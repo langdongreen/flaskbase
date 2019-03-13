@@ -1,0 +1,2 @@
+-Dring and collar not aligned on Chrome (mobile and desktop)
+-2 displays of flash messages, one in layout template one in partials

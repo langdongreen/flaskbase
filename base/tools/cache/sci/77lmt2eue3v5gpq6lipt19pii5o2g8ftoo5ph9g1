@@ -1,0 +1,86 @@
+Return-Path: <201807102127011f104a27043e4a20b236bc523c60p0na@bounces.amazon.com>
+Received: from a13-42.smtp-out.amazonses.com (a13-42.smtp-out.amazonses.com [54.240.13.42])
+ by inbound-smtp.us-west-2.amazonaws.com with SMTP id 77lmt2eue3v5gpq6lipt19pii5o2g8ftoo5ph9g1
+ for in@sciose.com;
+ Tue, 10 Jul 2018 21:27:02 +0000 (UTC)
+X-SES-Spam-Verdict: PASS
+X-SES-Virus-Verdict: PASS
+Received-SPF: pass (spfCheck: domain of bounces.amazon.com designates 54.240.13.42 as permitted sender) client-ip=54.240.13.42; envelope-from=201807102127011f104a27043e4a20b236bc523c60p0na@bounces.amazon.com; helo=a13-42.smtp-out.amazonses.com;
+Authentication-Results: amazonses.com;
+ spf=pass (spfCheck: domain of bounces.amazon.com designates 54.240.13.42 as permitted sender) client-ip=54.240.13.42; envelope-from=201807102127011f104a27043e4a20b236bc523c60p0na@bounces.amazon.com; helo=a13-42.smtp-out.amazonses.com;
+ dkim=pass header.i=@amazonses.com;
+ dkim=pass header.i=@amazon.com;
+X-SES-RECEIPT: AEFBQUFBQUFBQUFIeGcxRWhHTUlFM242bHcybDVFL04xcWNZRmRFcmkreGpQdEV3dUYvclhyZTVkSVhua2dCR0VFcnZ4WlI4NHFiaE53aVZnOHlncFhqK0NySE5oS2hDMVlDU2lSSGxtek1GWllFMU1FbW42ZmdJcmxoV0h0dVl3QSticUxyTzllMEl2MWQ5bERtOFlVdU9SQzhmV3Y4bi93SHFibWR3eHBGaEp5RjlJM1VrV1Z6KzBJR0NKVmlVTHJTY0R2ZnBQWkZKWmJhVE9oZTc1NVRpVUhYQ0Q1TVI3ZUF2eXhxdkNOVTJiWXhpTkR3UnFITFFGYkdpVWFtM2Jtb0s5Yi9XalI1L0FyNGNzMmR1T0NjVWVUNlFFd3JmbXBPUVFEUmpFSkN6VGswT0Z0Ymh5clN5KzN2YnpGUGpweXJYMFNHM2ZJQi84eTJLd3NwRmN3TTlmWDhXYkVzRzZiVmRvaHhFOFVFYzBtWWNlRzhYV01nPT0=
+X-SES-DKIM-SIGNATURE: a=rsa-sha256; q=dns/txt; b=Q0iDvR0+t0jM/fCcCnUXs0nkj0cNavMIfi/f1adfWR6FVWafjgIECsCid4mNOQxyM5nYoCys0lFJ7f+leax5LTV1dhk4PTtqDhx9TkS2dNVGkD8OvRlx7fcEL9MKhogGRgaTNafEfX9JSHqXzxAvnQIigACccQXfcenm5TWRhyE=; c=relaxed/simple; s=7v7vs6w47njt4pimodk5mmttbegzsi6n; d=amazonses.com; t=1531258023; v=1; bh=YSiwYgS4rb21uqCZy3DO7P4S/zZNMI4wiBjDOA2y1J4=; h=From:To:Cc:Bcc:Subject:Date:Message-ID:MIME-Version:Content-Type:X-SES-RECEIPT;
+DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/simple;
+	s=yg4mwqurec7fkhzutopddd3ytuaqrvuz; d=amazon.com; t=1531258021;
+	h=Date:From:To:Message-ID:Subject:MIME-Version:Content-Type;
+	bh=YSiwYgS4rb21uqCZy3DO7P4S/zZNMI4wiBjDOA2y1J4=;
+	b=KEURoE3qyUJDN+rWomcrtIqjFnFiiP7Cf8jYuzPowiGyzVfyIhMmKNnQNcTkCQUC
+	HqjFuiqoKpgO/ynI3H1/VGQrgyWwGNfkD7FDGzMzYnNtuS1GmmhBzuZlk5Aygamqn0n
+	as7+gdGJ6SbTfTCZp2gto2uMQ2PL+EGzDe+njbzA=
+DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/simple;
+	s=ug7nbtf4gccmlpwj322ax3p6ow6yfsug; d=amazonses.com; t=1531258021;
+	h=Date:From:To:Message-ID:Subject:MIME-Version:Content-Type:Feedback-ID;
+	bh=YSiwYgS4rb21uqCZy3DO7P4S/zZNMI4wiBjDOA2y1J4=;
+	b=FrAx5lntuT2X2yEuCX5oG+Y8aMTpyJeLTIlXdH7hiMTicGUbmh+fiaK7TtpgLKHk
+	l/ct8kK3nL0zqaxHATfmjmTHZ+oo6lgKe0TMJOfWSeMsGZngOUUJminiANBxYmzCjxZ
+	I/adfiJ1gDxKDyGTh7m6L+HIz/5uWq8b2QahxEtM=
+Date: Tue, 10 Jul 2018 21:27:01 +0000
+From: "no-reply-aws@amazon.com" <no-reply-aws@amazon.com>
+To: "in@sciose.com" <in@sciose.com>
+Message-ID: <010001648617255a-f2cdfacc-7eba-436a-8206-1828e8b520ba-000000@email.amazonses.com>
+Subject: [CASE 5206907351] Your Amazon Web Services domain transfer
+MIME-Version: 1.0
+Content-Type: multipart/mixed; 
+	boundary="----=_Part_17130030_36395131.1531258021179"
+X-AMAZON-RTE-VERSION: 2.0
+X-AMAZON-METADATA: RI=A35GZ5WAF3R00K
+Bounces-to: 201807102127011f104a27043e4a20b236bc523c60p0na@bounces.amazon.com
+X-AMAZON-MAIL-RELAY-TYPE: notification
+X-Original-MessageID: <urn.correios.msg.201807102127011f104a27043e4a20b236bc523c60p0na@1531258021181.rte-1bx-na-m4l1e-9b008fe6.us-east-1.amazon.com>
+X-SES-Outgoing: 2018.07.10-54.240.13.42
+Feedback-ID: 1.us-east-1.ZHcGJK6s+x+i9lRHKog4RW3tECwWIf1xzTYCZyUaiec=:AmazonSES
+
+------=_Part_17130030_36395131.1531258021179
+Content-Type: text/plain; charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+
+Hi,
+
+I'm writing to inform you that we have successfully transferred domain name sciose.com to this AWS account.
+
+Domains can be viewed here on your AWS account: https://console.aws.amazon.com/route53/home?region=ap-northeast-2#DomainListing:
+
+Please note that a Route 53 hosted zone can only be transferred to another AWS account by using a manual migration process. If you're using a hosted zone as the DNS service for the transferred domain name, we suggest creating a new hosted zone on the gaining account and to make sure to update the name servers on the domain's detail page to match the new name servers. Here is the domain detail page (make sure to replace DOMAIN with the actual domain name):
+
+https://console.aws.amazon.com/route53/home?region=us-east-1#DomainDetail:<DOMAIN>
+
+Feel free to let me know if you have any other questions or concerns and I will be glad to help. 
+
+Best regards,
+
+Christopher K.
+Amazon Web Services
+
+Check out the AWS Support Knowledge Center, a knowledge base of articles and videos that answer customer questions about AWS services: https://aws.amazon.com/premiumsupport/knowledge-center/?icmpid=support_email_category
+
+We value your feedback. Please rate my response using the link below.
+===================================================
+
+To contact us again about this case, please return to the AWS Support Center using the following URL:
+
+https://console.aws.amazon.com/support/home#/case/?displayId=5206907351&language=en
+
+(If you are connecting by federation, log in before following the link.)
+
+*Please note: this e-mail was sent from an address that cannot accept incoming e-mail. Please use the link above if you need to contact us again about this same issue.
+
+====================================================================
+Learn to work with the AWS Cloud. Get started with free online videos and self-paced labs at 
+http://aws.amazon.com/training/
+====================================================================
+
+Amazon Web Services, Inc. and affiliates
+------=_Part_17130030_36395131.1531258021179--

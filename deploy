@@ -1,0 +1,6 @@
+#!/bin/bash
+rsync -rav --delete --exclude .git --exclude .aws --exclude debug.log --exclude ipnout.txt --exclude orders --exclude run --exclude deploy --exclude venv --exclude local_run -e "ssh " /home/lg/private/lg/projects/software/hp/ root@bl-lg-b1.langdongreen.com:/home/hp/
+ssh root@bl-lg-b1.langdongreen.com find /home/hp -name '*.pyc' -delete 
+ssh root@bl-lg-b1.langdongreen.com chown -R hp /home/hp/
+ssh root@bl-lg-b1.langdongreen.com csync2 -x -G apps 
+ssh root@bl-lg-b1.langdongreen.com systemctl restart hp.service

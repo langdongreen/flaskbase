@@ -1,0 +1,74 @@
+Return-Path: <20190103072820d375f3ea5bad43bfbfd85e57cea0p0na@bounces.amazon.com>
+Received: from a13-26.smtp-out.amazonses.com (a13-26.smtp-out.amazonses.com [54.240.13.26])
+ by inbound-smtp.us-west-2.amazonaws.com with SMTP id fqs14j55t54fdjp62omvadj4rsv6ltt085pe3no1
+ for in@sciose.com;
+ Thu, 03 Jan 2019 07:28:21 +0000 (UTC)
+X-SES-Spam-Verdict: PASS
+X-SES-Virus-Verdict: PASS
+Received-SPF: pass (spfCheck: domain of bounces.amazon.com designates 54.240.13.26 as permitted sender) client-ip=54.240.13.26; envelope-from=20190103072820d375f3ea5bad43bfbfd85e57cea0p0na@bounces.amazon.com; helo=a13-26.smtp-out.amazonses.com;
+Authentication-Results: amazonses.com;
+ spf=pass (spfCheck: domain of bounces.amazon.com designates 54.240.13.26 as permitted sender) client-ip=54.240.13.26; envelope-from=20190103072820d375f3ea5bad43bfbfd85e57cea0p0na@bounces.amazon.com; helo=a13-26.smtp-out.amazonses.com;
+ dkim=pass header.i=@amazon.com;
+ dkim=pass header.i=@amazonses.com;
+ dmarc=none header.from=amazon.com;
+X-SES-RECEIPT: AEFBQUFBQUFBQUFHeVdsQ1FVOEJXQk05Q21SWFU2ei9YeGc1bVhDNWF4bTVrQU1hYkdZMFQzb0IveGt6RW1qNUFmRnl0MkdTdWMveXV3QlBpN3o0WlBVL09CK1pyUVora0ZMZ0hvaGVpR09KRDhYMTVjdTAxT3hYVjJBSXdMbHQyQzRtVDJ1eGFRUlFKaVJudXVoU1V4cXRVbitLckxKYWgzMzcvUVpQMjVOVG9pZWNuejNVZUhNWWxqbjhISkVDakxsVDl3dE9UTnBrWjNFSFVJUzk2eGdNU3ZtZ001bnI1WVg4Uk8rVk1SOUJXK1N3dm9IRWRtSUhZTzlSS08weUJ3dW9hcFYrMW5WVUk1YXFuZlc4eXRwbUREVGNWQkVkQlBTYVBVK1l1cUVkbkkxcDdYcGxBVFJ3Z3ljNU5LYjZyTVdHV2VPWU16N3oxMW12Y29QallnMnNXYTNQbyttMERPK0xnY1ljeElLdXM0b0MrWklVL0dBPT0=
+X-SES-DKIM-SIGNATURE: a=rsa-sha256; q=dns/txt; b=HBOOzeayPIMut2g6rzFzLgFWz8Z+hmTOLmQhB5eI+wi6NMfU8RBBt0SaYOsSMtCyuhzivdDidUpHPiCOtJyJ/Ux6wupekpXYKETONvICJ6wi1RkmL1UJBFUlXNE9ELicrzIcsv3m5HChm8p+bznMiLEbv/3ltFYq+iwS/0R2+ws=; c=relaxed/simple; s=7v7vs6w47njt4pimodk5mmttbegzsi6n; d=amazonses.com; t=1546500502; v=1; bh=V0mLm/DdPZiTSq0A+RAWqG7tvkM9ctrGyalpn0axKsY=; h=From:To:Cc:Bcc:Subject:Date:Message-ID:MIME-Version:Content-Type:X-SES-RECEIPT;
+DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/simple;
+	s=eaxkvsyelrnxjh4cicqyjjmtjpetuwjx; d=amazon.com; t=1546500500;
+	h=Date:From:To:Message-ID:Subject:MIME-Version:Content-Type;
+	bh=V0mLm/DdPZiTSq0A+RAWqG7tvkM9ctrGyalpn0axKsY=;
+	b=IYqSA7K71c30d6TN/YfDSQkTN2R8yV74vurTn6TeGKpF3ytlmJHHr1hZUFtuo3Dj
+	CKCsCcIts9jE14AtxgqNrD6nkfXmruU48NWPFBwwbHfgHuPg1ZnUyWepyfupeKTt/5o
+	qQw+yxobHn4cYUBgsg01HWmwU+M8/jGvz8RgfLLk=
+DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/simple;
+	s=ug7nbtf4gccmlpwj322ax3p6ow6yfsug; d=amazonses.com; t=1546500500;
+	h=Date:From:To:Message-ID:Subject:MIME-Version:Content-Type:Feedback-ID;
+	bh=V0mLm/DdPZiTSq0A+RAWqG7tvkM9ctrGyalpn0axKsY=;
+	b=exqvvFVFoC0yEU1FnyHL0HUGzf3hnWJeI7/j5GP1Syli36kx54jlqHBexWpe8Rfy
+	bgWc40mMC32lM5fjWow3k2Zhfd17uWWvufMocrP1WNSk2+VyHCC9mS1pG/KwG8KQsce
+	DfCL8/LpAJBIp948I8QDEAHbBIeYIYpQvqjW1CwY=
+Date: Thu, 3 Jan 2019 07:28:20 +0000
+From: Amazon Web Services <no-reply-aws@amazon.com>
+To: "in@sciose.com" <in@sciose.com>
+Message-ID: <01000168129cebff-d8ff34ee-63b7-41d5-b533-323cfb2007d1-000000@email.amazonses.com>
+Subject: Amazon Web Services Billing Statement Available
+MIME-Version: 1.0
+Content-Type: multipart/mixed; 
+	boundary="----=_Part_109103597_941180607.1546500500464"
+X-AMAZON-RTE-VERSION: 2.0
+Bounces-to: 20190103072820d375f3ea5bad43bfbfd85e57cea0p0na@bounces.amazon.com
+X-AMAZON-MAIL-RELAY-TYPE: notification
+X-Original-MessageID: <urn.correios.msg.20190103072820d375f3ea5bad43bfbfd85e57cea0p0na@1546500500466.rte-svc-m4a-1c18251f.us-east-1.amazon.com>
+X-SES-Outgoing: 2019.01.03-54.240.13.26
+Feedback-ID: 1.us-east-1.ZHcGJK6s+x+i9lRHKog4RW3tECwWIf1xzTYCZyUaiec=:AmazonSES
+
+------=_Part_109103597_941180607.1546500500464
+Content-Type: text/plain; charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+Greetings from Amazon Web Services,
+
+This e-mail confirms that your latest billing statement, for the account ending in ****6374, is available on the AWS web site. Your account will be charged the following:
+
+Total: $0.55
+
+You can see a complete break down of all charges on the Billing & Cost Management page located here:
+
+https://console.aws.amazon.com/billing/home#/bill?statementTimePeriod=1543622400
+
+To protect your privacy, we can only communicate account information to the e-mail address on file for your account.
+
+Thank you for using Amazon Web Services.
+
+Sincerely,
+
+Amazon Web Services
+
+To learn more about managing your AWS costs with Cost Allocation and Tagging, visit http://docs.aws.amazon.com/awsaccountbilling/latest/aboutv2/cost-alloc-tags.html
+
+This message was produced and distributed by Amazon Web Services, Inc. and affiliates, 410 Terry Ave. North, Seattle, WA 98109-5210.
+
+AWS will not be bound by, and specifically objects to, any term, condition or other provision which is different from or in addition to the provisions of the AWS Customer Agreement or AWS Enterprise Agreement between AWS and you (whether or not it would materially alter such AWS Customer Agreement or AWS Enterprise Agreement) and which is submitted in any order, receipt, acceptance, confirmation, correspondence or otherwise, unless AWS specifically agrees to such provision in a written instrument signed by AWS.
+
+The AWS Customer Agreement was updated on May 14, 2018. You can see more information about these changes at https://aws.amazon.com/agreement/recent-changes/.
+------=_Part_109103597_941180607.1546500500464--

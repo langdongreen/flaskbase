@@ -1,0 +1,188 @@
+Return-Path: <010001645ac39990-744d576b-4f71-4e53-a040-76963211efa5-000000@amazonses.com>
+Received: from a11-118.smtp-out.amazonses.com (a11-118.smtp-out.amazonses.com [54.240.11.118])
+ by inbound-smtp.us-west-2.amazonaws.com with SMTP id 9bdidgt24pra328odekdskkjea9sm7gmj1qudm01
+ for in@sciose.com;
+ Mon, 02 Jul 2018 11:32:06 +0000 (UTC)
+X-SES-Spam-Verdict: PASS
+X-SES-Virus-Verdict: PASS
+Received-SPF: pass (spfCheck: domain of amazonses.com designates 54.240.11.118 as permitted sender) client-ip=54.240.11.118; envelope-from=010001645ac39990-744d576b-4f71-4e53-a040-76963211efa5-000000@amazonses.com; helo=a11-118.smtp-out.amazonses.com;
+Authentication-Results: amazonses.com;
+ spf=pass (spfCheck: domain of amazonses.com designates 54.240.11.118 as permitted sender) client-ip=54.240.11.118; envelope-from=010001645ac39990-744d576b-4f71-4e53-a040-76963211efa5-000000@amazonses.com; helo=a11-118.smtp-out.amazonses.com;
+ dkim=pass header.i=@amazonses.com;
+ dkim=pass header.i=@minds.com;
+X-SES-RECEIPT: AEFBQUFBQUFBQUFFQXVnUEJZbXZGT0RLWTJKMUptZTNqM2kzemNVNHVvRHpQR2tMSHZ2eEovRFZKNzRUZWIvOVpWWjFiVzI1cGpCUFdUV3RLSkUzRkJpODFCaUhqc2VsZUJFZTRGQkNCTWoyb1RjV3QrTUQwVkJ0SlhUOWdBUnZJdEJxSGFLNm9qQ0wvRmNDOVpqMmkvUFE4RXpmV3RqTlRCdmR6b1ZyclcxYnBkRWVzVU93bU1Va2xaOWp3elFNK05JbEwxcjV6WFVPcitueGk2YW1NY0laZTM3YS94dTVaTzRGbHNHRmtHcVM2azJWblE0Y1llZFFQVmlPb015alVqSTVpZHNrREhUS0ZDN1NtVWVFYlZjSHdZUUxONHozb3d1TFR4dDhaTUNnMjVmdXBrR09uelROMGpocW5JY05DZUZYczNnem92OWI1QVJiOFRmVFh2R2VJdDlRR1FLZUdzY3RkNUNEUHUzVTRKYkFJeCsySXV3PT0=
+X-SES-DKIM-SIGNATURE: a=rsa-sha256; q=dns/txt; b=IB73+VapJHj3daUo2fuPPJ288aGzUav3JPL4iUIbcZcfy/YTZP3Fx0fk2wd2IiiZrKMeAdVEATAwSM7fimyWfqertrWmbFG5ZodkXhP5tMgvCvYJSETQ3WphwznUBSLR9vmH7tEzcYjBSj4jT8G1QgFjxUiBlR52z3B04rcHFig=; c=relaxed/simple; s=7v7vs6w47njt4pimodk5mmttbegzsi6n; d=amazonses.com; t=1530531127; v=1; bh=7QET7LImzJatmM5Uqv5PqTBngfVXfECGRvw71Nxrhrs=; h=From:To:Cc:Bcc:Subject:Date:Message-ID:MIME-Version:Content-Type:X-SES-RECEIPT;
+DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/simple;
+	s=rjwkg7dzzsnmdkk6eoirhcamycujpbcc; d=minds.com; t=1530531125;
+	h=Date:To:From:Subject:Message-ID:MIME-Version:Content-Type:Content-Transfer-Encoding;
+	bh=7QET7LImzJatmM5Uqv5PqTBngfVXfECGRvw71Nxrhrs=;
+	b=M/2Vo1k/P618GY6AiaChVd+Sy7M0GkIzjacXQCftxo8+I3XDFVcAKzFJmIMlwqmr
+	R1fYclq6kWxLEZ8xuBz8+nZu7vnAAhJ21ACe8+wFYPDcfPPiXnoyA5PVaQsog+rty9i
+	WsR6sqaxd4dgm9/sb8pL6Uo/DJpWCHGu5jqC7HbA=
+DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/simple;
+	s=ug7nbtf4gccmlpwj322ax3p6ow6yfsug; d=amazonses.com; t=1530531125;
+	h=Date:To:From:Subject:Message-ID:MIME-Version:Content-Type:Content-Transfer-Encoding:Feedback-ID;
+	bh=7QET7LImzJatmM5Uqv5PqTBngfVXfECGRvw71Nxrhrs=;
+	b=FqntrF14Zw4hX0mKXSqu16dsC8/5Js0V7RIT/2E/C7FQ+o6YLFjMhWxjh1IhABHb
+	iOYySxFxDNJGE/Sk36uL7sQDNs/BbBC6ZNdl/U3HAf5auwXFsnjbCc6/7lBJjOaW9IO
+	XfNTnOC/5xqcwfY/MdntCeU/PReLxf4YkBbTBdCY=
+Date: Mon, 2 Jul 2018 11:32:05 +0000
+To: sciose <in@sciose.com>
+From: Minds <info@minds.com>
+Subject: Support other channels with Wire
+Message-ID: <010001645ac39990-744d576b-4f71-4e53-a040-76963211efa5-000000@email.amazonses.com>
+X-Mailer: PHPMailer 5.2.26 (https://github.com/PHPMailer/PHPMailer)
+MIME-Version: 1.0
+Content-Type: text/html; charset=utf-8
+Content-Transfer-Encoding: 8bit
+X-SES-Outgoing: 2018.07.02-54.240.11.118
+Feedback-ID: 1.us-east-1.btzuEzJiONRP6E05ZM6mBRRJ9O8KMzM5YBs2ObG4xSg=:AmazonSES
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+      <title></title>
+      <style>
+        p { 
+          font-family: Roboto,Arial,sans-serif;
+          font-size: 18px;
+          line-height: 1.5;
+          color: #444 !important;
+        }
+        a {
+          color: #4690df !important;
+        }
+      </style>
+  </head>
+  <body style="margin:0; padding:0;">
+
+    <table cellspacing="0" cellpadding="0" border="0" width="100%" align="center" style="width:100%!important">
+      <tbody>
+        <tr>
+          <td>
+            <!-- START HEADER -->
+            <table cellspacing="8" cellpadding="8" border="0" width="600" align="center">
+              <tbody>
+                <tr>
+                    <td height="20"></td>
+                </tr>
+                <tr>
+                    <td bgcolor="#ffffff" style="font-family:Helvetica Neue,Helvetica,Roboto,Arial,sans-serif;font-size:14px;line-height:20px" width="520">
+                      <h3 style="margin-bottom: 0;margin-top: 84px;color: #444;font-size: 24px;">@sciose</h3>
+                    </td>
+                    <td bgcolor="#ffffff" style="font-family:Helvetica Neue,Helvetica,Roboto,Arial,sans-serif;font-size:14px;line-height:20px">
+                      <!-- Email body -->
+
+                      <p align="right">
+                        <a href="https://www.minds.com/?__e_ct_guid=856359540067672080" style="text-decoration:none;">
+                          <img src="https://cdn-assets.minds.com/front/dist/assets/logos/bulb.jpg" align="middle" height="80px"/>
+                        </a>
+                      </p>
+                    </td>
+                </tr>
+                <tr>
+                  <td height="20"></td>
+                </tr>
+              </tbody>
+            </table>
+            <!-- END HEADER -->
+
+            <!-- START BODY -->
+            <table cellspacing="0" cellpadding="0" border="0" width="600" align="center">
+              <tbody>
+                <tr>
+                  <td><table cellspacing="8" cellpadding="8" border="0" width="558" align="center">
+  <tbody>
+    <tr>
+      <td>
+        <p>
+         One of the best ways to support other channels on Minds is through <a href="https://www.minds.com/wire?__e_ct_guid=856359540067672080&campaign=global&topic=minds_tips&type=wire">Wire</a>. 
+        </p>
+        <p>
+          Wire is the peer-to-peer payment system for you to send tokens to other channels as a tip or in exchange for access to exclusive content or rewards.
+        </p> 
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <a href="https://www.minds.com/wire?__e_ct_guid=856359540067672080&campaign=global&topic=minds_tips&type=wire">
+          <img src="https://cdn-assets.minds.com/front/dist/assets/screenshots/wire-white.jpg" width="558"/>
+        </a>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <p>
+          To send a Wire, simply click on the lightning bolt icon on someone’s content or channel and select how many tokens you wish to send them.
+          You may choose to make the payment either recurring or a one-time payment.
+        </p> 
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <a href="https://www.minds.com/wire?__e_ct_guid=856359540067672080&campaign=global&topic=minds_tips&type=wire">
+          <img src="https://cdn-assets.minds.com/front/dist/assets/screenshots/wire-send.jpg" width="558" />
+        </a>
+      </td>
+    </tr>
+
+    <tr>
+      <td>
+        <p>
+          Stay subscribed for more helpful tips to improve your channel and earn more tokens.
+        </p>
+      </td>
+    </tr>
+  </tbody>
+</table>
+</td>
+                </tr>
+              </tbody>
+            </table>
+            <!-- END BODY -->
+
+            <table cellspacing="8" cellpadding="8" border="0" width="600" align="center">
+              <tbody>
+                <tr>
+                  <td>
+                    <p><b>The Minds Team</b></p>
+                  </td>
+                </tr>
+              </tbody> 
+            </table>
+
+
+            <!-- START FOOTER -->
+                        <table cellspacing="8" cellpadding="8" border="0" width="300" align="center">
+              <tbody>
+                <tr>
+                  <td height="20"></td>
+                  <td height="20"></td>
+                </tr>
+                <tr>
+                  <td>
+                    <a href="https://www.minds.com/emails/unsubscribe/sciose/in@sciose.com/global/minds_tips?__e_ct_guid=856359540067672080" align="center" style="color:#888">
+                      Unsubscribe 
+                    </a>
+                    from this type of email. 
+                  </td>
+                  <td>
+                    <a href="https://www.minds.com/settings/emails" align="center" style="color:#888">
+                      Change my email settings
+                    </a>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+                        <!-- END FOOTER -->
+
+          </td>
+        </tr>
+      </tbody>
+    </table>
+
+
+  </body>
+
+</html>
+

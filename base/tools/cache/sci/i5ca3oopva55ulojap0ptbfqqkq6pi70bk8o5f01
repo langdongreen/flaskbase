@@ -1,0 +1,58 @@
+Return-Path: <201806230904571d00650cf3034222919a257a0490p0na@bounces.amazon.com>
+Received: from a13-74.smtp-out.amazonses.com (a13-74.smtp-out.amazonses.com [54.240.13.74])
+ by inbound-smtp.us-west-2.amazonaws.com with SMTP id i5ca3oopva55ulojap0ptbfqqkq6pi70bk8o5f01
+ for in@sciose.com;
+ Sat, 23 Jun 2018 09:04:58 +0000 (UTC)
+X-SES-Spam-Verdict: PASS
+X-SES-Virus-Verdict: PASS
+Received-SPF: pass (spfCheck: domain of bounces.amazon.com designates 54.240.13.74 as permitted sender) client-ip=54.240.13.74; envelope-from=201806230904571d00650cf3034222919a257a0490p0na@bounces.amazon.com; helo=a13-74.smtp-out.amazonses.com;
+Authentication-Results: amazonses.com;
+ spf=pass (spfCheck: domain of bounces.amazon.com designates 54.240.13.74 as permitted sender) client-ip=54.240.13.74; envelope-from=201806230904571d00650cf3034222919a257a0490p0na@bounces.amazon.com; helo=a13-74.smtp-out.amazonses.com;
+ dkim=pass header.i=@amazon.com;
+ dkim=pass header.i=@amazonses.com;
+X-SES-RECEIPT: AEFBQUFBQUFBQUFITGlNUXpnS2g1MW11dXBSeXdkbUJpYjZGS0JuS3NzK1dhK3RoYW10ZXcwc0o0SHNIQWJXZWc3RSs0VThLS2l4dlVsTUVUbWRaYnJySC9ya3MzYzlKZzZSMWR5WGVUV2FncFZmNE5mc3FIalkwUXZQZitKZWRHRURkaDJwTXRBSUg1VkRaYitRbDlsZDlVVUFCc3ZWVlJ4QldDNDdlTExXUXdWT05LaDNyRFR1UEY1eFIzT2VKL3lPVlB3a3lDaWYrOTNPNjU1d2JIRDJJSElWUFRwTHJ1L1RQY3AweVdoUlpBOW9CcDUrM0JvbzhRbVNXSUZIRkF0eHhBYUlSZUhHaktoTjBvU1djMGthdUJOT2ozUDBMUkJPUmI5eDI2OGFSbDBpSDhta2ZnWjF6ZHNtM0hmMFZXdVN5OGthSzBnU2swL0Y4SGpra2lmZW95WC9aVG8xN2VvVWdaWWNDMW9XN3Y3Z0pNT1lJc1R3PT0=
+X-SES-DKIM-SIGNATURE: a=rsa-sha256; q=dns/txt; b=CVNLFjVSuAeVHjKaMUMuOXfOQ8ijmsBkRUN/O2HB9MXBn3YgzUHGZW4cRPqxHgB+9sPeutEUOp61hpMf65FxKG53zbS0jl75XgkjVUCxLY39eG5SVT6lqV/dhrwK7CNUf9yUbgkoJ3paUj+kIdJL0g0EFW9a/bV+EM3et7DCiTQ=; c=relaxed/simple; s=7v7vs6w47njt4pimodk5mmttbegzsi6n; d=amazonses.com; t=1529744698; v=1; bh=zbEFbXA46sbXf2Qe7AImPjGCu2Hy6Beg2WlV3mse0jM=; h=From:To:Cc:Bcc:Subject:Date:Message-ID:MIME-Version:Content-Type:X-SES-RECEIPT;
+DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/simple;
+	s=yg4mwqurec7fkhzutopddd3ytuaqrvuz; d=amazon.com; t=1529744697;
+	h=From:To:Message-ID:Subject:MIME-Version:Content-Type:Date;
+	bh=zbEFbXA46sbXf2Qe7AImPjGCu2Hy6Beg2WlV3mse0jM=;
+	b=JdWPXFA/ogk/5eC7SPQWrSyU4BP8X+MfhxVKJVj4o5CceXPmoHjfR5i606xozw3d
+	ejWFPCVjd1oojwNVojOjiCBKluYhJFxoDuK+W7RQHk5ojcgs9bw7OddHhp3/9uJAl1Z
+	an7IiYoKHCSD1/9it+QbJN8B4Vvbbrs0lPLBNqf4=
+DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/simple;
+	s=ug7nbtf4gccmlpwj322ax3p6ow6yfsug; d=amazonses.com; t=1529744697;
+	h=From:To:Message-ID:Subject:MIME-Version:Content-Type:Date:Feedback-ID;
+	bh=zbEFbXA46sbXf2Qe7AImPjGCu2Hy6Beg2WlV3mse0jM=;
+	b=S4YaY6RsdpFZegcPRQhvtIQKbhpBD/1fhu9wcDdf/zeKUkDx8+v7/h9Htf7owMXY
+	ZfTV7atLKp7AjERwKhv3ScE1dX7WRfgNjS9DeWq3HHRlQnox4dPlTBeoue2HW8m8zOU
+	NTgwaXvjukkgdmyRtnYJYnxNX8NONwBukevvlf50=
+From: "Amazon Web Services, Inc." <no-reply-aws@amazon.com>
+To: in@sciose.com
+Message-ID: <010001642be3a7c2-e29a4ab2-d866-42be-97b3-91fc294aa1df-000000@email.amazonses.com>
+Subject: DKIM setup SUCCESS for sciose.com in US West (Oregon) region
+MIME-Version: 1.0
+Content-Type: multipart/alternative; 
+	boundary="----=_Part_8354896_1014721678.1529744697258"
+X-AMAZON-MAIL-RELAY-TYPE: notification
+Bounces-to: 201806230904571d00650cf3034222919a257a0490p0na@bounces.amazon.com
+X-AMAZON-METADATA: CA=C1CN9FUGPTPOG2-CU=AE8H8YCKX0Z7W-RI=A35GZ5WAF3R00K
+X-SM-COMMUNICATION: true
+X-Original-MessageID: <urn.rtn.msg.201806230904571d00650cf3034222919a257a0490p0na@1529744697258.rtn-svc-na-back-m4l1d-5a834e32.us-east-1.amazon.com>
+Date: Sat, 23 Jun 2018 09:04:57 +0000
+X-SES-Outgoing: 2018.06.23-54.240.13.74
+Feedback-ID: 1.us-east-1.ZHcGJK6s+x+i9lRHKog4RW3tECwWIf1xzTYCZyUaiec=:AmazonSES
+
+------=_Part_8354896_1014721678.1529744697258
+Content-Type: text/plain; charset=utf-8
+Content-Transfer-Encoding: 7bit
+
+Congratulations! Your DKIM setup for the domain sciose.com is complete. You can now send DKIM-signed emails from any address within this domain through both Amazon SES and Amazon Pinpoint.
+
+Please note that the settings for individually verified email addresses override domain-level settings. For example, if you enable DKIM signing for a verified domain but disable DKIM signing for a verified email address in that domain, then emails from that email address will not be DKIM-signed.
+
+For more information about DKIM, see the Amazon SES Developer Guide at http://docs.aws.amazon.com/ses/latest/DeveloperGuide/dkim.html .
+
+Please note that this email only relates to the US West (Oregon) region.
+
+Thank you for using Amazon Web Services.
+------=_Part_8354896_1014721678.1529744697258--

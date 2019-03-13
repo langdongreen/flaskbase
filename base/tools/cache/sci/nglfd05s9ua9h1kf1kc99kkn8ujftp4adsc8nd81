@@ -1,0 +1,60 @@
+Return-Path: <201807132157175649523b3e2a4468841343a24d50p0na@bounces.amazon.com>
+Received: from a13-51.smtp-out.amazonses.com (a13-51.smtp-out.amazonses.com [54.240.13.51])
+ by inbound-smtp.us-west-2.amazonaws.com with SMTP id nglfd05s9ua9h1kf1kc99kkn8ujftp4adsc8nd81
+ for in@sciose.com;
+ Fri, 13 Jul 2018 21:57:18 +0000 (UTC)
+X-SES-Spam-Verdict: PASS
+X-SES-Virus-Verdict: PASS
+Received-SPF: pass (spfCheck: domain of bounces.amazon.com designates 54.240.13.51 as permitted sender) client-ip=54.240.13.51; envelope-from=201807132157175649523b3e2a4468841343a24d50p0na@bounces.amazon.com; helo=a13-51.smtp-out.amazonses.com;
+Authentication-Results: amazonses.com;
+ spf=pass (spfCheck: domain of bounces.amazon.com designates 54.240.13.51 as permitted sender) client-ip=54.240.13.51; envelope-from=201807132157175649523b3e2a4468841343a24d50p0na@bounces.amazon.com; helo=a13-51.smtp-out.amazonses.com;
+ dkim=pass header.i=@amazonses.com;
+ dkim=pass header.i=@amazon.com;
+X-SES-RECEIPT: AEFBQUFBQUFBQUFGR3dWeE9hU3BNUWlqR1NQdk1xdGJXYXlFbU9tTUJVa0EvbjN4NG1TSldkT0V0KzVuZ3lEVUNYWXMvNjJoU00wemxIUmFMNXhGejlrdG9KNlpxenB5Q2RCWUxIUGxraE5NOVFpMGdKelEwaDkwZ3JmZkcreHFFM2dFdG4yOWQ4VDZRbVpad3dVdU1uZ0RKNjlvdlVDalN1S2tveG9yays2SWdQWGNFRENFWUZKT09reU5IVzBmdjcwdk1yVUEyTGRsWXJKN04wa0hscGF5ckxvZ21oMGdKaHVYcjljUjVWSm4yVUtWMTBmT1FmeEg3QTA2b29ZbkpyUkE1blErQVhOaXlscHFIWWZYNnZpeVdIZm5LSDBkemppSnZJRmVzREk0aDVzbDJOZG5ZSE13bWdWQ3lydTA2TGJ2Wi9CQjUyZXAzbDhnQ2ZxejAzbXhlLzBOd3NsNnkzNzNhS0NHYngrNWtzdlAwS1A3dXJ3PT0=
+X-SES-DKIM-SIGNATURE: a=rsa-sha256; q=dns/txt; b=UAFjiNfg4tei22sWcjFmyYiNNiQXxz7GzUzIUXeAd1QzyJlfKx5hkNL8RcM36xp/hVR8Fpcm87lIhO1RRSWbkp7sIN2uGDegrPMfMxYbqDi2xlBT5SWwYUmiUZwD31kghuqA/e9G72dOPw8pX+ir0CUSZP1aT8zzSfMSTh3dFso=; c=relaxed/simple; s=7v7vs6w47njt4pimodk5mmttbegzsi6n; d=amazonses.com; t=1531519039; v=1; bh=KS80cZYHTVG4eWzC/E5DcJKO9Zll37sb8X0lZE8pVow=; h=From:To:Cc:Bcc:Subject:Date:Message-ID:MIME-Version:Content-Type:X-SES-RECEIPT;
+DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/simple;
+	s=yg4mwqurec7fkhzutopddd3ytuaqrvuz; d=amazon.com; t=1531519037;
+	h=Date:From:To:Message-ID:Subject:MIME-Version:Content-Type:Content-Transfer-Encoding;
+	bh=KS80cZYHTVG4eWzC/E5DcJKO9Zll37sb8X0lZE8pVow=;
+	b=Mei1xtG6so5zuZJUt+kmQWP/syH4CS4XtLmWcmblGCHK0O7/dEgw+7kDXgCC4aey
+	1DbfoOPMKDG+QKBIRQ+rKVrWpP7T+Gp5f/dWcvQE3KgWjt8z1szBNyBdeMQWhMURMxX
+	KPN8LZGG85zWZuGAMUQRH0TMjlW0KPySGXEtQA5c=
+DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/simple;
+	s=ug7nbtf4gccmlpwj322ax3p6ow6yfsug; d=amazonses.com; t=1531519037;
+	h=Date:From:To:Message-ID:Subject:MIME-Version:Content-Type:Content-Transfer-Encoding:Feedback-ID;
+	bh=KS80cZYHTVG4eWzC/E5DcJKO9Zll37sb8X0lZE8pVow=;
+	b=hBwKrssq/VL5Tp9M7n7KqJ923K50tma2KxNMN20K7Jk6Muc2s+j8+p9hVg6J2KiU
+	8ckG5EG84VhPIXYkRZrwZ5IEBrRf5wA1P6pbWsCWu84SvemHjOnNsD9VzIyX4na0Jq/
+	hmCholYRFiVw3tkK4L8zKAnOuSco3NyaZtI3BvQk=
+Date: Fri, 13 Jul 2018 21:57:17 +0000
+From: Amazon Web Services <no-reply-aws@amazon.com>
+To: "in@sciose.com" <in@sciose.com>
+Message-ID: <0100016495a5f005-7aac4e70-4a96-45aa-a6e1-4e6295ff7e80-000000@email.amazonses.com>
+Subject: Attention required on case 5206907351: Your Amazon Web Services
+ domain transfer
+MIME-Version: 1.0
+Content-Type: text/plain; charset=UTF-8
+Content-Transfer-Encoding: 7bit
+X-AMAZON-RTE-VERSION: 2.0
+X-AMAZON-METADATA: RI=A35GZ5WAF3R00K
+Bounces-to: 201807132157175649523b3e2a4468841343a24d50p0na@bounces.amazon.com
+X-AMAZON-MAIL-RELAY-TYPE: notification
+X-Original-MessageID: <urn.correios.msg.201807132157175649523b3e2a4468841343a24d50p0na@1531519037394.rte-svc-m4a-9ea8e1b7.us-east-1.amazon.com>
+X-SES-Outgoing: 2018.07.13-54.240.13.51
+Feedback-ID: 1.us-east-1.ZHcGJK6s+x+i9lRHKog4RW3tECwWIf1xzTYCZyUaiec=:AmazonSES
+
+
+Hello,
+
+We haven't heard back from you regarding case 5206907351 for a while. For continued support regarding the same issue, you can contact us any time using the following URL:
+https://console.aws.amazon.com/support/home?#/case/?caseId=5206907351&displayId=5206907351&language=en
+
+Please note that no action is required on your part if you wish this case to be resolved. However, if you want to close this case yourself, you could do so via the Support Center. If we haven't heard back from you within the next 48 hours we will mark the case as Resolved, although you can re-open the case any time using the link above.
+
+Best Regards,
+
+Amazon Web Services
+
+*Please note: this e-mail was sent from an address that cannot accept incoming e-mail. Please use the link above if you need to contact us again about this same issue.
+
+Amazon Web Services, Inc. is a subsidiary of Amazon.com, Inc. Amazon.com is a registered trademark of Amazon.com, Inc.

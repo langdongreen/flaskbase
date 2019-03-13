@@ -1,0 +1,6 @@
+#!/bin/bash
+PYTHON_PATH=`which python3`
+GUNICORN_PATH=`which gunicorn`
+WORKING=~/private/lg/projects/software/hp
+cd $WORKING; source ./venv/bin/activate; $PYTHON_PATH $GUNICORN_PATH --pythonpath $WORKING/venv/bin --bind 0.0.0.0:8001 wsgi:app
+

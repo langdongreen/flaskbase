@@ -1,0 +1,85 @@
+Return-Path: <20180813064919dafabb0bcb104a64a41372aff440p0na@bounces.amazon.com>
+Received: from a13-80.smtp-out.amazonses.com (a13-80.smtp-out.amazonses.com [54.240.13.80])
+ by inbound-smtp.us-west-2.amazonaws.com with SMTP id d0vte6cfm22n4fcsu1gt8bortg6l9q99tg0p5b01
+ for in@sciose.com;
+ Mon, 13 Aug 2018 06:49:21 +0000 (UTC)
+X-SES-Spam-Verdict: PASS
+X-SES-Virus-Verdict: PASS
+Received-SPF: pass (spfCheck: domain of bounces.amazon.com designates 54.240.13.80 as permitted sender) client-ip=54.240.13.80; envelope-from=20180813064919dafabb0bcb104a64a41372aff440p0na@bounces.amazon.com; helo=a13-80.smtp-out.amazonses.com;
+Authentication-Results: amazonses.com;
+ spf=pass (spfCheck: domain of bounces.amazon.com designates 54.240.13.80 as permitted sender) client-ip=54.240.13.80; envelope-from=20180813064919dafabb0bcb104a64a41372aff440p0na@bounces.amazon.com; helo=a13-80.smtp-out.amazonses.com;
+ dkim=pass header.i=@aws.amazon.com;
+ dkim=pass header.i=@amazonses.com;
+X-SES-RECEIPT: AEFBQUFBQUFBQUFGd0Qrd2F2YkZwMTNwWXhLY2ZtR0NSODlmU3ZKYjUvMmQ2VHJPVkVmTTU2TnJaUlJyYWNGTTFoL0xPT1BBM3ZDU3BXMHVrUHNoc0c1dE1vc0ZBZkFkODlMNC9EajVIUzZDdXdxYUFnSXlWa2pIK0NUNU1hZUswK1FHbld6Yk1raVFwUVQ0cFdjM0N6Q0t2VUFTRUlHQ1RFZzU5aUFYUkRsZkh2eDY1NkNEWGxQVVl3M21OUTlQOVpLS0dTTlY2bGY4Y2o1bk1tY1dwaU9GNmE0VWpKYXJQU3FlOXVkUEdYbzF5a0FHVWEyVUhXQ043STNsWGJpNUVUenduMWNaM1JuWUJlTEZCV2xMTFdxek1XRFdjZ2VyS1RnbXE5Zmtrc0FiaUs3aElLWmlOdDBQY29MNTJJdjV6bUJhQ25UU2hLT2phSlJ5RFZwbCtaWmdmZHpVQkM4c1VYdUtncXo2Z3hQUEo5OXFLQXIyT3pRPT0=
+X-SES-DKIM-SIGNATURE: a=rsa-sha256; q=dns/txt; b=ewThedOjZyvh83AJUtqGyqkvAQV12XXbLl7gvcafDyFQ5C1i+6j736PsVLgl0krqu6/TKupKaWaSwuKUDwAF1Da+1SDyYJXujGNei+SRDD82AmzXrJgXxGRx88qXfeAzbcUbrHXfkzkXVfiomOrvJli6vITNVKyrnM6DWCjIc9c=; c=relaxed/simple; s=7v7vs6w47njt4pimodk5mmttbegzsi6n; d=amazonses.com; t=1534142961; v=1; bh=8KoO1suSOvnSy107UmVFztpWRkJnlLMLFgf4Z9m8u64=; h=From:To:Cc:Bcc:Subject:Date:Message-ID:MIME-Version:Content-Type:X-SES-RECEIPT;
+DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/simple;
+	s=yg4mwqurec7fkhzutopddd3ytuaqrvuz; d=amazon.com; t=1534142959;
+	i=@aws.amazon.com;
+	h=From:To:Message-ID:Subject:MIME-Version:Content-Type:Date;
+	bh=8KoO1suSOvnSy107UmVFztpWRkJnlLMLFgf4Z9m8u64=;
+	b=OSKatGmsEsu5+b9Fd+2vJp4W0KVGR4W6A+0b7QuGQwXwpMef4lNEH8x6dGKvNGE8
+	K1GGfCEtrrpurn8TpQ1rmZd+rgFQeEH8VaoQpk0PI+2NcrQTS3xnpAD3c1NSvRAtwab
+	bVdeAK2UjeVjCHABehf9fxvZdsgjvgkqs4VkWm2c=
+DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/simple;
+	s=ug7nbtf4gccmlpwj322ax3p6ow6yfsug; d=amazonses.com; t=1534142959;
+	h=From:To:Message-ID:Subject:MIME-Version:Content-Type:Date:Feedback-ID;
+	bh=8KoO1suSOvnSy107UmVFztpWRkJnlLMLFgf4Z9m8u64=;
+	b=hxRB7MmS34uVrPXc2FrhBS8YJBBzSw6h6avnqTy/AKRPp8DdOctxfEyJGYE0m/kM
+	LujhSLDzOb3wSRCBDGA9C70NzlfENy1iUjEugmSryovWp+y18IaJ2CFKecn1N5XxAqE
+	27WVcyMXH29JtPgh6TbxENa8A/iArIrszP5s5jXg=
+From: Amazon Web Services <password-reset-noreply@aws.amazon.com>
+To: in@sciose.com
+Message-ID: <01000165320bd039-35b04c3d-4b17-4f38-902a-c1cff0599b1a-000000@email.amazonses.com>
+Subject: Amazon Web Services Password Assistance
+MIME-Version: 1.0
+Content-Type: multipart/alternative; 
+	boundary="----=_Part_8995461_1812457860.1534142959661"
+X-AMAZON-MAIL-RELAY-TYPE: notification
+Bounces-to: 20180813064919dafabb0bcb104a64a41372aff440p0na@bounces.amazon.com
+X-AMAZON-METADATA: CA=CWFOQ9ZLPODGJ-RI=A35GZ5WAF3R00K
+X-Original-MessageID: <urn.rtn.msg.20180813064919dafabb0bcb104a64a41372aff440p0na@1534142959662.rtn-svc-na-back-m4l1d-b5fef7f5.us-east-1.amazon.com>
+Date: Mon, 13 Aug 2018 06:49:19 +0000
+X-SES-Outgoing: 2018.08.13-54.240.13.80
+Feedback-ID: 1.us-east-1.ZHcGJK6s+x+i9lRHKog4RW3tECwWIf1xzTYCZyUaiec=:AmazonSES
+
+------=_Part_8995461_1812457860.1534142959661
+Content-Type: text/html; charset=utf-8
+Content-Transfer-Encoding: quoted-printable
+
+<html><body><img width=3D"1" height=3D"1" src=3D"https://www.amazon.com/gp/=
+r.html?C=3D137C9FRVBHSVM&M=3Durn:rtn:msg:20180813064919dafabb0bcb104a64a413=
+72aff440p0na&R=3DC9OW7AXM267T&T=3DO&U=3Dhttps%3A%2F%2Fimages-na.ssl-images-=
+amazon.com%2Fimages%2FG%2F01%2Fnav%2Ftransp.gif&H=3DSF4GIE2SXTJXSC00GVPV6DC=
+MJY4A&ref_=3Dpe_2640180_213386830_opens" />Greetings from Amazon Web Servic=
+es,<br><br>We received a request to reset the password for the AWS account =
+associated with this e-mail address. Click the link below to reset your pas=
+sword using our secure server:<br><br>https://signin.aws.amazon.com/resetpa=
+ssword?token=3Dx_saaNxnEz1kHzx-haTpFlT9DxENz7XsR_zI7OL4rjpwmG4aKswYI7cLzD3V=
+XdvYhuMKcz5L_fkPrSqDhnmREo2wexLJAfAoliWQ847CnNewbfemFeu4VfO6W0h0r-JbJ574a3h=
+RFQCNdQbXROUy7I0LQsOYaw5LXBxeDecUw-DqJ6JFGTL3iCriBIX0qrKRCiSVAiC7TKZu05Wa6F=
+qBoN_TbP29vobmLUr5f7q1Dgc230Ij_VkD3Uk05YAiQF7yiYxcrvOkFUP2aHnzqx3E7wWfoxU5&=
+key=3DAQIDAHhIU2rYKiqXYckMu9vmHkrP9AbVRT2DSzh4_8tpwZMe2QHwRMOsoplsw31JnEfXu=
+S6bAAAAfjB8BgkqhkiG9w0BBwagbzBtAgEAMGgGCSqGSIb3DQEHATAeBglghkgBZQMEAS4wEQQM=
+Mzkj04bYL5ztQWLYAgEQgDuXU8ihK_8XFsUleFY4Akbf0C5HrPC6EqmpptY3XAB_FwHxzwZ5JTv=
+336K00NvzSl1h_6uoi3okS7qjkQ<br><br>If clicking the link doesn't work, you c=
+an copy and paste the link into your web browser's address bar. You will be=
+ able to create a new password for your AWS account after clicking the link=
+ above.<br><br>If you did not request to have your password reset, you can =
+safely ignore this email. Rest assured your Amazon Web Services account is =
+safe.<br><br>Amazon Web Services will never email you and ask you to disclo=
+se or verify your password, credit card, or banking account number. If you =
+receive a suspicious email with a link to update your account information, =
+do not click on the link. Instead, report the e-mail to Amazon Web Services=
+ for investigation.<br>For help and support, visit the AWS Support Center a=
+t <a href=3D"https://www.amazon.com/gp/f.html?C=3D137C9FRVBHSVM&M=3Durn:rtn=
+:msg:20180813064919dafabb0bcb104a64a41372aff440p0na&R=3DC9OW7AXM267T&T=3DC&=
+U=3Dhttps%3A%2F%2Faws.amazon.com%2Fsupport%3Fref_%3Dpe_2640180_213386830&H=
+=3DPB6KJDVAUH8FUY8TQLPPVSYRPTKA&ref_=3Dpe_2640180_213386830">https://aws.am=
+azon.com/support</a>.<br><br>Thank you for using Amazon Web Services.<br><b=
+r>Sincerely,<br>The Amazon Web Service Team<img width=3D"1" height=3D"1" sr=
+c=3D"https://www.amazon.com/gp/r.html?C=3D137C9FRVBHSVM&M=3Durn:rtn:msg:201=
+80813064919dafabb0bcb104a64a41372aff440p0na&R=3DC9OW7AXM267T&T=3DE&U=3Dhttp=
+s%3A%2F%2Fimages-na.ssl-images-amazon.com%2Fimages%2FG%2F01%2Fnav%2Ftransp.=
+gif&H=3DFEGTJNAGHAZDSR5ZZAYBRQAQEQGA&ref_=3Dpe_2640180_213386830_open" /></=
+body></html>
+------=_Part_8995461_1812457860.1534142959661--

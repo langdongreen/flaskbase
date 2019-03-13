@@ -1,0 +1,39 @@
+Return-Path: <noreply@github.com>
+Received: from out-16.smtp.github.com (out-16.smtp.github.com [192.30.254.199])
+ by inbound-smtp.us-west-2.amazonaws.com with SMTP id 3nmdrmqvj7bohkf4ugc6f1pv2nqaopod8449n981
+ for in@sciose.com;
+ Thu, 28 Jun 2018 04:23:02 +0000 (UTC)
+X-SES-Spam-Verdict: PASS
+X-SES-Virus-Verdict: PASS
+Received-SPF: pass (spfCheck: domain of github.com designates 192.30.254.199 as permitted sender) client-ip=192.30.254.199; envelope-from=noreply@github.com; helo=out-16.smtp.github.com;
+Authentication-Results: amazonses.com;
+ spf=pass (spfCheck: domain of github.com designates 192.30.254.199 as permitted sender) client-ip=192.30.254.199; envelope-from=noreply@github.com; helo=out-16.smtp.github.com;
+ dkim=permerror header.i=@github.com;
+X-SES-RECEIPT: AEFBQUFBQUFBQUFHRmlSeDZHTStmQzF4Kzl4Ym5hZ0RZNXMxbWhrWVcxaW5Ydm9Xd0JMSVZvZWhGeGVDWEF0T2lRQmFQaUREUnRWRmY2Q2xzUjB0UzliL3Rzb2dkSmJ1WGhkZnB1b2twbm50bzRwbytVTFVCblllVi9UcjY1QlhMcWw0dVZMR1VlQ3JhY2dCUEhlbzdnTGhwVmR5bktRTlBYWFZiMDl3M3dldmRveHpaUUtqZGlmUXVmUUhVMkNncVY2N1VKWmg4bDUwQTlUd21SY05MREJWemY5TjE0OFJUUHdYcGsvdVZoV1hoYzFPTkdLT0tMUXFHR2J4dkxLY0lBVTdPOCttaG1LUGVJMGsrQkdIZnBBSGE0eE1KeHVmU2JLL0ZNYThaL1YwVTZ3Zmp6QjhMK0Rld0Y0R2l3WEhKTnNPTElTQ1Evazg9
+X-SES-DKIM-SIGNATURE: a=rsa-sha256; q=dns/txt; b=Tl28Gx/TdBXPwRdNsD3QJdI/Dh6Wm4FQ1aWdjyZBRNTQxQ+JUv/9iJ/tsmVIFBNI+NeorkNAPZl2us2v6XlLvBz8y7VvM065kvtJi9gXQAck1WeGEOHEhnQb6WApmkCj3pwZQPyvsQ8GT2+S7bieoqrk7S/wBipX/eDYz1TWZgg=; c=relaxed/simple; s=7v7vs6w47njt4pimodk5mmttbegzsi6n; d=amazonses.com; t=1530159783; v=1; bh=Beb4PxaUhNNCF5A37Lot2c3Tid7zz+sfzcmvu4SK78c=; h=From:To:Cc:Bcc:Subject:Date:Message-ID:MIME-Version:Content-Type:X-SES-RECEIPT;
+Date: Wed, 27 Jun 2018 21:23:02 -0700
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=github.com;
+	s=pf2014; t=1530159782;
+	bh=Beb4PxaUhNNCF5A37Lot2c3Tid7zz+sfzcmvu4SK78c=;
+	h=Date:From:Subject:From;
+	b=MOpLH17VEzKRS6UBLF4dcUhk61P7zxRRTNDmjxj7lGAp96mtQs5i/YTxWjuzt0DJc
+	 kXf26HH3WmKckbKQid5i4tFsUiYhtLg0G7/NmKTTVSR+FGqUtPyA4e40WOaTwT4Owk
+	 t/jsgFNWb8iizag+d0dGpmjWQxgR3+xoja1xEums=
+From: GitHub <noreply@github.com>
+Message-ID: <5b3462a66277b_77cc3ff38604af882961a7@github-lowworker-d2dd71d.cp1-iad.github.net.mail>
+Subject: [GitHub] A new public key was added to sciose/www
+Mime-Version: 1.0
+Content-Type: text/plain;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+X-Auto-Response-Suppress: All
+
+The following SSH key was added to the sciose/www repository by sciose:
+
+office
+5f:8b:2a:ee:da:d2:43:1d:fc:2b:bd:71:79:78:8d:0b
+
+If you believe this key was added in error, you can remove the key and disable
+access at the following location:
+
+https://github.com/sciose/www/settings/keys

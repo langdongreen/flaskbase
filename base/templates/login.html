@@ -1,0 +1,76 @@
+{% extends "layout.html" %}
+{% block body %}
+<div class="columns">
+<div class="column is-3"></div>
+
+<div class="column">
+{% if loginForm %}
+    {% for message in loginForm.email.errors %}
+      <div class="flash">{{ message }}</div>
+    {% endfor %}
+    
+    {% for message in loginForm.password.errors %}
+      <div class="flash">{{ message }}</div>
+    {% endfor %}
+
+{%endif%}
+
+ 
+  <form action="{{ url_for(action) }}" method="post">
+
+     {{ loginForm.csrf_token }}
+
+    {% if action == 'reset_password' or action == 'client_login' %}
+    <div class="field">
+        <div class="control">
+            {{ loginForm.email(placeholder="Email",class="input") }}
+        </div><!--control-->       
+    </div><!--field-->
+    {%endif%}
+    
+    {% if action == 'update_password' or action == 'client_login' %}
+    <div class="field">
+        <div class="control">
+            {{ loginForm.password(placeholder="Password",class="input") }}
+        </div><!--control-->       
+    </div><!--field-->
+    {%endif%}
+    
+    {% if action == 'update_password' and token %}
+    <div class="field">
+        <div class="control">
+            {{ loginForm.password2(placeholder="Password Again",class="input") }}
+        </div><!--control-->       
+    </div><!--field-->
+    
+    <div class="field">
+        <div class="control">
+            {{ loginForm.token(value = token) }}
+        </div><!--control-->       
+    </div><!--field-->
+    {%endif%}
+    
+    
+    
+    <div class="field">
+        <label class="label"></label>
+        <div class="control">
+            {{ loginForm.send(class="button") }}
+        </div><!--control-->       
+    </div><!--field-->
+
+
+            
+
+     
+
+    </form>
+     <a href="{{ url_for('reset_password') }}" class="has-text-centered">Lost Password</a>
+     {% if message %}
+         {{ message }}
+     {%endif%}
+     </div><!--Middle column-->
+    <div class="column is-3"></div>
+</div> <!--columns-->
+
+{% endblock %}

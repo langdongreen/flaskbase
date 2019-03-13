@@ -1,0 +1,667 @@
+Return-Path: <bounces+848413-bcf1-in=sciose.com@sgmail.github.com>
+Received: from o4.sgmail.github.com (o4.sgmail.github.com [192.254.112.99])
+ by inbound-smtp.us-west-2.amazonaws.com with SMTP id 5si5pp20bth2ekehti45gcl6hpnjfv5or6uis401
+ for in@sciose.com;
+ Thu, 28 Jun 2018 04:03:28 +0000 (UTC)
+X-SES-Spam-Verdict: PASS
+X-SES-Virus-Verdict: PASS
+Received-SPF: pass (spfCheck: domain of sgmail.github.com designates 192.254.112.99 as permitted sender) client-ip=192.254.112.99; envelope-from=bounces+848413-bcf1-in=sciose.com@sgmail.github.com; helo=o4.sgmail.github.com;
+Authentication-Results: amazonses.com;
+ spf=pass (spfCheck: domain of sgmail.github.com designates 192.254.112.99 as permitted sender) client-ip=192.254.112.99; envelope-from=bounces+848413-bcf1-in=sciose.com@sgmail.github.com; helo=o4.sgmail.github.com;
+ dkim=pass header.i=@github.com;
+X-SES-RECEIPT: AEFBQUFBQUFBQUFHSGZWbGNFK1Mxa3M0SVBQd1p6U1doR3pqWEhJUmFQbzl2MklLdDVPcFRsK0pLOCtqcXgwTGNyQmZ6MXFFejZnc3BSQzBiTkg1aGgxNzBoV0lrMXFyeVVtMjI3NHlyN1J0UzQzb2hiaGg4K3ZvMGdVRG9pd09XMUJKby9IaW1kOUF4MUJacFdRNzVoR29JNGU5ZWdGdHM1OVJ3cG5IWjAxNmkxMHF1YzdBZHpHYmVVemM1ZmJHekFvYlR5ZFo1SGhaekVlaE5KVk0zOUxjZWJJS2pWR0JNbXNxMDZyRm12R2dxbko1ZnV0NC9FZ1duelRzeDJYUUU4THpQMi9PaEFkdXh0Yk04RUdBQXNhcnVWV3gycC9OaGczdVBXbTNZT2FvRXhoSWx1MnlteVlrVEtYQTRKc0pWMzRVODdoN29yenk0R0NpT0k1TTVVZWV5TzZid25xeGc=
+X-SES-DKIM-SIGNATURE: a=rsa-sha256; q=dns/txt; b=AmxPPll7/lnzGCpFxh7hnJ4bB6Uv48xsMRgemRTGzMEpsC3Kic5cuLV4P8r4GXMuOR4WzQeEyqzkbU2p0oNlm0zFgtEJWSVP5QZ8G4M8nkA6GDeUW+F2ylo40+XaDxDOiceF7F/anvu5XbtVhciahpfeyRIYAjnZo8rhAdrCngE=; c=relaxed/simple; s=7v7vs6w47njt4pimodk5mmttbegzsi6n; d=amazonses.com; t=1530158609; v=1; bh=Uwqp1F6nfpqyFNHDBrQGHped6x2TzNn7PBEHFwYpLmk=; h=From:To:Cc:Bcc:Subject:Date:Message-ID:MIME-Version:Content-Type:X-SES-RECEIPT;
+DKIM-Signature: v=1; a=rsa-sha1; c=relaxed/relaxed; d=github.com; 
+	h=from:to:subject:mime-version:content-type:content-transfer-encoding; 
+	s=s20150108; bh=xqevY27S/UA/IO/s70yRLceAqoI=; b=wEO2IvEpxZ9RDyff
+	yQid0O1w856A58ti+kmJuDviNTMLPQWKWHMVrN8D0D4Q6VUSucnmy1r3bf6nOMgF
+	LS22pyZNMCvVA83nj8bJtv2BzUgm1aAYjK13EPNIzuBZtCPR6dkrlaqjmoF+lTws
+	p5Y982oth/kXJ8W89LC3XlYIsSo=
+Received: by filter0263p1iad2.sendgrid.net with SMTP id filter0263p1iad2-21519-5B345E0F-E
+        2018-06-28 04:03:27.2494175 +0000 UTC
+Received: from github-highworker-649cabc.cp1-iad.github.net (unknown [192.30.252.40])
+	by ismtpd0044p1mdw1.sendgrid.net (SG) with ESMTP id 2mZVpRZmRyaIK17uNAKzOA
+	for <in@sciose.com>; Thu, 28 Jun 2018 04:03:26.835 +0000 (UTC)
+Received: from github.com (localhost [127.0.0.1])
+	by github-highworker-649cabc.cp1-iad.github.net (Postfix) with ESMTP id 7C64D100C23
+	for <in@sciose.com>; Wed, 27 Jun 2018 21:03:26 -0700 (PDT)
+Date: Thu, 28 Jun 2018 04:03:27 +0000 (UTC)
+From: GitHub <support@github.com>
+To: sciose <in@sciose.com>
+Message-ID: <5b345e0e7b84c_53f03ff8db912f80934b4@github-highworker-649cabc.cp1-iad.github.net.mail>
+Subject: [GitHub] Thanks for verifying your email address.
+Mime-Version: 1.0
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: quoted-printable
+X-Auto-Response-Suppress: All
+categories: welcome
+X-SG-EID: gdxP/ONwTgRZHEcgzv5ZCQ5hlIlN+t6TjtEhSmRl9NZt1xW6yFwT/BMcCYzx2Wk0PGQcfz6C42DanW
+ 1j+3tym43ibTdw1VmCw4ltVvMahwmR8MIn0v3Az6X/9CmLqJ2t3+ZHgHoJI9BNZyft/zROxmXKxujG
+ FYNdauPvuqv3Swghm8ZyuBQF8AasorDQZ8wARxMAdQsDydaSSIdLi/BcYw==
+X-SG-ID: vsx7nv/2zpleokjqD6CJiS3lcz8Q2CP4mEOmUjO20qM=
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.=
+w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html lang=3D"en">
+  <head>
+    <meta http-equiv=3D"content-type" content=3D"text/html; charset=3Dutf-8=
+">
+    <title>Welcome to GitHub!</title>
+
+  <style type=3D"text/css">
+		#outlook a{
+			padding:0;
+		}
+		body{
+			width:100% !important;
+			min-width:100%;
+			-webkit-font-smoothing:antialiased;
+			-webkit-text-size-adjust:100%;
+			-ms-text-size-adjust:100%;
+			margin:0;
+			padding:0;
+			background:#fafafa;
+		}
+		.ExternalClass{
+			width:100%;
+		}
+		.ExternalClass,.ExternalClass p,.ExternalClass span,.ExternalClass font,.=
+ExternalClass td,.ExternalClass div{
+			line-height:100%;
+		}
+		#backgroundTable{
+			margin:0;
+			padding:0;
+			width:100% !important;
+			line-height:100% !important;
+		}
+		img{
+			outline:none;
+			text-decoration:none;
+			-ms-interpolation-mode:bicubic;
+			width:auto;
+			max-width:100%;
+		}
+		center{
+			width:100%;
+			min-width:580px;
+		}
+		.center-text{
+			text-align:center;
+		}
+		a img{
+			border:none;
+		}
+		p{
+			margin:0;
+			word-wrap:normal;
+			hyphens:none;
+			font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;
+			font-size:14px;
+			font-weight:normal;
+			color:#333;
+			line-height:20px;
+		}
+		p a{
+			color:#4183C4;
+			text-decoration:none;
+		}
+		table{
+			border-spacing:0;
+			border-collapse:collapse;
+		}
+		td{
+			word-break:break-word;
+			-webkit-hyphens:auto;
+			-moz-hyphens:auto;
+			hyphens:auto;
+			border-collapse:collapse !important;
+		}
+		table,tr,td{
+			padding:0;
+			vertical-align:top;
+			text-align:center;
+		}
+		hr.rule{
+			margin:15px 0;
+			color:#d9d9d9;
+			background-color:#d9d9d9;
+			height:1px;
+			border:none;
+		}
+		table.body{
+			height:100%;
+			width:100%;
+			background:#fafafa;
+		}
+		table.container{
+			width:580px;
+			margin:0 auto;
+			text-align:inherit;
+		}
+		table.row{
+			padding:0;
+			width:100%;
+			position:relative;
+		}
+		table.container table.row{
+			display:block;
+		}
+		td.wrapper{
+			padding:10px 20px 0 0;
+			position:relative;
+		}
+		table.columns,table.column{
+			margin:0 auto;
+		}
+		table.columns td,table.column td{
+			padding:0 0 10px;
+		}
+		table.row td.last,table.container td.last{
+			padding-right:0;
+		}
+		table.twelve{
+			width:540px;
+		}
+		table.twelve center{
+			min-width:540px;
+		}
+		table.twelve .panel center{
+			min-width:540px;
+		}
+		.body .columns td.twelve,.body .column td.twelve{
+			width:100%;
+		}
+		td.expander{
+			visibility:hidden;
+			width:0;
+			padding:0 !important;
+		}
+		table.center,td.center{
+			text-align:center;
+		}
+		img.center{
+			margin:0 auto;
+			float:none;
+		}
+		body,table.body,h1,h2,h3,h4,h5,h6,p,td{
+			color:#333333;
+			font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;
+			font-weight:normal;
+			padding:0;
+			margin:0;
+			text-align:center;
+			line-height:1.3;
+		}
+		h1,h2,h3,h4,h5,h6{
+			word-break:normal;
+			font-weight:300;
+		}
+		body,table.body,p,td{
+			font-size:14px;
+			line-height:20px;
+		}
+		a{
+			color:#4183C4;
+			text-decoration:none;
+		}
+		a:hover{
+			color:#4183C4;
+		}
+		a:active{
+			color:#4183C4;
+		}
+		a:visited{
+			color:#4183C4;
+		}
+		h1 a,h2 a,h3 a,h4 a,h5 a,h6 a,h1 a:active,h2 a:active,h3 a:active,h4 a:ac=
+tive,h5 a:active,h6 a:active,h1 a:visited,h2 a:visited,h3 a:visited,h4 a:vi=
+sited,h5 a:visited,h6 a:visited{
+			color:#4183C4;
+		}
+		.panel{
+			background:#ffffff;
+			background-color:#ffffff;
+			border:1px solid #dddddd;
+			padding:20px;
+			border-radius:3px;
+			box-shadow:0 1px 3px rgba(0,0,0,0.05);
+		}
+		div.cta-button-wrap{
+			padding:20px 0 25px;
+			text-align:center;
+			color:#ffffff;
+		}
+		div.cta-button-wrap a{
+			display:inline-block;
+			width:auto !important;
+			text-align:center;
+			background:#4183C4;
+			background-color:#4183C4;
+			border-radius:5px;
+			-webkit-border-radius:5px;
+			padding:12px 44px;
+			box-shadow:0 3px 0 #25588c;
+			font-weight:bold;
+			text-decoration:none;
+			color:#ffffff;
+			letter-spacing:normal;
+			font-size:17px;
+			font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;
+			margin:0 auto;
+			-webkit-text-size-adjust:none;
+		}
+		body.outlook p{
+			display:inline !important;
+		}
+		h1.primary-heading{
+			text-align:center;
+			margin:10px 0 25px;
+			font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;
+			font-size:38px;
+			letter-spacing:-1px;
+			color:#333;
+			font-weight:300;
+			line-height:1;
+		}
+		.panel p{
+			font-weight:300;
+			margin-bottom:15px;
+		}
+		h2{
+			font-size:28px;
+			margin:20px 0 15px;
+		}
+		img.logo-wordmark{
+			padding:25px 0 17px;
+			text-align:center;
+		}
+		table.columns td.branding{
+			text-align:center;
+			padding:10px 0;
+		}
+		img.hero-img,img.content-image{
+			margin:15px 0;
+			width:100%;
+		}
+		img.welcometocat{
+			width:352px;
+		}
+		table.layout-content div.content p{
+			margin:15px 0 5px;
+			font-size:14px;
+			font-weight:normal;
+			color:#333;
+			line-height:20px;
+		}
+		table.layout-content div.content p:first-child{
+			margin-top:5px;
+		}
+		p.footer-text{
+			margin:0;
+			font-size:12px;
+			color:#999;
+			text-align:center;
+		}
+		p.subtext{
+			margin-top:0;
+			margin-bottom:10px;
+			font-size:17px;
+			font-weight:300;
+			line-height:18px;
+			color:#555;
+		}
+		div.content-footer p{
+			margin-bottom:20px;
+		}
+		td.wrapper.last{
+			padding:0;
+		}
+		table.layout-footer div.unsubscribe{
+			padding:20px 0 0;
+			color:#888;
+			text-align:center;
+		}
+		table.layout-footer div.footer-links{
+			padding:20px 0;
+			text-align:center;
+		}
+		table.layout-footer div.content{
+			margin:0 0 15px;
+		}
+	@media only screen and (max-width: 600px){
+		table[class=3Dbody] h1.primary-heading{
+			font-size:28px !important;
+		}
+
+}	@media only screen and (max-width: 600px){
+		table[class=3Dbody] h2.content-heading{
+			font-size:22px !important;
+		}
+
+}	@media only screen and (max-width: 600px){
+		table[class=3Dbody] div.panel p{
+			line-height:17px !important;
+		}
+
+}	@media only screen and (max-width: 600px){
+		table[class=3Dbody] img{
+			width:auto !important;
+			height:auto !important;
+		}
+
+}	@media only screen and (max-width: 600px){
+		table[class=3Dbody] center{
+			min-width:0 !important;
+		}
+
+}	@media only screen and (max-width: 600px){
+		table[class=3Dbody] .container{
+			width:95% !important;
+		}
+
+}	@media only screen and (max-width: 600px){
+		table[class=3Dbody] .row{
+			width:100% !important;
+			display:table !important;
+		}
+
+}	@media only screen and (max-width: 600px){
+		table[class=3Dbody] .wrapper{
+			display:block !important;
+			padding-right:0 !important;
+		}
+
+}	@media only screen and (max-width: 600px){
+		table[class=3Dbody] .columns,table[class=3Dbody] .column{
+			table-layout:fixed !important;
+			float:none !important;
+			width:100% !important;
+			padding-right:0 !important;
+			padding-left:0 !important;
+			display:block !important;
+		}
+
+}	@media only screen and (max-width: 600px){
+		table[class=3Dbody] .wrapper.first .columns,table[class=3Dbody] .wrapper.=
+first .column{
+			display:table !important;
+		}
+
+}	@media only screen and (max-width: 600px){
+		table[class=3Dbody] table.columns td,table[class=3Dbody] table.column td{
+			width:100% !important;
+		}
+
+}	@media only screen and (max-width: 600px){
+		table[class=3Dbody] .columns td.twelve,table[class=3Dbody] .column td.twe=
+lve{
+			width:100% !important;
+		}
+
+}	@media only screen and (max-width: 600px){
+		table[class=3Dbody] table.columns td.expander{
+			width:1px !important;
+		}
+
+}	@media only screen and (max-width: 600px){
+		div[class=3Dpanel],td[class=3Dpanel],table[class=3Dpanel]{
+			padding:12px !important;
+		}
+
+}	@media only screen and (max-width: 600px){
+		table[class=3Dbody] img.logo-wordmark{
+			width:102px !important;
+		}
+
+}	@media only screen and (max-width: 600px){
+		table[class=3Dbody] img.logo-invertocat{
+			width:40px !important;
+		}
+
+}</style></head>
+  <body bgcolor=3D"#fafafa" topmargin=3D"0" leftmargin=3D"0" marginheight=
+=3D"0" marginwidth=3D"0" style=3D"min-width: 100%;-webkit-font-smoothing: a=
+ntialiased;-webkit-text-size-adjust: 100%;-ms-text-size-adjust: 100%;margin=
+: 0;padding: 0;background: #fafafa;color: #333333;font-family: 'Helvetica N=
+eue', Helvetica, Arial, sans-serif;font-weight: normal;text-align: center;l=
+ine-height: 20px;font-size: 14px;width: 100% !important;">
+    <table class=3D"body" style=3D"border-spacing:0;border-collapse:collaps=
+e;padding:0;vertical-align:top;text-align:center;height:100%;width:100%;bac=
+kground:#fafafa;color:#333333;font-family:'Helvetica Neue', Helvetica, Aria=
+l, sans-serif;font-weight:normal;margin:0;line-height:20px;font-size:14px;">
+      <tr style=3D"padding:0;vertical-align:top;text-align:center;">
+        <td class=3D"center" align=3D"center" valign=3D"top" style=3D"paddi=
+ng:0;vertical-align:top;text-align:center;color:#333333;font-family:'Helvet=
+ica Neue', Helvetica, Arial, sans-serif;font-weight:normal;margin:0;line-he=
+ight:20px;font-size:14px;border-collapse:collapse !important;">
+          <center style=3D"width:100%;min-width:580px;">
+            <!--email content-->
+            <table class=3D"row header" style=3D"border-spacing:0;border-co=
+llapse:collapse;padding:0px;vertical-align:top;text-align:center;width:100%=
+;position:relative;">
+              <tr style=3D"padding:0;vertical-align:top;text-align:center;">
+                <td class=3D"center" align=3D"center" style=3D"padding:0;ve=
+rtical-align:top;text-align:center;color:#333333;font-family:'Helvetica Neu=
+e', Helvetica, Arial, sans-serif;font-weight:normal;margin:0;line-height:20=
+px;font-size:14px;border-collapse:collapse !important;">
+                  <center style=3D"width:100%;min-width:580px;">
+                    <table class=3D"container" style=3D"border-spacing:0;bo=
+rder-collapse:collapse;padding:0;vertical-align:top;text-align:inherit;widt=
+h:580px;margin:0 auto;">
+                      <tr style=3D"padding:0;vertical-align:top;text-align:=
+center;">
+                        <td class=3D"wrapper last" style=3D"padding:0;verti=
+cal-align:top;text-align:center;color:#333333;font-family:'Helvetica Neue',=
+ Helvetica, Arial, sans-serif;font-weight:normal;margin:0;line-height:20px;=
+font-size:14px;position:relative;padding-right:0px;border-collapse:collapse=
+ !important;">
+                          <table class=3D"twelve columns" style=3D"border-s=
+pacing:0;border-collapse:collapse;padding:0;vertical-align:top;text-align:c=
+enter;margin:0 auto;width:540px;">
+                            <tr style=3D"padding:0;vertical-align:top;text-=
+align:center;">
+                              <td style=3D"padding:0px 0px 10px;vertical-al=
+ign:top;text-align:center;color:#333333;font-family:'Helvetica Neue', Helve=
+tica, Arial, sans-serif;font-weight:normal;margin:0;line-height:20px;font-s=
+ize:14px;border-collapse:collapse !important;">
+                                <div class=3D"mark" style=3D"text-align:cen=
+ter;">
+                                  <a href=3D"https://github.com" style=3D"t=
+ext-align:center;color:#4183C4;text-decoration:none;">
+                                    <img alt=3D"GitHub, Inc." src=3D"https:=
+//assets-cdn.github.com/images/email/global/wordmark.png" width=3D"102" hei=
+ght=3D"28" class=3D"center logo-wordmark" style=3D"outline: none;text-decor=
+ation: none;-ms-interpolation-mode: bicubic;width: auto;max-width: 100%;bor=
+der: none;margin: 0 auto;float: none;padding: 25px 0 17px;text-align: cente=
+r;">
+                                  </a>
+                                  </div>
+                                </td>
+                                <td class=3D"expander" style=3D"padding:0 !=
+important;vertical-align:top;text-align:center;color:#333333;font-family:'H=
+elvetica Neue', Helvetica, Arial, sans-serif;font-weight:normal;margin:0;li=
+ne-height:20px;font-size:14px;visibility:hidden;width:0px;border-collapse:c=
+ollapse !important;">
+                                </td>
+                              </tr>
+                            </table>
+                            <!--/.twelve.columns-->
+                          </td>
+                        </tr>
+                      </table>
+                      <!--/.container-->
+                    </center>
+                  </td>
+                </tr>
+              </table>
+              <!--/.row.header-->
+              <table class=3D"container" style=3D"border-spacing:0;border-c=
+ollapse:collapse;padding:0;vertical-align:top;text-align:inherit;width:580p=
+x;margin:0 auto;">
+                <tr style=3D"padding:0;vertical-align:top;text-align:center=
+;">
+                  <td style=3D"padding:0;vertical-align:top;text-align:cent=
+er;color:#333333;font-family:'Helvetica Neue', Helvetica, Arial, sans-serif=
+;font-weight:normal;margin:0;line-height:20px;font-size:14px;border-collaps=
+e:collapse !important;">
+                    <table class=3D"row" style=3D"border-spacing:0;border-c=
+ollapse:collapse;padding:0px;vertical-align:top;text-align:center;width:100=
+%;position:relative;display:block;">
+                      <tr style=3D"padding:0;vertical-align:top;text-align:=
+center;">
+                        <td class=3D"wrapper last" style=3D"padding:0;verti=
+cal-align:top;text-align:center;color:#333333;font-family:'Helvetica Neue',=
+ Helvetica, Arial, sans-serif;font-weight:normal;margin:0;line-height:20px;=
+font-size:14px;position:relative;padding-right:0px;border-collapse:collapse=
+ !important;">
+                          <div class=3D"panel" style=3D"background:#ffffff;=
+background-color:#ffffff;border:1px solid #dddddd;padding:20px;border-radiu=
+s:3px;">
+                            <table class=3D"twelve columns" style=3D"border=
+-spacing:0;border-collapse:collapse;padding:0;vertical-align:top;text-align=
+:center;margin:0 auto;width:540px;">
+                              <tr style=3D"padding:0;vertical-align:top;tex=
+t-align:center;">
+                                <td style=3D"padding:0px 0px 10px;vertical-=
+align:top;text-align:center;color:#333333;font-family:'Helvetica Neue', Hel=
+vetica, Arial, sans-serif;font-weight:normal;margin:0;line-height:20px;font=
+-size:14px;border-collapse:collapse !important;">
+                                  <div class=3D"content">
+                                    <h1 class=3D"primary-heading" mc:edit=
+=3D"primaryheading" style=3D"color:#333;font-family:'Helvetica Neue', Helve=
+tica, Arial, sans-serif;font-weight:300;padding:0;margin:10px 0 25px;text-a=
+lign:center;line-height:1;font-size:38px;letter-spacing:-1px;">Welcome,<br>=
+<strong>@sciose</strong>!</h1>
+                                    <p mc:edit=3D"introparagraph" style=3D"=
+margin:0;font-family:'Helvetica Neue', Helvetica, Arial, sans-serif;font-si=
+ze:14px;font-weight:300;color:#333333;line-height:20px;padding:0;text-align=
+:center;margin-bottom:15px;">GitHub lets you version your code, collaborate=
+ with others, and share what you=E2=80=99ve built with the world. We=E2=80=
+=99re excited to see what you make.</p>
+
+                                    <img mc:edit=3D"welcomeimage" class=3D"=
+welcometocat" src=3D"https://assets-cdn.github.com/images/email/welcome-ema=
+il/welcometocat.png" width=3D"350" style=3D"outline: none;text-decoration: =
+none;-ms-interpolation-mode: bicubic;width: 352px;max-width: 100%;" alt=3D"=
+welcometocat">
+                                  </div>
+                                  <!--/.content-->
+                                </td>
+                                <td class=3D"expander" style=3D"padding:0 !=
+important;vertical-align:top;text-align:center;color:#333333;font-family:'H=
+elvetica Neue', Helvetica, Arial, sans-serif;font-weight:normal;margin:0;li=
+ne-height:20px;font-size:14px;visibility:hidden;width:0px;border-collapse:c=
+ollapse !important;">
+                                </td>
+                              </tr>
+                            </table>
+                            <!--/.twelve-columns-->
+                          </div>
+                          <!--/.panel-->
+                        </td>
+                      </tr>
+                    </table>
+                    <!--/.row-->
+                  </td>
+                </tr>
+              </table>
+              <!--/.container-->
+              <table class=3D"row layout-footer" style=3D"border-spacing:0;=
+border-collapse:collapse;padding:0px;vertical-align:top;text-align:center;w=
+idth:100%;position:relative;">
+                <tr style=3D"padding:0;vertical-align:top;text-align:center=
+;">
+                  <td class=3D"center" align=3D"center" style=3D"padding:0;=
+vertical-align:top;text-align:center;color:#333333;font-family:'Helvetica N=
+eue', Helvetica, Arial, sans-serif;font-weight:normal;margin:0;line-height:=
+20px;font-size:14px;border-collapse:collapse !important;">
+                    <center style=3D"width:100%;min-width:580px;">
+                      <table class=3D"container" style=3D"border-spacing:0;=
+border-collapse:collapse;padding:0;vertical-align:top;text-align:inherit;wi=
+dth:580px;margin:0 auto;">
+                        <tr style=3D"padding:0;vertical-align:top;text-alig=
+n:center;">
+                          <td class=3D"wrapper last" style=3D"padding:0;ver=
+tical-align:top;text-align:center;color:#333333;font-family:'Helvetica Neue=
+', Helvetica, Arial, sans-serif;font-weight:normal;margin:0;line-height:20p=
+x;font-size:14px;position:relative;padding-right:0px;border-collapse:collap=
+se !important;">
+                            <table class=3D"twelve columns" style=3D"border=
+-spacing:0;border-collapse:collapse;padding:0;vertical-align:top;text-align=
+:center;margin:0 auto;width:540px;">
+                              <tr style=3D"padding:0;vertical-align:top;tex=
+t-align:center;">
+                                <td style=3D"padding:0px 0px 10px;vertical-=
+align:top;text-align:center;color:#333333;font-family:'Helvetica Neue', Hel=
+vetica, Arial, sans-serif;font-weight:normal;margin:0;line-height:20px;font=
+-size:14px;border-collapse:collapse !important;">
+                                  <div class=3D"footer-links" style=3D"padd=
+ing:20px 0;text-align:center;">
+                                    <p class=3D"footer-text" style=3D"margi=
+n:0;font-family:'Helvetica Neue', Helvetica, Arial, sans-serif;font-size:12=
+px;font-weight:normal;color:#999;line-height:20px;padding:0;text-align:cent=
+er;">
+                                      <a href=3D"https://github.com/setting=
+s/emails" style=3D"color:#4183C4;text-decoration:none;">Email preferences</=
+a>
+                                  </p>
+                                  <p class=3D"footer-text" style=3D"margin:=
+0;font-family:'Helvetica Neue', Helvetica, Arial, sans-serif;font-size:12px=
+;font-weight:normal;color:#999;line-height:20px;padding:0;text-align:center=
+;"><a href=3D"https://help.github.com/articles/github-terms-of-service/" st=
+yle=3D"color:#4183C4;text-decoration:none;">Terms</a> =E2=80=A2 <a href=3D"=
+https://help.github.com/articles/github-privacy-policy/" style=3D"color:#41=
+83C4;text-decoration:none;">Privacy</a> =E2=80=A2 <a href=3D"https://github=
+.com/login" style=3D"color:#4183C4;text-decoration:none;">Log in to GitHub<=
+/a>
+                                </p>
+                              </div>
+                              <div class=3D"content" style=3D"margin:0 0 15=
+px 0;">
+                                <a href=3D"https://github.com" style=3D"col=
+or:#4183C4;text-decoration:none;">
+                                  <img class=3D"logo-invertocat" src=3D"htt=
+ps://assets-cdn.github.com/images/email/global/invertocat-mark.png" width=
+=3D"40" height=3D"38" alt=3D"GitHub">
+                                </a>
+                                </div>
+                                <div class=3D"content" style=3D"margin:0 0 =
+15px 0;">
+                                  <p class=3D"footer-text" style=3D"margin:=
+0;font-family:'Helvetica Neue', Helvetica, Arial, sans-serif;font-size:12px=
+;font-weight:normal;color:#999;line-height:20px;padding:0;text-align:center=
+;">GitHub, Inc.</p>
+                                  <p class=3D"footer-text" style=3D"margin:=
+0;font-family:'Helvetica Neue', Helvetica, Arial, sans-serif;font-size:12px=
+;font-weight:normal;color:#999;line-height:20px;padding:0;text-align:center=
+;">88 Colin P Kelly Jr St.<br> San Francisco, CA 94107</p>
+                                </div>
+                              </td>
+                              <td class=3D"expander" style=3D"padding:0 !im=
+portant;vertical-align:top;text-align:center;color:#333333;font-family:'Hel=
+vetica Neue', Helvetica, Arial, sans-serif;font-weight:normal;margin:0;line=
+-height:20px;font-size:14px;visibility:hidden;width:0px;border-collapse:col=
+lapse !important;">
+                              </td>
+                            </tr>
+                          </table>
+                          <!--/.twelve.columns-->
+                        </td>
+                      </tr>
+                    </table>
+                    <!--/.container-->
+                  </center>
+                </td>
+              </tr>
+            </table>
+            <!--/.row.footer-->
+            <!--/email content-->
+          </center>
+        </td>
+      </tr>
+    </table>
+    <!--/.body-->
+  </body>
+</html>

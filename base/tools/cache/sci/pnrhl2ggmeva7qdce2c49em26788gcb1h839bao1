@@ -1,0 +1,163 @@
+Return-Path: <201806251102280fcbbcb30476439fb7f14f52bd90p0na@bounces.amazon.com>
+Received: from a13-59.smtp-out.amazonses.com (a13-59.smtp-out.amazonses.com [54.240.13.59])
+ by inbound-smtp.us-west-2.amazonaws.com with SMTP id pnrhl2ggmeva7qdce2c49em26788gcb1h839bao1
+ for in@sciose.com;
+ Mon, 25 Jun 2018 11:02:29 +0000 (UTC)
+X-SES-Spam-Verdict: PASS
+X-SES-Virus-Verdict: PASS
+Received-SPF: pass (spfCheck: domain of bounces.amazon.com designates 54.240.13.59 as permitted sender) client-ip=54.240.13.59; envelope-from=201806251102280fcbbcb30476439fb7f14f52bd90p0na@bounces.amazon.com; helo=a13-59.smtp-out.amazonses.com;
+Authentication-Results: amazonses.com;
+ spf=pass (spfCheck: domain of bounces.amazon.com designates 54.240.13.59 as permitted sender) client-ip=54.240.13.59; envelope-from=201806251102280fcbbcb30476439fb7f14f52bd90p0na@bounces.amazon.com; helo=a13-59.smtp-out.amazonses.com;
+ dkim=pass header.i=@amazonses.com;
+ dkim=pass header.i=@amazon.com;
+X-SES-RECEIPT: AEFBQUFBQUFBQUFIRXZ0T3ZQNUF1NjhSdVZZTnIrc0FYZVBZU2YwOUF2THVJWTUwaFdUUm9VblFPdFVnbVE1QW82VFFWTFh3Y1RVWkxEajZCL3RFZnl6UDBGTWhNSEZtT2dhNklmek1lWlRoNHFGOW5BcU9rbjdwN3B0WnR0d1ZqcmNYSmhYdks5NTlJZzlFWmtIalZMWGFXYlVqNHZZeHJ4NkNldDcrMGQ3bVpENG02cE05SHo5MWdaTFUwdkxBWDF0MFhNMU9teHNzdUdqV3hOZHRXM1lnSEhHZWltQ1RVVE5ndkV2M2JFOHVmamhFQ0lTcWpJME0xbVZpNnR3bVpyeEdHRVlROXUvREtza0JqaGdLYy8vakhsenBSc015NmtFSnpiTEEyMDFaTnBnZTBoWG45ZE9IN2ZITysyekFUajd6Y0lQVkoraWtOUzUrVGtCM2FoRTN0d21xV09vdHFacUJVc2xSNk9JUzV5VFVWeXpIN2pRPT0=
+X-SES-DKIM-SIGNATURE: a=rsa-sha256; q=dns/txt; b=IepVg/30B40yxSRZs9AwgQHW4R4b9/CqyeQcBSy1ufNA2k5etFMdOzkwDhv7XL2FesVyV9473BqrKS9zEMIDAyBUATynPTVCTczq0maZBPJ34eux3C6W+whNKJVT8Xqm2yyy+HrgF3nro1soVrM19Ttq9rjgIJUzQAazZPJYCr8=; c=relaxed/simple; s=7v7vs6w47njt4pimodk5mmttbegzsi6n; d=amazonses.com; t=1529924550; v=1; bh=dmWfMz2rBiUULeACNriMym+nLZWWp8BFvP031bhveuw=; h=From:To:Cc:Bcc:Subject:Date:Message-ID:MIME-Version:Content-Type:X-SES-RECEIPT;
+DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/simple;
+	s=yg4mwqurec7fkhzutopddd3ytuaqrvuz; d=amazon.com; t=1529924548;
+	h=From:To:Message-ID:Subject:MIME-Version:Content-Type:Date;
+	bh=dmWfMz2rBiUULeACNriMym+nLZWWp8BFvP031bhveuw=;
+	b=GR3K6ccSlTMGvq3QGHB1MR0CtdRQswrZt+0u1+0dnMYi5r3hp2RkaDfaMUK4DzZ8
+	YoD2dtC8Su5oDECX5+Hm78sWsKdpJm0HhAqFyVliEG0AgTYD8YrS8cw13o+FYkAsvjJ
+	UgVFXu13dptB04bUCJoomO3ofng4KPlg5LJaubNo=
+DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/simple;
+	s=ug7nbtf4gccmlpwj322ax3p6ow6yfsug; d=amazonses.com; t=1529924548;
+	h=From:To:Message-ID:Subject:MIME-Version:Content-Type:Date:Feedback-ID;
+	bh=dmWfMz2rBiUULeACNriMym+nLZWWp8BFvP031bhveuw=;
+	b=Vq+/QTUdT0995P35goBfG6I3RFpigGTRToJAawzMiK5CMBBTCK7fNYNh0j6OPJ/s
+	sb+9n6I4dAF8N3BjTigwdR03rnKm06ySuwWEHsvnevzP5mSE5gYAEeefBAq21/dogrb
+	5N7kUK2XgUu9CZaWE/W2xPOZmFJHpJLUF5UfLdzA=
+From: "Amazon Web Services, Inc." <no-reply-aws@amazon.com>
+To: in@sciose.com
+Message-ID: <01000164369bf627-66579603-c10f-4efd-ab0d-8291e10e1537-000000@email.amazonses.com>
+Subject: Getting Started with Amazon Simple Email Service (SES) [AWS
+ Account: 107837816374]
+MIME-Version: 1.0
+Content-Type: multipart/alternative; 
+	boundary="----=_Part_22695056_329751220.1529924548130"
+X-AMAZON-MAIL-RELAY-TYPE: notification
+Bounces-to: 201806251102280fcbbcb30476439fb7f14f52bd90p0na@bounces.amazon.com
+X-AMAZON-METADATA: CA=C1CN9FUGPTPOG2-CU=AE8H8YCKX0Z7W-RI=A35GZ5WAF3R00K
+X-SM-COMMUNICATION: true
+X-Original-MessageID: <urn.rtn.msg.201806251102280fcbbcb30476439fb7f14f52bd90p0na@1529924548130.rtn-svc-na-back-m4l1b-9453a94b.us-east-1.amazon.com>
+Date: Mon, 25 Jun 2018 11:02:28 +0000
+X-SES-Outgoing: 2018.06.25-54.240.13.59
+Feedback-ID: 1.us-east-1.ZHcGJK6s+x+i9lRHKog4RW3tECwWIf1xzTYCZyUaiec=:AmazonSES
+
+------=_Part_22695056_329751220.1529924548130
+Content-Type: text/plain; charset=utf-8
+Content-Transfer-Encoding: 7bit
+
+Hello,
+
+Thank you for exploring Amazon Simple Email Service (SES). Below is a list of resources that we think will be useful as you familiarize yourself with SES and its features.
+
+---------------------------------------
+
+SEND YOUR FIRST EMAIL. You can use the console, API, or SMTP interface.
+
+-- Console: https://aws.amazon.com/getting-started/tutorials/send-an-email
+-- API: http://docs.aws.amazon.com/ses/latest/DeveloperGuide/send-an-email-using-sdk.html
+-- SMTP: http://docs.aws.amazon.com/ses/latest/DeveloperGuide/send-an-email-using-smtp.html
+
+---------------------------------------
+
+VERIFY YOUR EMAIL ADDRESS OR DOMAIN. Before sending email with SES, you must verify your "From", "Source", "Sender", and "Return-Path" address to prove that you own it.
+
+-- Verify an email address: http://docs.aws.amazon.com/ses/latest/DeveloperGuide/verify-email-addresses.html
+-- Verify a domain: http://docs.aws.amazon.com/ses/latest/DeveloperGuide/verify-domains.html
+-- Check your domain verification DNS records: http://docs.aws.amazon.com/ses/latest/DeveloperGuide/domain-verification-problems.html#domain-verification-check-dns
+
+---------------------------------------
+
+MOVE OUT OF THE SANDBOX. New SES users are initially placed in a test environment called the sandbox. In the sandbox, you have full access to SES features, but you can send email only to yourself and to the mailbox simulator. You can apply to move out of the sandbox.
+
+-- Move out of the sandbox: http://docs.aws.amazon.com/ses/latest/DeveloperGuide/request-production-access.html
+
+---------------------------------------
+
+RAISE YOUR LIMITS. With SES, you have a daily sending quota (the maximum number of emails that you can send in a 24-hour period) and a maximum send rate (the maximum number of emails that SES can accept from your account per second). When you move out of the sandbox as described above, these limits automatically increase. You can then apply to increase the limits further.
+
+-- Learn about your sending limits: http://docs.aws.amazon.com/ses/latest/DeveloperGuide/manage-sending-limits.html
+-- Increase your sending limits: http://aws.amazon.com/ses/extendedaccessrequest/
+-- Learn about other SES limits: http://docs.aws.amazon.com/ses/latest/DeveloperGuide/limits.html
+
+---------------------------------------
+
+PREVENT SENDING PROBLEMS. We highly recommend that you actively monitor and act on your bounces and complaints. If your emails result in excessive bounces, complaints, or other issues, your sending abilities might be placed on probation or suspended. This process is called enforcement. In these cases, you will receive a notification at the email address associated with your AWS account.
+
+-- Monitor your sending activity: http://docs.aws.amazon.com/ses/latest/DeveloperGuide/monitor-sending-activity.html
+-- Obtain and maintain your mailing list: http://docs.aws.amazon.com/ses/latest/DeveloperGuide/best-practices-recipients.html
+-- Bounce and complaint best practices: http://docs.aws.amazon.com/ses/latest/DeveloperGuide/best-practices-bounces-complaints.html
+-- Bounce and complaint monitoring with Reputation Dashboard: https://docs.aws.amazon.com/ses/latest/DeveloperGuide/reputation-dashboard-dg.html
+-- Enforcement FAQ: http://docs.aws.amazon.com/ses/latest/DeveloperGuide/e-faq.html
+-- Bounce FAQ: http://docs.aws.amazon.com/ses/latest/DeveloperGuide/e-faq-bn.html
+-- Complaint FAQ: http://docs.aws.amazon.com/ses/latest/DeveloperGuide/e-faq-cm.html
+
+---------------------------------------
+
+INCREASE DELIVERABILITY. SES would like to help you obtain high deliverability, which is the percentage of your emails that arrive in your recipients' inboxes. You achieve high deliverability by following email sending best practices and by authenticating your emails.
+
+-- Increase deliverability: http://docs.aws.amazon.com/ses/latest/DeveloperGuide/improve-deliverability.html
+-- Authenticate your emails: http://docs.aws.amazon.com/ses/latest/DeveloperGuide/authentication.html
+-- Amazon SES Email Sending Best Practices white paper: http://media.amazonwebservices.com/AWS_Amazon_SES_Best_Practices.pdf
+
+---------------------------------------
+
+INTEGRATE WITH MAIL SERVERS. You can integrate SES with other mail servers and email clients by following our integration instructions. Because the integration uses the SMTP interface, you must first obtain your SES SMTP credentials.
+
+-- Get your SMTP credentials: http://docs.aws.amazon.com/ses/latest/DeveloperGuide/smtp-credentials.html
+-- Integrate SES with your existing mail server: http://docs.aws.amazon.com/ses/latest/DeveloperGuide/send-email-smtp-existing-server.html
+-- Integrate SES with Postfix: http://docs.aws.amazon.com/ses/latest/DeveloperGuide/postfix.html
+-- Integrate SES with Sendmail: http://docs.aws.amazon.com/ses/latest/DeveloperGuide/sendmail.html
+-- Integrate SES with email clients: http://docs.aws.amazon.com/ses/latest/DeveloperGuide/configure-email-client.html
+
+---------------------------------------
+
+TEST YOUR SYSTEM. You can use the SES mailbox simulator to simulate common email sending scenarios such as bounces and complaints without affecting your reputation or sending quota. 
+
+-- Mailbox simulator: http://docs.aws.amazon.com/ses/latest/DeveloperGuide/mailbox-simulator.html
+
+---------------------------------------
+
+TROUBLESHOOT YOUR SENDING. You can find help with troubleshooting scenarios at the links below.
+
+-- Troubleshooting topics: http://docs.aws.amazon.com/ses/latest/DeveloperGuide/troubleshooting.html
+-- Email sending errors: http://docs.aws.amazon.com/ses/latest/DeveloperGuide/ses-errors.html
+-- SMTP issues: http://docs.aws.amazon.com/ses/latest/DeveloperGuide/smtp-issues.html
+-- Suppression list bounces: http://docs.aws.amazon.com/ses/latest/DeveloperGuide/remove-from-suppression-list.html
+-- DKIM problems: http://docs.aws.amazon.com/ses/latest/DeveloperGuide/DKIM-problems.html
+
+---------------------------------------
+
+RECEIVE EMAIL. You can also use SES to receive and process email. 
+
+-- Email receiving concepts: http://docs.aws.amazon.com/ses/latest/DeveloperGuide/receiving-email.html
+-- Build an email receiving pipeline: https://aws.amazon.com/getting-started/projects/setup-email-receiving-pipeline/
+
+---------------------------------------
+
+WATCH OUR VIDEOS. Check out our videos and webcasts.
+
+-- Getting Started with Amazon SES: http://youtu.be/EKnK54TAKWg
+-- Email Best Practices with Amazon SES: http://youtu.be/U3STb1Zz7Jc
+-- Using SMTP with Amazon SES: http://youtu.be/1jEmL0UYQ5M
+-- Handling Bounces and Complaints with Amazon SES: http://youtu.be/n3Fr0bCsIvo
+-- Using Domain Verification with Amazon SES: http://youtu.be/ezpMM1dzN68
+-- re:Invent sessions: https://aws.amazon.com/ses/getting-started
+
+---------------------------------------
+
+CONTACT US. If you have questions or concerns, please reach out to us on the SES forum. If you are a Premium Support subscriber, you can also open a support case.
+
+-- SES forum: https://forums.aws.amazon.com/forum.jspa?forumID=90
+-- Open a Premium Support case: https://console.aws.amazon.com/support/home?#/case/create
+
+---------------------------------------
+
+We hope these resources help you get started with SES.
+
+Sincerely,
+The AWS Support Team
+
+Amazon Web Services, Inc. is a subsidiary of Amazon.com, Inc. Amazon.com is a registered trademark of Amazon.com, Inc. This message was produced and distributed by Amazon Web Services Inc., 410 Terry Ave. North, Seattle, WA 98109-5210
+------=_Part_22695056_329751220.1529924548130--

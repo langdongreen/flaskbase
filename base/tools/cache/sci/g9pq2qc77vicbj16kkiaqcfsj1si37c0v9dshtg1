@@ -1,0 +1,86 @@
+Return-Path: <20180624220725dfe694652c6d444d89ef616c27f0p0na@bounces.amazon.com>
+Received: from a13-64.smtp-out.amazonses.com (a13-64.smtp-out.amazonses.com [54.240.13.64])
+ by inbound-smtp.us-west-2.amazonaws.com with SMTP id g9pq2qc77vicbj16kkiaqcfsj1si37c0v9dshtg1
+ for in@sciose.com;
+ Sun, 24 Jun 2018 22:07:27 +0000 (UTC)
+X-SES-Spam-Verdict: PASS
+X-SES-Virus-Verdict: PASS
+Received-SPF: pass (spfCheck: domain of bounces.amazon.com designates 54.240.13.64 as permitted sender) client-ip=54.240.13.64; envelope-from=20180624220725dfe694652c6d444d89ef616c27f0p0na@bounces.amazon.com; helo=a13-64.smtp-out.amazonses.com;
+Authentication-Results: amazonses.com;
+ spf=pass (spfCheck: domain of bounces.amazon.com designates 54.240.13.64 as permitted sender) client-ip=54.240.13.64; envelope-from=20180624220725dfe694652c6d444d89ef616c27f0p0na@bounces.amazon.com; helo=a13-64.smtp-out.amazonses.com;
+ dkim=pass header.i=@amazon.com;
+ dkim=pass header.i=@amazonses.com;
+X-SES-RECEIPT: AEFBQUFBQUFBQUFFbHgvQ3M2UlpnUXNnVlZ3VXhDd3NmVS9jcDhmYmVjb1g5WVllYmp2VWdHaHdmZHRYM0twT3gyTHdiYTMvZFBJMTE4RHRwa1RIc3duWEtlZHpwdm9XZk83ejl6OTNJb1dzL0VpQWJ5YThXT3BxbEN2dnVyck0rNGZ0d2lZOUVZQW5BRTQ2RE5qUGd3Y3ZlK1FXZFRibTVTUm9lZEJxNWZoK0hTbnp2OTg0TWk0eUI1SkNGRFI4QzdPdURxbXdMMll2RE5ZU3pES0V4VWtYUDIrc0J5bFloTEtyV2NVZklpL0tjNDFIei9CeTdxRmlwbnREbEwrbDdJT0VOaEl3Nm5XZ01RU0s2bHE5K2k3a256MTVwUWo0TXBoUW5vM0tmQ1dFdXNTUHFXY2x0NVkwRXFhVm9aTDdINmp3OHF5eHVSRWV2REQyUEh3MFNmUlVxVW94dUdhUmMyUDRRM0ljNmlycWZQbzR2aVcrM1lnPT0=
+X-SES-DKIM-SIGNATURE: a=rsa-sha256; q=dns/txt; b=WkkMZEqz7psS+3pEAfXugQyZ1wIit5zc0IaaM1M08lbPnB9LjiLBVynEYulHiXxQfl/XAVRZgeMVaAXbQlec2p9lb4DTp3WBLCjz36ic7xuZIPA+aDzOzGtJA02xxdFAlddukR0HUT6YwaBgDe5tq8A4zPp+mfUiqP5Y9kePZWk=; c=relaxed/simple; s=7v7vs6w47njt4pimodk5mmttbegzsi6n; d=amazonses.com; t=1529878048; v=1; bh=Fe1UQFPy0/J2J/Hhwa4inRvO3keTpKE6cPArri1KxmQ=; h=From:To:Cc:Bcc:Subject:Date:Message-ID:MIME-Version:Content-Type:X-SES-RECEIPT;
+DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/simple;
+	s=yg4mwqurec7fkhzutopddd3ytuaqrvuz; d=amazon.com; t=1529878046;
+	h=From:To:Message-ID:Subject:MIME-Version:Content-Type:Date;
+	bh=Fe1UQFPy0/J2J/Hhwa4inRvO3keTpKE6cPArri1KxmQ=;
+	b=DXUvJllrlRpOJLrmsC/2t4+xjelBgAdcAAGD/wNeA20ILmo+cAChqnPmpLOw6b1s
+	MNSviuDbNjCTWpsCATTDVBLp1Fdo6EpuzRcmrjztcvY32iLoamjAoGytcRSt6XlmMRw
+	Vyq4jAwtwb3DQnxd5pRT40c4//JDNm1lR4k6GgcA=
+DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/simple;
+	s=ug7nbtf4gccmlpwj322ax3p6ow6yfsug; d=amazonses.com; t=1529878045;
+	h=From:To:Message-ID:Subject:MIME-Version:Content-Type:Date:Feedback-ID;
+	bh=Fe1UQFPy0/J2J/Hhwa4inRvO3keTpKE6cPArri1KxmQ=;
+	b=G+8dNh9lnqIotXJj06XVjgOWe3EBFNHTvtUgVKFn2Fzx72zFxPwJAb6G0e6HMTTZ
+	jIh1SgoQOAacu4yFrt/tLvcpb2QWh2rJ5lV2ZivLUmkt4kdcSf2eaRw53eZgEsSSwwj
+	vwYxZ80KEYwP/s9Fba+5cSen+M4p9k850RhGWD1U=
+From: "Amazon Web Services, Inc." <no-reply-aws@amazon.com>
+To: in@sciose.com
+Message-ID: <0100016433d66503-4e66d744-ffff-4f9b-ad6d-4ab60a5ea663-000000@email.amazonses.com>
+Subject: Getting Started with Amazon Simple Storage Service (S3) [AWS
+ Account: 107837816374]
+MIME-Version: 1.0
+Content-Type: multipart/alternative; 
+	boundary="----=_Part_21692383_706484912.1529878045948"
+X-AMAZON-MAIL-RELAY-TYPE: notification
+Bounces-to: 20180624220725dfe694652c6d444d89ef616c27f0p0na@bounces.amazon.com
+X-AMAZON-METADATA: CA=C1CN9FUGPTPOG2-CU=AE8H8YCKX0Z7W-RI=A35GZ5WAF3R00K
+X-SM-COMMUNICATION: true
+X-Original-MessageID: <urn.rtn.msg.20180624220725dfe694652c6d444d89ef616c27f0p0na@1529878045948.rtn-svc-na-back-m4l1b-b67f3464.us-east-1.amazon.com>
+Date: Sun, 24 Jun 2018 22:07:25 +0000
+X-SES-Outgoing: 2018.06.24-54.240.13.64
+Feedback-ID: 1.us-east-1.ZHcGJK6s+x+i9lRHKog4RW3tECwWIf1xzTYCZyUaiec=:AmazonSES
+
+------=_Part_21692383_706484912.1529878045948
+Content-Type: text/plain; charset=utf-8
+Content-Transfer-Encoding: 7bit
+
+Hello,
+
+You are receiving this email because the first S3 bucket was created in your account[1] and we'd like to help you get started with S3. Please take a look at the following resources to learn more about S3's features and capabilities.
+
+Getting Started with Amazon S3:
+- Video intro to S3: https://www.youtube.com/watch?v=77lMCiiMilo
+- Getting Started with Amazon Simple Storage Service: http://docs.aws.amazon.com/AmazonS3/latest/gsg/GetStartedWithS3.html
+- Frequently Asked Questions: https://aws.amazon.com/s3/faqs/
+
+S3 offers many capabilities like enhanced security features, tools to manage the lifecycle of an object, and the ability to setup event driven workflows.
+
+Within security, we provide the ability to:
+- Manage Access to Your S3 Resources:  http://docs.aws.amazon.com/AmazonS3/latest/dev/intro-managing-access-s3-resources.html
+- Log Requests to Your Bucket: http://docs.aws.amazon.com/AmazonS3/latest/UG/ManagingBucketLogging.html
+- Version Control Your Objects: http://docs.aws.amazon.com/AmazonS3/latest/dev/Versioning.html
+
+To manage the lifecycle of an object, we provide the ability to automatically delete or transition objects to Glacier: http://docs.aws.amazon.com/AmazonS3/latest/dev/object-lifecycle-mgmt.html
+
+To get started with event driven workflows, you can configure Amazon S3 Event Notifications: http://docs.aws.amazon.com/AmazonS3/latest/dev/NotificationHowTo.html
+
+S3 also supports many use cases like running a web service/application or running enterprise applications. We have several narratives that can help you on this journey like:
+- Host a Static Website: http://docs.aws.amazon.com/AmazonS3/latest/dev/WebsiteHosting.html
+- Monitor Storage Metrics with Amazon CloudWatch: http://docs.aws.amazon.com/AmazonS3/latest/dev/cloudwatch-monitoring.html
+- Programmatically Access S3 with the AWS Command Line Interface: http://docs.aws.amazon.com/cli/latest/userguide/cli-chap-getting-set-up.html
+- Optimize Performance for High Request Rates (More Than 100 Requests per Second):  http://docs.aws.amazon.com/AmazonS3/latest/dev/request-rate-perf-considerations.html
+
+We hope these resources will answer your questions and help you get started using Amazon S3. If you have additional questions or concerns, please reach out to us on the S3 forums: https://forums.aws.amazon.com/forum.jspa?forumID=24
+
+For Premium Support subscribers, please open a support case: https://console.aws.amazon.com/support/home?#/case/create
+
+Sincerely,
+The AWS Support Team
+
+[1]: If you did not create an S3 bucket recently, please note that other AWS Services (such as CloudFormation, CloudTrail, CodeDeploy, Elastic Beanstalk, and Elastic Load Balancer) and third party tools may have created an S3 bucket on your behalf. A list of your S3 buckets is available at: https://console.aws.amazon.com/s3/home
+
+Amazon Web Services, Inc. is a subsidiary of Amazon.com, Inc. Amazon.com is a registered trademark of Amazon.com, Inc. This message was produced and distributed by Amazon Web Services Inc., 410 Terry Ave. North, Seattle, WA 98109-5210
+------=_Part_21692383_706484912.1529878045948--

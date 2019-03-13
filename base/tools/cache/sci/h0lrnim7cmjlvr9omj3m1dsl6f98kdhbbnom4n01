@@ -1,0 +1,104 @@
+Return-Path: <201806242207258a92b196727d4ffba868b530ffa0p0na@bounces.amazon.com>
+Received: from a13-59.smtp-out.amazonses.com (a13-59.smtp-out.amazonses.com [54.240.13.59])
+ by inbound-smtp.us-west-2.amazonaws.com with SMTP id h0lrnim7cmjlvr9omj3m1dsl6f98kdhbbnom4n01
+ for in@sciose.com;
+ Sun, 24 Jun 2018 22:07:26 +0000 (UTC)
+X-SES-Spam-Verdict: PASS
+X-SES-Virus-Verdict: PASS
+Received-SPF: pass (spfCheck: domain of bounces.amazon.com designates 54.240.13.59 as permitted sender) client-ip=54.240.13.59; envelope-from=201806242207258a92b196727d4ffba868b530ffa0p0na@bounces.amazon.com; helo=a13-59.smtp-out.amazonses.com;
+Authentication-Results: amazonses.com;
+ spf=pass (spfCheck: domain of bounces.amazon.com designates 54.240.13.59 as permitted sender) client-ip=54.240.13.59; envelope-from=201806242207258a92b196727d4ffba868b530ffa0p0na@bounces.amazon.com; helo=a13-59.smtp-out.amazonses.com;
+ dkim=pass header.i=@amazonses.com;
+ dkim=pass header.i=@amazon.com;
+X-SES-RECEIPT: AEFBQUFBQUFBQUFFSERXc2M2VUp4c1NOcitrWmZJM1l3dEVTcWxPWDM3NHZXbzVhV0cvbmtaWWlpTHViMEFQL2Y0VldsaUJTSHhpank0YWJVSk9KcHNaNnZLYkJUYlluWSsyZkczNDF4bUlGZVJJNUJnYUxaMGNLY25qSXZoY1hXelE4YTBlVTJmWUgzNWk1ZkEvbW8zZHZ2ZzlHNzFmVTV2cFNhdkFqZUcrcmE2WXZ3M1VCemVJOE52Mmp5emVsWThLdkEvRStvRndMOTBWbUdaejgwMEZzM3dSSXM0WDhCKzdVOTVVclVIelZNeEE1ZVpVVEtxSmR6bTU5cUJrYkNvUHRwTU5jT0o3OFd3NDM1YWxxR2Fhak1Gb1pFM1lCUVF5NTBacUpZTVdsTndLUDg3aTRJYW5ENk5JWUIza0ZEcnVOVEk3dlhTVTI1cFhkWE13eHZiZERRcHlpQU1mSWVIY01mbW9US0htUm92VlkvZUhVZDJ3PT0=
+X-SES-DKIM-SIGNATURE: a=rsa-sha256; q=dns/txt; b=TbSgcDtm8w+zZN6vj4eOI2Oswv/auTpYAWYYcPZp2SV6iPCL3kiwgEIUT3n8+WSXvLOvGjfdIG9jdnsHUCgj7AzQS54pyZ2MvKK1rNeGZVfo1zzSX4OY2WUATYPQILQNAdDc0MzWS/toGoOrqvmnq31rgJMS51HSutLyIq/g8D0=; c=relaxed/simple; s=7v7vs6w47njt4pimodk5mmttbegzsi6n; d=amazonses.com; t=1529878046; v=1; bh=ZZhDm2GXArcjp4jdgVuQ2A87vWGatKgmtHnDQkN5/F0=; h=From:To:Cc:Bcc:Subject:Date:Message-ID:MIME-Version:Content-Type:X-SES-RECEIPT;
+DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/simple;
+	s=yg4mwqurec7fkhzutopddd3ytuaqrvuz; d=amazon.com; t=1529878045;
+	h=From:To:Message-ID:Subject:MIME-Version:Content-Type:Date;
+	bh=ZZhDm2GXArcjp4jdgVuQ2A87vWGatKgmtHnDQkN5/F0=;
+	b=PpIDAZaRCtKZ83NDgenpcWM6Xh/VKz0+4HCiYOQkVIhtjPLB75CvXU7NMf1M2biZ
+	y6QegX/dNo8/MlvQaBOPaLvrLQBM8TZyNQN3ARheKgyKaEg3hioyeZtfugEQVxxqg2g
+	UFVtcwgV5jYTBJbkCRgo1+mXFh6vqMx2plezkmPk=
+DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/simple;
+	s=ug7nbtf4gccmlpwj322ax3p6ow6yfsug; d=amazonses.com; t=1529878045;
+	h=From:To:Message-ID:Subject:MIME-Version:Content-Type:Date:Feedback-ID;
+	bh=ZZhDm2GXArcjp4jdgVuQ2A87vWGatKgmtHnDQkN5/F0=;
+	b=O5UJzKxR/O2+jxjiEWLlDZUw5Wr+UmUZfoXHWfn3z8EBb/gCG1N/elbOL3S1PsVM
+	DiDgknELk7mWVinfDRAF6Wl4c8NQh3+Gt2BwhjA4jZREwbdPKTMat8NxENntSQhnAyR
+	Kojw22ITL5jYPtByCCLEb0svgF+ZX9URK4zx3cRs=
+From: "Amazon Web Services, Inc." <no-reply-aws@amazon.com>
+To: in@sciose.com
+Message-ID: <0100016433d661dc-06d145a7-568a-417f-afdc-b74cdb17c049-000000@email.amazonses.com>
+Subject: Getting Started with Amazon Web Services Route 53 Service [AWS
+ Account: 107837816374]
+MIME-Version: 1.0
+Content-Type: multipart/alternative; 
+	boundary="----=_Part_21765966_252956968.1529878045125"
+X-AMAZON-MAIL-RELAY-TYPE: notification
+Bounces-to: 201806242207258a92b196727d4ffba868b530ffa0p0na@bounces.amazon.com
+X-AMAZON-METADATA: CA=C1CN9FUGPTPOG2-CU=AE8H8YCKX0Z7W-RI=A35GZ5WAF3R00K
+X-SM-COMMUNICATION: true
+X-Original-MessageID: <urn.rtn.msg.201806242207258a92b196727d4ffba868b530ffa0p0na@1529878045125.rtn-svc-na-back-m4l1e-bd285cbd.us-east-1.amazon.com>
+Date: Sun, 24 Jun 2018 22:07:25 +0000
+X-SES-Outgoing: 2018.06.24-54.240.13.59
+Feedback-ID: 1.us-east-1.ZHcGJK6s+x+i9lRHKog4RW3tECwWIf1xzTYCZyUaiec=:AmazonSES
+
+------=_Part_21765966_252956968.1529878045125
+Content-Type: text/plain; charset=utf-8
+Content-Transfer-Encoding: 7bit
+
+Hello,
+
+Thank you for activating Amazon Route 53 Service. We would like to help you get started to make your experience with Route 53 better. We have put together a few documents, getting started videos and resources which we think will be useful as you familiarize yourself with this product.
+
+Creating your First Hosted Zone
+
+How should I create record sets?
+http://docs.aws.amazon.com/Route53/latest/DeveloperGuide/resource-record-sets-creating.html
+
+Wondering how to choose the correct routing policy?
+http://docs.aws.amazon.com/Route53/latest/DeveloperGuide/routing-policy.html
+
+What is an alias record? Should I use it?
+http://docs.aws.amazon.com/Route53/latest/DeveloperGuide/resource-record-sets-choosing-alias-non-alias.html
+
+Configuring Amazon Route 53 as your DNS Service
+
+What are the assigned name servers for my hosted zone?
+http://docs.aws.amazon.com/Route53/latest/DeveloperGuide/GetInfoAboutHostedZone.html
+
+What will be the best practice for migration process?
+http://docs.aws.amazon.com/Route53/latest/DeveloperGuide/MigratingDNS.html
+
+Additional Features from Amazon Route 53
+
+Is there a way to have additional availability from DNS layer?
+http://docs.aws.amazon.com/Route53/latest/DeveloperGuide/dns-failover.html
+
+Can I use Route 53 as my private DNS service?
+http://docs.aws.amazon.com/Route53/latest/DeveloperGuide/hosted-zones-private.html
+
+Videos and self-paced Lab
+
+Want some hands on experience? 
+https://aws.amazon.com/training/intro_series/#networking-1
+
+How do I transfer a domain to Route 53?
+https://aws.amazon.com/premiumsupport/knowledge-center/transfer-domain-to-aws/
+
+How do I verify that resource record sets are accessible from the Internet?
+https://aws.amazon.com/premiumsupport/knowledge-center/route-53-reachable-resource-record-sets/
+
+What can I check when I'm unable to access my website when using the Route 53 DNS Service?
+https://aws.amazon.com/premiumsupport/knowledge-center/route-53-dns-website-unreachable/
+
+
+We hope these resources will answer your questions and help you get started using Amazon Route 53. If you have additional questions or concerns, please reach out to us on the AWS Route 53 forum: https://forums.aws.amazon.com/forum.jspa?forumID=87
+
+For Premium Support subscribers, please open a support case: https://console.aws.amazon.com/support/home?#/case/create
+
+Regards,
+The AWS Route 53 Team
+
+Amazon Web Services, Inc. is a subsidiary of Amazon.com, Inc. Amazon.com is a registered trademark of Amazon.com, Inc. This message was produced and distributed by Amazon Web Services Inc., 410 Terry Ave. North, Seattle, WA 98109-5210
+------=_Part_21765966_252956968.1529878045125--
