@@ -1,7 +1,6 @@
 /venv
-*.pyc
-*.pyo
-*/__pycache__
+*.py[cod]
+__pycache__/
 debug.log
 config.py
 config.json
