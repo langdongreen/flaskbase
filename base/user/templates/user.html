@@ -4,3 +4,8 @@
 {{ message }}
 
 {% endblock %}
+
+
+git filter-branch --force --index-filter \\
+  'git rm --cached --ignore-unmatch /home/lg/private/lg/projects/software/flaskbase/config.py' \
+  --prune-empty --tag-name-filter cat -- --all

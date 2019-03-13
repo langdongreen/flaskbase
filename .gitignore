@@ -2,3 +2,6 @@
 *.pyc
 *.pyo
 */__pycache__
+debug.log
+config.py
+config.json
