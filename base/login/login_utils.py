@@ -1,21 +1,25 @@
 from ..tools import sdb
 from argon2 import PasswordHasher
-from base import c,logging
+from base.tools import jsonconfig as config
+import logging
+log = logging.getLogger(__name__)
 
 def user_exists(user):
     '''Check to make sure user item is in sdb'''
+    c = config.get_config()
     try:
         item = sdb.get_attributes(c['domain'],user)
         if item['Attributes']:
             return True;
         
     except Exception as e:
-        logging.error(e)
+        log.error(e)
         return None
 
 
 def new_user(user,password):
     '''Add new user item and password attribute to sdb'''
+    c = config.get_config()
     hash = hash_password(password)
 
     try:
@@ -23,27 +27,28 @@ def new_user(user,password):
         sdb.add_attribute(c['domain'],user,('password',hash))
         return True
     except KeyError as e:
-        logging.error(e)
+        log.error(e)
         return False
     
 
 def confirm_user(user):
     '''Confirm users email is valid'''
+    c = config.get_config()
     if user_exists(user):
      return sdb.add_attribute(c['domain'],user,('confirmed','1'))
  
 def user_confirmed(user):
     '''check if user item has been confirmed'''
-  
+    c = config.get_config()
     try:
         items = sdb.get_attributes(c['domain'],user)['Attributes']
-        logging.debug(next(item for item in items if item["Name"] == "confirmed"))
+        log.debug(next(item for item in items if item["Name"] == "confirmed"))
         if next(item['Value'] for item in items if item["Name"] == "confirmed") == '1':
             return True
         else:
             return False
     except Exception as e:
-        logging.debug(e)
+        log.debug(e)
         return None
                
 
@@ -53,14 +58,16 @@ def delete_user(user):
 
 def change_password(user,password):
     '''update sdb user item with new password'''
+    c = config.get_config()
     hash = hash_password(password)
     sdb.add_attribute(c['domain'],user,('password',hash))
 
 def login_user(user,input):
     '''Retrieve user item and password attribute from sdb and check password'''
+    c = config.get_config()
     password = sdb.get_attributes(c['domain'],user)
 
-    logging.debug(password)
+    log.debug(password)
     if password:
         password = password['Attributes'][0]['Value']
 
@@ -72,7 +79,7 @@ def check_password(input,password):
     try:
         ph.verify(password,input)
     except Exception as e:
-        logging.error(e)
+        log.error(e)
         return False
 
     return True

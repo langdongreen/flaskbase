@@ -1,19 +1,23 @@
 from flask import Flask,g,session
 import logging
-from flask_mail import Mail
-from itsdangerous import URLSafeTimedSerializer
+
 from base.tools import jsonconfig as config
+
+from base.login.login import login_blueprint
+from base.user.user import user_blueprint
+from base.public.public import public_blueprint
 
 app = Flask(__name__)
 app.config.from_pyfile('../config.py')
+
+#Blueprints
+app.register_blueprint(login_blueprint)
+app.register_blueprint(user_blueprint)
+app.register_blueprint(public_blueprint)
+
 logging.basicConfig(filename='debug.log',level=logging.DEBUG, format='%(asctime)s,%(msecs)d %(levelname)-8s [%(filename)s:%(lineno)d] %(message)s',
     datefmt='%d-%m-%Y:%H:%M:%S')
 
-mail = Mail(app)
-app.config['WTF_CSRF_SECRET_KEY'] = app.config["SECRET_KEY"]
-
-#key for email verification
-ts = URLSafeTimedSerializer(app.config["SECRET_KEY"])
 c = config.get_config()
 
 #default template variables
@@ -61,8 +65,5 @@ def add_header(response):
     return response'''
 
 '''Import application files'''
-from base.user import user
-from base.login import login
-from base.public import public
 
 

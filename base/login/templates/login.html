@@ -20,7 +20,7 @@
 
      {{ loginForm.csrf_token }}
 
-    {% if action == 'reset_password' or action == 'client_login' %}
+    {% if action == 'login.reset_password' or action == 'login.client_login' %}
     <div class="field">
         <div class="control">
             {{ loginForm.email(placeholder="Email",class="input") }}
@@ -28,7 +28,7 @@
     </div><!--field-->
     {%endif%}
     
-    {% if action == 'update_password' or action == 'client_login' %}
+    {% if action == 'login.update_password' or action == 'login.client_login' %}
     <div class="field">
         <div class="control">
             {{ loginForm.password(placeholder="Password",class="input") }}
@@ -36,7 +36,7 @@
     </div><!--field-->
     {%endif%}
     
-    {% if action == 'update_password' and token %}
+    {% if action == 'login.update_password' and token %}
     <div class="field">
         <div class="control">
             {{ loginForm.password2(placeholder="Password Again",class="input") }}
@@ -65,7 +65,7 @@
      
 
     </form>
-     <a href="{{ url_for('reset_password') }}" class="has-text-centered">Lost Password</a>
+     <a href="{{ url_for('login.reset_password') }}" class="has-text-centered">Lost Password</a>
      {% if message %}
          {{ message }}
      {%endif%}

@@ -21,7 +21,7 @@
 
     <div class="navbar" role="navigation" aria-label="main navigation">
         <div class="navbar-brand">
-            <a class="navbar-item" href="{{ url_for('index') }}">{{ banner }}</a>
+            <a class="navbar-item" href="{{ url_for('public.index') }}">{{ banner }}</a>
             
             <a role="button" class="navbar-burger burger" aria-label="menu" aria-expanded="false" data-target="navbarBasic">
                 <span aria-hidden="true"></span>
@@ -32,16 +32,16 @@
         
         <div id="navbarBasic" class="navbar-menu">
             <div class="navbar-start">
-                 <a class="navbar-item" href="{{ url_for('index') }}">
+                 <a class="navbar-item" href="{{ url_for('public.index') }}">
                     Home
                  </a>
                 {% if user  %}
-                     <a class="navbar-item" href="{{ url_for('user') }}">{{ user }}</a>
+                     <a class="navbar-item" href="{{ url_for('user.user') }}">{{ user }}</a>
     
-                    <a class="navbar-item" href="{{ url_for('client_logout') }}">Logout</a>
+                    <a class="navbar-item" href="{{ url_for('login.client_logout') }}">Logout</a>
     
                 {% else %}
-                    <a class="navbar-item" href="{{ url_for('client_login') }}">Login</a>
+                    <a class="navbar-item" href="{{ url_for('login.client_login') }}">Login</a>
     
                 {% endif %}
             </div><!--navbar-start-->
