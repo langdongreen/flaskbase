@@ -4,3 +4,4 @@ __pycache__/
 debug.log
 config.py
 config.json
+.fuse_hidden*
