@@ -1,14 +1,17 @@
+from flask import url_for
+from itsdangerous import URLSafeTimedSerializer
 from ..tools import sdb
 from argon2 import PasswordHasher
-from base.tools import jsonconfig as config
+from base.tools import mail
 import logging
 log = logging.getLogger(__name__)
 
+domain = 's3mail'
+
 def user_exists(user):
     '''Check to make sure user item is in sdb'''
-    c = config.get_config()
     try:
-        item = sdb.get_attributes(c['domain'],user)
+        item = sdb.get_attributes(domain,user)
         if item['Attributes']:
             return True;
         
@@ -19,29 +22,35 @@ def user_exists(user):
 
 def new_user(user,password):
     '''Add new user item and password attribute to sdb'''
-    c = config.get_config()
     hash = hash_password(password)
 
     try:
-        sdb.add_attribute(c['domain'],user,('confirmed','0'))
-        sdb.add_attribute(c['domain'],user,('password',hash))
+        sdb.add_attribute(domain,user,('confirmed','0'))
+        sdb.add_attribute(domain,user,('password',hash))
         return True
     except KeyError as e:
         log.error(e)
         return False
     
+def send_confirm(key,sender,recipient):
+    ts = URLSafeTimedSerializer(key)
+    link = url_for('login.confirm_email', _external = True, token = ts.dumps(recipient,salt='confirmationkey'))
+    mail.send_email("Confirm Email ",sender,recipient,link,'')
+    log.debug(user_confirmed(recipient))
 
+    log.info("confirmation Sent"  + email+ " IP: " + request.remote_addr)
+    
+    
 def confirm_user(user):
     '''Confirm users email is valid'''
-    c = config.get_config()
+ 
     if user_exists(user):
-     return sdb.add_attribute(c['domain'],user,('confirmed','1'))
+     return sdb.add_attribute(domain,user,('confirmed','1'))
  
 def user_confirmed(user):
     '''check if user item has been confirmed'''
-    c = config.get_config()
     try:
-        items = sdb.get_attributes(c['domain'],user)['Attributes']
+        items = sdb.get_attributes(domain,user)['Attributes']
         log.debug(next(item for item in items if item["Name"] == "confirmed"))
         if next(item['Value'] for item in items if item["Name"] == "confirmed") == '1':
             return True
@@ -58,14 +67,12 @@ def delete_user(user):
 
 def change_password(user,password):
     '''update sdb user item with new password'''
-    c = config.get_config()
     hash = hash_password(password)
-    sdb.add_attribute(c['domain'],user,('password',hash))
+    sdb.add_attribute(domain,user,('password',hash))
 
 def login_user(user,input):
     '''Retrieve user item and password attribute from sdb and check password'''
-    c = config.get_config()
-    password = sdb.get_attributes(c['domain'],user)
+    password = sdb.get_attributes(domain,user)
 
     log.debug(password)
     if password:

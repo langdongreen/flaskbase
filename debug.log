@@ -11574,3 +11574,1043 @@ b'<?xml version="1.0"?>\n<GetAttributesResponse xmlns="http://sdb.amazonaws.com/
 13-03-2019:15:46:39,30 DEBUG    [retryhandler.py:187] No retry needed.
 13-03-2019:15:46:39,31 DEBUG    [login_utils.py:70] {'Attributes': [{'Name': 'password', 'Value': '$argon2id$v=19$m=102400,t=2,p=8$QS6cYn2jJm4JbIzeoaUbyw$SLWcox7ULv/RFcdWk1Kcbg'}, {'Name': 'confirmed', 'Value': '1'}], 'ResponseMetadata': {'RequestId': '09cafc14-c128-ccd0-1970-224c440395d3', 'BoxUsage': '0.0000093282', 'HTTPStatusCode': 200, 'HTTPHeaders': {'date': 'Wed, 13 Mar 2019 05:46:38 GMT', 'content-type': 'text/xml', 'transfer-encoding': 'chunked', 'connection': 'keep-alive', 'vary': 'Accept-Encoding', 'server': 'Amazon SimpleDB'}, 'RetryAttempts': 0}}
 13-03-2019:15:46:39,144 INFO     [login.py:55] langdon@idealcs.com.au logged in IP: 127.0.0.1
+13-03-2019:16:35:01,165 DEBUG    [hooks.py:417] Changing event name from creating-client-class.iot-data to creating-client-class.iot-data-plane
+13-03-2019:16:35:01,169 DEBUG    [hooks.py:417] Changing event name from before-call.apigateway to before-call.api-gateway
+13-03-2019:16:35:01,169 DEBUG    [hooks.py:417] Changing event name from request-created.machinelearning.Predict to request-created.machine-learning.Predict
+13-03-2019:16:35:01,171 DEBUG    [hooks.py:417] Changing event name from before-parameter-build.autoscaling.CreateLaunchConfiguration to before-parameter-build.auto-scaling.CreateLaunchConfiguration
+13-03-2019:16:35:01,171 DEBUG    [hooks.py:417] Changing event name from before-parameter-build.route53 to before-parameter-build.route-53
+13-03-2019:16:35:01,172 DEBUG    [hooks.py:417] Changing event name from request-created.cloudsearchdomain.Search to request-created.cloudsearch-domain.Search
+13-03-2019:16:35:01,173 DEBUG    [hooks.py:417] Changing event name from docs.*.autoscaling.CreateLaunchConfiguration.complete-section to docs.*.auto-scaling.CreateLaunchConfiguration.complete-section
+13-03-2019:16:35:01,176 DEBUG    [hooks.py:417] Changing event name from before-parameter-build.logs.CreateExportTask to before-parameter-build.cloudwatch-logs.CreateExportTask
+13-03-2019:16:35:01,176 DEBUG    [hooks.py:417] Changing event name from docs.*.logs.CreateExportTask.complete-section to docs.*.cloudwatch-logs.CreateExportTask.complete-section
+13-03-2019:16:35:01,176 DEBUG    [hooks.py:417] Changing event name from before-parameter-build.cloudsearchdomain.Search to before-parameter-build.cloudsearch-domain.Search
+13-03-2019:16:35:01,176 DEBUG    [hooks.py:417] Changing event name from docs.*.cloudsearchdomain.Search.complete-section to docs.*.cloudsearch-domain.Search.complete-section
+13-03-2019:16:35:01,236 DEBUG    [credentials.py:1687] Looking for credentials via: env
+13-03-2019:16:35:01,237 DEBUG    [credentials.py:1687] Looking for credentials via: assume-role
+13-03-2019:16:35:01,237 DEBUG    [credentials.py:1687] Looking for credentials via: shared-credentials-file
+13-03-2019:16:35:01,237 INFO     [credentials.py:1046] Found credentials in shared credentials file: ~/.aws/credentials
+13-03-2019:16:35:01,238 DEBUG    [loaders.py:174] Loading JSON file: /usr/home/lg/private/lg/projects/software/flaskbase/venv/lib/python3.6/site-packages/botocore/data/endpoints.json
+13-03-2019:16:35:01,242 DEBUG    [hooks.py:210] Event choose-service-name: calling handler <function handle_service_name_alias at 0x802e26ae8>
+13-03-2019:16:35:01,274 DEBUG    [loaders.py:174] Loading JSON file: /usr/home/lg/private/lg/projects/software/flaskbase/venv/lib/python3.6/site-packages/botocore/data/sdb/2009-04-15/service-2.json
+13-03-2019:16:35:01,276 DEBUG    [hooks.py:210] Event creating-client-class.simpledb: calling handler <function add_generate_presigned_url at 0x802dd71e0>
+13-03-2019:16:35:01,277 DEBUG    [args.py:169] The s3 config key is not a dictionary type, ignoring its value of: None
+13-03-2019:16:35:01,279 DEBUG    [endpoint.py:266] Setting sdb timeout as (60, 60)
+13-03-2019:16:35:01,280 DEBUG    [loaders.py:174] Loading JSON file: /usr/home/lg/private/lg/projects/software/flaskbase/venv/lib/python3.6/site-packages/botocore/data/_retry.json
+13-03-2019:16:35:01,281 DEBUG    [client.py:139] Registering retry handlers for service: sdb
+13-03-2019:16:35:01,282 DEBUG    [hooks.py:210] Event before-parameter-build.simpledb.GetAttributes: calling handler <function generate_idempotent_uuid at 0x802e5be18>
+13-03-2019:16:35:01,282 DEBUG    [hooks.py:210] Event before-call.simpledb.GetAttributes: calling handler <function inject_api_version_header_if_needed at 0x802e59950>
+13-03-2019:16:35:01,282 DEBUG    [endpoint.py:101] Making request for OperationModel(name=GetAttributes) with params: {'url_path': '/', 'query_string': '', 'method': 'POST', 'headers': {'Content-Type': 'application/x-www-form-urlencoded; charset=utf-8', 'User-Agent': 'Boto3/1.9.98 Python/3.6.7 FreeBSD/12.0-RELEASE-p3 Botocore/1.12.98'}, 'body': {'Action': 'GetAttributes', 'Version': '2009-04-15', 'DomainName': 's3mail', 'ItemName': 'langdon@idealcs.com.au'}, 'url': 'https://sdb.ap-southeast-2.amazonaws.com/', 'context': {'client_region': 'ap-southeast-2', 'client_config': <botocore.config.Config object at 0x80340bcf8>, 'has_streaming_input': False, 'auth_type': None}}
+13-03-2019:16:35:01,282 DEBUG    [hooks.py:210] Event request-created.simpledb.GetAttributes: calling handler <bound method RequestSigner.handler of <botocore.signers.RequestSigner object at 0x80340bc88>>
+13-03-2019:16:35:01,282 DEBUG    [hooks.py:210] Event choose-signer.simpledb.GetAttributes: calling handler <function set_operation_specific_signer at 0x802e5bd08>
+13-03-2019:16:35:01,283 DEBUG    [auth.py:73] Calculating signature using v2 auth.
+13-03-2019:16:35:01,283 DEBUG    [auth.py:95] String to sign: POST
+sdb.ap-southeast-2.amazonaws.com
+/
+AWSAccessKeyId=AKIAIYWRP3SNXSCU3H6A&Action=GetAttributes&DomainName=s3mail&ItemName=langdon%40idealcs.com.au&SignatureMethod=HmacSHA256&SignatureVersion=2&Timestamp=2019-03-13T06%3A35%3A01Z&Version=2009-04-15
+13-03-2019:16:35:01,283 DEBUG    [endpoint.py:187] Sending http request: <AWSPreparedRequest stream_output=False, method=POST, url=https://sdb.ap-southeast-2.amazonaws.com/, headers={'Content-Type': b'application/x-www-form-urlencoded; charset=utf-8', 'User-Agent': b'Boto3/1.9.98 Python/3.6.7 FreeBSD/12.0-RELEASE-p3 Botocore/1.12.98', 'Content-Length': '271'}>
+13-03-2019:16:35:01,284 DEBUG    [retry.py:210] Converted retries value: False -> Retry(total=False, connect=None, read=None, redirect=0, status=None)
+13-03-2019:16:35:01,284 DEBUG    [connectionpool.py:813] Starting new HTTPS connection (1): sdb.ap-southeast-2.amazonaws.com:443
+13-03-2019:16:35:01,906 DEBUG    [connectionpool.py:393] https://sdb.ap-southeast-2.amazonaws.com:443 "POST / HTTP/1.1" 200 None
+13-03-2019:16:35:01,908 DEBUG    [parsers.py:234] Response headers: {'Date': 'Wed, 13 Mar 2019 06:35:01 GMT', 'Content-Type': 'text/xml', 'Transfer-Encoding': 'chunked', 'Connection': 'keep-alive', 'Vary': 'Accept-Encoding', 'Server': 'Amazon SimpleDB'}
+13-03-2019:16:35:01,908 DEBUG    [parsers.py:235] Response body:
+b'<?xml version="1.0"?>\n<GetAttributesResponse xmlns="http://sdb.amazonaws.com/doc/2009-04-15/"><GetAttributesResult><Attribute><Name>password</Name><Value>$argon2id$v=19$m=102400,t=2,p=8$QS6cYn2jJm4JbIzeoaUbyw$SLWcox7ULv/RFcdWk1Kcbg</Value></Attribute><Attribute><Name>confirmed</Name><Value>1</Value></Attribute></GetAttributesResult><ResponseMetadata><RequestId>efeb4e8d-bfdb-a14b-fff1-326fc31b5d4e</RequestId><BoxUsage>0.0000093282</BoxUsage></ResponseMetadata></GetAttributesResponse>'
+13-03-2019:16:35:01,909 DEBUG    [hooks.py:210] Event needs-retry.simpledb.GetAttributes: calling handler <botocore.retryhandler.RetryHandler object at 0x80343e128>
+13-03-2019:16:35:01,909 DEBUG    [retryhandler.py:187] No retry needed.
+13-03-2019:16:35:01,911 DEBUG    [login_utils.py:45] {'Name': 'confirmed', 'Value': '1'}
+13-03-2019:16:35:01,912 DEBUG    [hooks.py:210] Event choose-service-name: calling handler <function handle_service_name_alias at 0x802e26ae8>
+13-03-2019:16:35:01,912 DEBUG    [hooks.py:210] Event creating-client-class.simpledb: calling handler <function add_generate_presigned_url at 0x802dd71e0>
+13-03-2019:16:35:01,912 DEBUG    [args.py:169] The s3 config key is not a dictionary type, ignoring its value of: None
+13-03-2019:16:35:01,928 DEBUG    [endpoint.py:266] Setting sdb timeout as (60, 60)
+13-03-2019:16:35:01,929 DEBUG    [client.py:139] Registering retry handlers for service: sdb
+13-03-2019:16:35:01,930 DEBUG    [hooks.py:210] Event before-parameter-build.simpledb.GetAttributes: calling handler <function generate_idempotent_uuid at 0x802e5be18>
+13-03-2019:16:35:01,930 DEBUG    [hooks.py:210] Event before-call.simpledb.GetAttributes: calling handler <function inject_api_version_header_if_needed at 0x802e59950>
+13-03-2019:16:35:01,930 DEBUG    [endpoint.py:101] Making request for OperationModel(name=GetAttributes) with params: {'url_path': '/', 'query_string': '', 'method': 'POST', 'headers': {'Content-Type': 'application/x-www-form-urlencoded; charset=utf-8', 'User-Agent': 'Boto3/1.9.98 Python/3.6.7 FreeBSD/12.0-RELEASE-p3 Botocore/1.12.98'}, 'body': {'Action': 'GetAttributes', 'Version': '2009-04-15', 'DomainName': 's3mail', 'ItemName': 'langdon@idealcs.com.au'}, 'url': 'https://sdb.ap-southeast-2.amazonaws.com/', 'context': {'client_region': 'ap-southeast-2', 'client_config': <botocore.config.Config object at 0x8031ff898>, 'has_streaming_input': False, 'auth_type': None}}
+13-03-2019:16:35:01,931 DEBUG    [hooks.py:210] Event request-created.simpledb.GetAttributes: calling handler <bound method RequestSigner.handler of <botocore.signers.RequestSigner object at 0x80208bd68>>
+13-03-2019:16:35:01,931 DEBUG    [hooks.py:210] Event choose-signer.simpledb.GetAttributes: calling handler <function set_operation_specific_signer at 0x802e5bd08>
+13-03-2019:16:35:01,931 DEBUG    [auth.py:73] Calculating signature using v2 auth.
+13-03-2019:16:35:01,931 DEBUG    [auth.py:95] String to sign: POST
+sdb.ap-southeast-2.amazonaws.com
+/
+AWSAccessKeyId=AKIAIYWRP3SNXSCU3H6A&Action=GetAttributes&DomainName=s3mail&ItemName=langdon%40idealcs.com.au&SignatureMethod=HmacSHA256&SignatureVersion=2&Timestamp=2019-03-13T06%3A35%3A01Z&Version=2009-04-15
+13-03-2019:16:35:01,931 DEBUG    [endpoint.py:187] Sending http request: <AWSPreparedRequest stream_output=False, method=POST, url=https://sdb.ap-southeast-2.amazonaws.com/, headers={'Content-Type': b'application/x-www-form-urlencoded; charset=utf-8', 'User-Agent': b'Boto3/1.9.98 Python/3.6.7 FreeBSD/12.0-RELEASE-p3 Botocore/1.12.98', 'Content-Length': '271'}>
+13-03-2019:16:35:01,932 DEBUG    [retry.py:210] Converted retries value: False -> Retry(total=False, connect=None, read=None, redirect=0, status=None)
+13-03-2019:16:35:01,932 DEBUG    [connectionpool.py:813] Starting new HTTPS connection (1): sdb.ap-southeast-2.amazonaws.com:443
+13-03-2019:16:35:02,101 DEBUG    [connectionpool.py:393] https://sdb.ap-southeast-2.amazonaws.com:443 "POST / HTTP/1.1" 200 None
+13-03-2019:16:35:02,101 DEBUG    [parsers.py:234] Response headers: {'Date': 'Wed, 13 Mar 2019 06:35:02 GMT', 'Content-Type': 'text/xml', 'Transfer-Encoding': 'chunked', 'Connection': 'keep-alive', 'Vary': 'Accept-Encoding', 'Server': 'Amazon SimpleDB'}
+13-03-2019:16:35:02,102 DEBUG    [parsers.py:235] Response body:
+b'<?xml version="1.0"?>\n<GetAttributesResponse xmlns="http://sdb.amazonaws.com/doc/2009-04-15/"><GetAttributesResult><Attribute><Name>password</Name><Value>$argon2id$v=19$m=102400,t=2,p=8$QS6cYn2jJm4JbIzeoaUbyw$SLWcox7ULv/RFcdWk1Kcbg</Value></Attribute><Attribute><Name>confirmed</Name><Value>1</Value></Attribute></GetAttributesResult><ResponseMetadata><RequestId>0922193d-f9a8-c552-0efe-08331060b4ea</RequestId><BoxUsage>0.0000093282</BoxUsage></ResponseMetadata></GetAttributesResponse>'
+13-03-2019:16:35:02,102 DEBUG    [hooks.py:210] Event needs-retry.simpledb.GetAttributes: calling handler <botocore.retryhandler.RetryHandler object at 0x80343e668>
+13-03-2019:16:35:02,102 DEBUG    [retryhandler.py:187] No retry needed.
+13-03-2019:16:35:02,104 DEBUG    [hooks.py:210] Event choose-service-name: calling handler <function handle_service_name_alias at 0x802e26ae8>
+13-03-2019:16:35:02,104 DEBUG    [hooks.py:210] Event creating-client-class.simpledb: calling handler <function add_generate_presigned_url at 0x802dd71e0>
+13-03-2019:16:35:02,104 DEBUG    [args.py:169] The s3 config key is not a dictionary type, ignoring its value of: None
+13-03-2019:16:35:02,105 DEBUG    [endpoint.py:266] Setting sdb timeout as (60, 60)
+13-03-2019:16:35:02,106 DEBUG    [client.py:139] Registering retry handlers for service: sdb
+13-03-2019:16:35:02,107 DEBUG    [hooks.py:210] Event before-parameter-build.simpledb.GetAttributes: calling handler <function generate_idempotent_uuid at 0x802e5be18>
+13-03-2019:16:35:02,107 DEBUG    [hooks.py:210] Event before-call.simpledb.GetAttributes: calling handler <function inject_api_version_header_if_needed at 0x802e59950>
+13-03-2019:16:35:02,107 DEBUG    [endpoint.py:101] Making request for OperationModel(name=GetAttributes) with params: {'url_path': '/', 'query_string': '', 'method': 'POST', 'headers': {'Content-Type': 'application/x-www-form-urlencoded; charset=utf-8', 'User-Agent': 'Boto3/1.9.98 Python/3.6.7 FreeBSD/12.0-RELEASE-p3 Botocore/1.12.98'}, 'body': {'Action': 'GetAttributes', 'Version': '2009-04-15', 'DomainName': 's3mail', 'ItemName': 'langdon@idealcs.com.au'}, 'url': 'https://sdb.ap-southeast-2.amazonaws.com/', 'context': {'client_region': 'ap-southeast-2', 'client_config': <botocore.config.Config object at 0x8034a75f8>, 'has_streaming_input': False, 'auth_type': None}}
+13-03-2019:16:35:02,107 DEBUG    [hooks.py:210] Event request-created.simpledb.GetAttributes: calling handler <bound method RequestSigner.handler of <botocore.signers.RequestSigner object at 0x80343e6a0>>
+13-03-2019:16:35:02,107 DEBUG    [hooks.py:210] Event choose-signer.simpledb.GetAttributes: calling handler <function set_operation_specific_signer at 0x802e5bd08>
+13-03-2019:16:35:02,107 DEBUG    [auth.py:73] Calculating signature using v2 auth.
+13-03-2019:16:35:02,108 DEBUG    [auth.py:95] String to sign: POST
+sdb.ap-southeast-2.amazonaws.com
+/
+AWSAccessKeyId=AKIAIYWRP3SNXSCU3H6A&Action=GetAttributes&DomainName=s3mail&ItemName=langdon%40idealcs.com.au&SignatureMethod=HmacSHA256&SignatureVersion=2&Timestamp=2019-03-13T06%3A35%3A02Z&Version=2009-04-15
+13-03-2019:16:35:02,108 DEBUG    [endpoint.py:187] Sending http request: <AWSPreparedRequest stream_output=False, method=POST, url=https://sdb.ap-southeast-2.amazonaws.com/, headers={'Content-Type': b'application/x-www-form-urlencoded; charset=utf-8', 'User-Agent': b'Boto3/1.9.98 Python/3.6.7 FreeBSD/12.0-RELEASE-p3 Botocore/1.12.98', 'Content-Length': '267'}>
+13-03-2019:16:35:02,108 DEBUG    [retry.py:210] Converted retries value: False -> Retry(total=False, connect=None, read=None, redirect=0, status=None)
+13-03-2019:16:35:02,108 DEBUG    [connectionpool.py:813] Starting new HTTPS connection (1): sdb.ap-southeast-2.amazonaws.com:443
+13-03-2019:16:35:02,255 DEBUG    [connectionpool.py:393] https://sdb.ap-southeast-2.amazonaws.com:443 "POST / HTTP/1.1" 200 None
+13-03-2019:16:35:02,255 DEBUG    [parsers.py:234] Response headers: {'Date': 'Wed, 13 Mar 2019 06:35:02 GMT', 'Content-Type': 'text/xml', 'Transfer-Encoding': 'chunked', 'Connection': 'keep-alive', 'Vary': 'Accept-Encoding', 'Server': 'Amazon SimpleDB'}
+13-03-2019:16:35:02,255 DEBUG    [parsers.py:235] Response body:
+b'<?xml version="1.0"?>\n<GetAttributesResponse xmlns="http://sdb.amazonaws.com/doc/2009-04-15/"><GetAttributesResult><Attribute><Name>password</Name><Value>$argon2id$v=19$m=102400,t=2,p=8$QS6cYn2jJm4JbIzeoaUbyw$SLWcox7ULv/RFcdWk1Kcbg</Value></Attribute><Attribute><Name>confirmed</Name><Value>1</Value></Attribute></GetAttributesResult><ResponseMetadata><RequestId>d564707b-cba2-0ddb-fd64-f92f0611763d</RequestId><BoxUsage>0.0000093282</BoxUsage></ResponseMetadata></GetAttributesResponse>'
+13-03-2019:16:35:02,256 DEBUG    [hooks.py:210] Event needs-retry.simpledb.GetAttributes: calling handler <botocore.retryhandler.RetryHandler object at 0x80340bcf8>
+13-03-2019:16:35:02,256 DEBUG    [retryhandler.py:187] No retry needed.
+13-03-2019:16:35:02,257 DEBUG    [login_utils.py:70] {'Attributes': [{'Name': 'password', 'Value': '$argon2id$v=19$m=102400,t=2,p=8$QS6cYn2jJm4JbIzeoaUbyw$SLWcox7ULv/RFcdWk1Kcbg'}, {'Name': 'confirmed', 'Value': '1'}], 'ResponseMetadata': {'RequestId': 'd564707b-cba2-0ddb-fd64-f92f0611763d', 'BoxUsage': '0.0000093282', 'HTTPStatusCode': 200, 'HTTPHeaders': {'date': 'Wed, 13 Mar 2019 06:35:02 GMT', 'content-type': 'text/xml', 'transfer-encoding': 'chunked', 'connection': 'keep-alive', 'vary': 'Accept-Encoding', 'server': 'Amazon SimpleDB'}, 'RetryAttempts': 0}}
+13-03-2019:16:35:02,380 ERROR    [login_utils.py:82] The password does not match the supplied hash
+13-03-2019:16:35:02,382 WARNING  [login.py:63] langdon@idealcs.com.au password didn't match IP: 127.0.0.1
+13-03-2019:16:35:02,407 DEBUG    [hooks.py:210] Event choose-service-name: calling handler <function handle_service_name_alias at 0x802e26ae8>
+13-03-2019:16:35:02,407 DEBUG    [hooks.py:210] Event creating-client-class.simpledb: calling handler <function add_generate_presigned_url at 0x802dd71e0>
+13-03-2019:16:35:02,407 DEBUG    [args.py:169] The s3 config key is not a dictionary type, ignoring its value of: None
+13-03-2019:16:35:02,409 DEBUG    [endpoint.py:266] Setting sdb timeout as (60, 60)
+13-03-2019:16:35:02,409 DEBUG    [client.py:139] Registering retry handlers for service: sdb
+13-03-2019:16:35:02,410 DEBUG    [hooks.py:210] Event before-parameter-build.simpledb.GetAttributes: calling handler <function generate_idempotent_uuid at 0x802e5be18>
+13-03-2019:16:35:02,410 DEBUG    [hooks.py:210] Event before-call.simpledb.GetAttributes: calling handler <function inject_api_version_header_if_needed at 0x802e59950>
+13-03-2019:16:35:02,410 DEBUG    [endpoint.py:101] Making request for OperationModel(name=GetAttributes) with params: {'url_path': '/', 'query_string': '', 'method': 'POST', 'headers': {'Content-Type': 'application/x-www-form-urlencoded; charset=utf-8', 'User-Agent': 'Boto3/1.9.98 Python/3.6.7 FreeBSD/12.0-RELEASE-p3 Botocore/1.12.98'}, 'body': {'Action': 'GetAttributes', 'Version': '2009-04-15', 'DomainName': 's3mail', 'ItemName': 'langdon@idealcs.com.au'}, 'url': 'https://sdb.ap-southeast-2.amazonaws.com/', 'context': {'client_region': 'ap-southeast-2', 'client_config': <botocore.config.Config object at 0x8034e9cf8>, 'has_streaming_input': False, 'auth_type': None}}
+13-03-2019:16:35:02,411 DEBUG    [hooks.py:210] Event request-created.simpledb.GetAttributes: calling handler <bound method RequestSigner.handler of <botocore.signers.RequestSigner object at 0x8034e9c50>>
+13-03-2019:16:35:02,411 DEBUG    [hooks.py:210] Event choose-signer.simpledb.GetAttributes: calling handler <function set_operation_specific_signer at 0x802e5bd08>
+13-03-2019:16:35:02,411 DEBUG    [auth.py:73] Calculating signature using v2 auth.
+13-03-2019:16:35:02,412 DEBUG    [auth.py:95] String to sign: POST
+sdb.ap-southeast-2.amazonaws.com
+/
+AWSAccessKeyId=AKIAIYWRP3SNXSCU3H6A&Action=GetAttributes&DomainName=s3mail&ItemName=langdon%40idealcs.com.au&SignatureMethod=HmacSHA256&SignatureVersion=2&Timestamp=2019-03-13T06%3A35%3A02Z&Version=2009-04-15
+13-03-2019:16:35:02,412 DEBUG    [endpoint.py:187] Sending http request: <AWSPreparedRequest stream_output=False, method=POST, url=https://sdb.ap-southeast-2.amazonaws.com/, headers={'Content-Type': b'application/x-www-form-urlencoded; charset=utf-8', 'User-Agent': b'Boto3/1.9.98 Python/3.6.7 FreeBSD/12.0-RELEASE-p3 Botocore/1.12.98', 'Content-Length': '267'}>
+13-03-2019:16:35:02,412 DEBUG    [retry.py:210] Converted retries value: False -> Retry(total=False, connect=None, read=None, redirect=0, status=None)
+13-03-2019:16:35:02,412 DEBUG    [connectionpool.py:813] Starting new HTTPS connection (1): sdb.ap-southeast-2.amazonaws.com:443
+13-03-2019:16:35:02,561 DEBUG    [connectionpool.py:393] https://sdb.ap-southeast-2.amazonaws.com:443 "POST / HTTP/1.1" 200 None
+13-03-2019:16:35:02,562 DEBUG    [parsers.py:234] Response headers: {'Date': 'Wed, 13 Mar 2019 06:35:02 GMT', 'Content-Type': 'text/xml', 'Transfer-Encoding': 'chunked', 'Connection': 'keep-alive', 'Vary': 'Accept-Encoding', 'Server': 'Amazon SimpleDB'}
+13-03-2019:16:35:02,562 DEBUG    [parsers.py:235] Response body:
+b'<?xml version="1.0"?>\n<GetAttributesResponse xmlns="http://sdb.amazonaws.com/doc/2009-04-15/"><GetAttributesResult><Attribute><Name>password</Name><Value>$argon2id$v=19$m=102400,t=2,p=8$QS6cYn2jJm4JbIzeoaUbyw$SLWcox7ULv/RFcdWk1Kcbg</Value></Attribute><Attribute><Name>confirmed</Name><Value>1</Value></Attribute></GetAttributesResult><ResponseMetadata><RequestId>396d7a5c-cb85-4cd0-0d69-c557175c136b</RequestId><BoxUsage>0.0000093282</BoxUsage></ResponseMetadata></GetAttributesResponse>'
+13-03-2019:16:35:02,562 DEBUG    [hooks.py:210] Event needs-retry.simpledb.GetAttributes: calling handler <botocore.retryhandler.RetryHandler object at 0x8034e9c18>
+13-03-2019:16:35:02,562 DEBUG    [retryhandler.py:187] No retry needed.
+13-03-2019:16:35:02,564 DEBUG    [login_utils.py:45] {'Name': 'confirmed', 'Value': '1'}
+13-03-2019:16:35:02,564 DEBUG    [hooks.py:210] Event choose-service-name: calling handler <function handle_service_name_alias at 0x802e26ae8>
+13-03-2019:16:35:02,564 DEBUG    [hooks.py:210] Event creating-client-class.simpledb: calling handler <function add_generate_presigned_url at 0x802dd71e0>
+13-03-2019:16:35:02,565 DEBUG    [args.py:169] The s3 config key is not a dictionary type, ignoring its value of: None
+13-03-2019:16:35:02,566 DEBUG    [endpoint.py:266] Setting sdb timeout as (60, 60)
+13-03-2019:16:35:02,567 DEBUG    [client.py:139] Registering retry handlers for service: sdb
+13-03-2019:16:35:02,567 DEBUG    [hooks.py:210] Event before-parameter-build.simpledb.GetAttributes: calling handler <function generate_idempotent_uuid at 0x802e5be18>
+13-03-2019:16:35:02,567 DEBUG    [hooks.py:210] Event before-call.simpledb.GetAttributes: calling handler <function inject_api_version_header_if_needed at 0x802e59950>
+13-03-2019:16:35:02,568 DEBUG    [endpoint.py:101] Making request for OperationModel(name=GetAttributes) with params: {'url_path': '/', 'query_string': '', 'method': 'POST', 'headers': {'Content-Type': 'application/x-www-form-urlencoded; charset=utf-8', 'User-Agent': 'Boto3/1.9.98 Python/3.6.7 FreeBSD/12.0-RELEASE-p3 Botocore/1.12.98'}, 'body': {'Action': 'GetAttributes', 'Version': '2009-04-15', 'DomainName': 's3mail', 'ItemName': 'langdon@idealcs.com.au'}, 'url': 'https://sdb.ap-southeast-2.amazonaws.com/', 'context': {'client_region': 'ap-southeast-2', 'client_config': <botocore.config.Config object at 0x8034e9ac8>, 'has_streaming_input': False, 'auth_type': None}}
+13-03-2019:16:35:02,568 DEBUG    [hooks.py:210] Event request-created.simpledb.GetAttributes: calling handler <bound method RequestSigner.handler of <botocore.signers.RequestSigner object at 0x8034e9f28>>
+13-03-2019:16:35:02,568 DEBUG    [hooks.py:210] Event choose-signer.simpledb.GetAttributes: calling handler <function set_operation_specific_signer at 0x802e5bd08>
+13-03-2019:16:35:02,568 DEBUG    [auth.py:73] Calculating signature using v2 auth.
+13-03-2019:16:35:02,568 DEBUG    [auth.py:95] String to sign: POST
+sdb.ap-southeast-2.amazonaws.com
+/
+AWSAccessKeyId=AKIAIYWRP3SNXSCU3H6A&Action=GetAttributes&DomainName=s3mail&ItemName=langdon%40idealcs.com.au&SignatureMethod=HmacSHA256&SignatureVersion=2&Timestamp=2019-03-13T06%3A35%3A02Z&Version=2009-04-15
+13-03-2019:16:35:02,568 DEBUG    [endpoint.py:187] Sending http request: <AWSPreparedRequest stream_output=False, method=POST, url=https://sdb.ap-southeast-2.amazonaws.com/, headers={'Content-Type': b'application/x-www-form-urlencoded; charset=utf-8', 'User-Agent': b'Boto3/1.9.98 Python/3.6.7 FreeBSD/12.0-RELEASE-p3 Botocore/1.12.98', 'Content-Length': '267'}>
+13-03-2019:16:35:02,569 DEBUG    [retry.py:210] Converted retries value: False -> Retry(total=False, connect=None, read=None, redirect=0, status=None)
+13-03-2019:16:35:02,569 DEBUG    [connectionpool.py:813] Starting new HTTPS connection (1): sdb.ap-southeast-2.amazonaws.com:443
+13-03-2019:16:35:02,712 DEBUG    [connectionpool.py:393] https://sdb.ap-southeast-2.amazonaws.com:443 "POST / HTTP/1.1" 200 None
+13-03-2019:16:35:02,712 DEBUG    [parsers.py:234] Response headers: {'Date': 'Wed, 13 Mar 2019 06:35:02 GMT', 'Content-Type': 'text/xml', 'Transfer-Encoding': 'chunked', 'Connection': 'keep-alive', 'Vary': 'Accept-Encoding', 'Server': 'Amazon SimpleDB'}
+13-03-2019:16:35:02,712 DEBUG    [parsers.py:235] Response body:
+b'<?xml version="1.0"?>\n<GetAttributesResponse xmlns="http://sdb.amazonaws.com/doc/2009-04-15/"><GetAttributesResult><Attribute><Name>password</Name><Value>$argon2id$v=19$m=102400,t=2,p=8$QS6cYn2jJm4JbIzeoaUbyw$SLWcox7ULv/RFcdWk1Kcbg</Value></Attribute><Attribute><Name>confirmed</Name><Value>1</Value></Attribute></GetAttributesResult><ResponseMetadata><RequestId>68f95705-cf46-66bb-d4cd-f6101a3f68af</RequestId><BoxUsage>0.0000093282</BoxUsage></ResponseMetadata></GetAttributesResponse>'
+13-03-2019:16:35:02,713 DEBUG    [hooks.py:210] Event needs-retry.simpledb.GetAttributes: calling handler <botocore.retryhandler.RetryHandler object at 0x8034dee10>
+13-03-2019:16:35:02,713 DEBUG    [retryhandler.py:187] No retry needed.
+13-03-2019:16:35:02,715 DEBUG    [hooks.py:210] Event choose-service-name: calling handler <function handle_service_name_alias at 0x802e26ae8>
+13-03-2019:16:35:02,715 DEBUG    [hooks.py:210] Event creating-client-class.simpledb: calling handler <function add_generate_presigned_url at 0x802dd71e0>
+13-03-2019:16:35:02,715 DEBUG    [args.py:169] The s3 config key is not a dictionary type, ignoring its value of: None
+13-03-2019:16:35:02,716 DEBUG    [endpoint.py:266] Setting sdb timeout as (60, 60)
+13-03-2019:16:35:02,717 DEBUG    [client.py:139] Registering retry handlers for service: sdb
+13-03-2019:16:35:02,718 DEBUG    [hooks.py:210] Event before-parameter-build.simpledb.GetAttributes: calling handler <function generate_idempotent_uuid at 0x802e5be18>
+13-03-2019:16:35:02,718 DEBUG    [hooks.py:210] Event before-call.simpledb.GetAttributes: calling handler <function inject_api_version_header_if_needed at 0x802e59950>
+13-03-2019:16:35:02,718 DEBUG    [endpoint.py:101] Making request for OperationModel(name=GetAttributes) with params: {'url_path': '/', 'query_string': '', 'method': 'POST', 'headers': {'Content-Type': 'application/x-www-form-urlencoded; charset=utf-8', 'User-Agent': 'Boto3/1.9.98 Python/3.6.7 FreeBSD/12.0-RELEASE-p3 Botocore/1.12.98'}, 'body': {'Action': 'GetAttributes', 'Version': '2009-04-15', 'DomainName': 's3mail', 'ItemName': 'langdon@idealcs.com.au'}, 'url': 'https://sdb.ap-southeast-2.amazonaws.com/', 'context': {'client_region': 'ap-southeast-2', 'client_config': <botocore.config.Config object at 0x8034decc0>, 'has_streaming_input': False, 'auth_type': None}}
+13-03-2019:16:35:02,718 DEBUG    [hooks.py:210] Event request-created.simpledb.GetAttributes: calling handler <bound method RequestSigner.handler of <botocore.signers.RequestSigner object at 0x8034de828>>
+13-03-2019:16:35:02,719 DEBUG    [hooks.py:210] Event choose-signer.simpledb.GetAttributes: calling handler <function set_operation_specific_signer at 0x802e5bd08>
+13-03-2019:16:35:02,719 DEBUG    [auth.py:73] Calculating signature using v2 auth.
+13-03-2019:16:35:02,719 DEBUG    [auth.py:95] String to sign: POST
+sdb.ap-southeast-2.amazonaws.com
+/
+AWSAccessKeyId=AKIAIYWRP3SNXSCU3H6A&Action=GetAttributes&DomainName=s3mail&ItemName=langdon%40idealcs.com.au&SignatureMethod=HmacSHA256&SignatureVersion=2&Timestamp=2019-03-13T06%3A35%3A02Z&Version=2009-04-15
+13-03-2019:16:35:02,719 DEBUG    [endpoint.py:187] Sending http request: <AWSPreparedRequest stream_output=False, method=POST, url=https://sdb.ap-southeast-2.amazonaws.com/, headers={'Content-Type': b'application/x-www-form-urlencoded; charset=utf-8', 'User-Agent': b'Boto3/1.9.98 Python/3.6.7 FreeBSD/12.0-RELEASE-p3 Botocore/1.12.98', 'Content-Length': '267'}>
+13-03-2019:16:35:02,719 DEBUG    [retry.py:210] Converted retries value: False -> Retry(total=False, connect=None, read=None, redirect=0, status=None)
+13-03-2019:16:35:02,720 DEBUG    [connectionpool.py:813] Starting new HTTPS connection (1): sdb.ap-southeast-2.amazonaws.com:443
+13-03-2019:16:35:02,862 DEBUG    [connectionpool.py:393] https://sdb.ap-southeast-2.amazonaws.com:443 "POST / HTTP/1.1" 200 None
+13-03-2019:16:35:02,863 DEBUG    [parsers.py:234] Response headers: {'Date': 'Wed, 13 Mar 2019 06:35:02 GMT', 'Content-Type': 'text/xml', 'Transfer-Encoding': 'chunked', 'Connection': 'keep-alive', 'Vary': 'Accept-Encoding', 'Server': 'Amazon SimpleDB'}
+13-03-2019:16:35:02,863 DEBUG    [parsers.py:235] Response body:
+b'<?xml version="1.0"?>\n<GetAttributesResponse xmlns="http://sdb.amazonaws.com/doc/2009-04-15/"><GetAttributesResult><Attribute><Name>password</Name><Value>$argon2id$v=19$m=102400,t=2,p=8$QS6cYn2jJm4JbIzeoaUbyw$SLWcox7ULv/RFcdWk1Kcbg</Value></Attribute><Attribute><Name>confirmed</Name><Value>1</Value></Attribute></GetAttributesResult><ResponseMetadata><RequestId>babad2c5-dcd9-d0a5-0ccf-5bb683e07ec3</RequestId><BoxUsage>0.0000093282</BoxUsage></ResponseMetadata></GetAttributesResponse>'
+13-03-2019:16:35:02,863 DEBUG    [hooks.py:210] Event needs-retry.simpledb.GetAttributes: calling handler <botocore.retryhandler.RetryHandler object at 0x8034dec88>
+13-03-2019:16:35:02,863 DEBUG    [retryhandler.py:187] No retry needed.
+13-03-2019:16:35:02,865 DEBUG    [login_utils.py:70] {'Attributes': [{'Name': 'password', 'Value': '$argon2id$v=19$m=102400,t=2,p=8$QS6cYn2jJm4JbIzeoaUbyw$SLWcox7ULv/RFcdWk1Kcbg'}, {'Name': 'confirmed', 'Value': '1'}], 'ResponseMetadata': {'RequestId': 'babad2c5-dcd9-d0a5-0ccf-5bb683e07ec3', 'BoxUsage': '0.0000093282', 'HTTPStatusCode': 200, 'HTTPHeaders': {'date': 'Wed, 13 Mar 2019 06:35:02 GMT', 'content-type': 'text/xml', 'transfer-encoding': 'chunked', 'connection': 'keep-alive', 'vary': 'Accept-Encoding', 'server': 'Amazon SimpleDB'}, 'RetryAttempts': 0}}
+13-03-2019:16:35:02,969 INFO     [login.py:55] langdon@idealcs.com.au logged in IP: 127.0.0.1
+14-03-2019:14:52:15,618 DEBUG    [login_utils.py:58] name 'domain' is not defined
+14-03-2019:14:52:15,823 DEBUG    [login_utils.py:58] name 'domain' is not defined
+14-03-2019:14:55:40,528 DEBUG    [hooks.py:417] Changing event name from creating-client-class.iot-data to creating-client-class.iot-data-plane
+14-03-2019:14:55:40,532 DEBUG    [hooks.py:417] Changing event name from before-call.apigateway to before-call.api-gateway
+14-03-2019:14:55:40,532 DEBUG    [hooks.py:417] Changing event name from request-created.machinelearning.Predict to request-created.machine-learning.Predict
+14-03-2019:14:55:40,535 DEBUG    [hooks.py:417] Changing event name from before-parameter-build.autoscaling.CreateLaunchConfiguration to before-parameter-build.auto-scaling.CreateLaunchConfiguration
+14-03-2019:14:55:40,536 DEBUG    [hooks.py:417] Changing event name from before-parameter-build.route53 to before-parameter-build.route-53
+14-03-2019:14:55:40,536 DEBUG    [hooks.py:417] Changing event name from request-created.cloudsearchdomain.Search to request-created.cloudsearch-domain.Search
+14-03-2019:14:55:40,537 DEBUG    [hooks.py:417] Changing event name from docs.*.autoscaling.CreateLaunchConfiguration.complete-section to docs.*.auto-scaling.CreateLaunchConfiguration.complete-section
+14-03-2019:14:55:40,540 DEBUG    [hooks.py:417] Changing event name from before-parameter-build.logs.CreateExportTask to before-parameter-build.cloudwatch-logs.CreateExportTask
+14-03-2019:14:55:40,540 DEBUG    [hooks.py:417] Changing event name from docs.*.logs.CreateExportTask.complete-section to docs.*.cloudwatch-logs.CreateExportTask.complete-section
+14-03-2019:14:55:40,541 DEBUG    [hooks.py:417] Changing event name from before-parameter-build.cloudsearchdomain.Search to before-parameter-build.cloudsearch-domain.Search
+14-03-2019:14:55:40,541 DEBUG    [hooks.py:417] Changing event name from docs.*.cloudsearchdomain.Search.complete-section to docs.*.cloudsearch-domain.Search.complete-section
+14-03-2019:14:55:40,622 DEBUG    [credentials.py:1687] Looking for credentials via: env
+14-03-2019:14:55:40,623 DEBUG    [credentials.py:1687] Looking for credentials via: assume-role
+14-03-2019:14:55:40,623 DEBUG    [credentials.py:1687] Looking for credentials via: shared-credentials-file
+14-03-2019:14:55:40,623 INFO     [credentials.py:1046] Found credentials in shared credentials file: ~/.aws/credentials
+14-03-2019:14:55:40,681 DEBUG    [loaders.py:174] Loading JSON file: /usr/home/lg/private/lg/projects/software/flaskbase/venv/lib/python3.6/site-packages/botocore/data/endpoints.json
+14-03-2019:14:55:40,686 DEBUG    [hooks.py:210] Event choose-service-name: calling handler <function handle_service_name_alias at 0x802e27950>
+14-03-2019:14:55:40,812 DEBUG    [loaders.py:174] Loading JSON file: /usr/home/lg/private/lg/projects/software/flaskbase/venv/lib/python3.6/site-packages/botocore/data/sdb/2009-04-15/service-2.json
+14-03-2019:14:55:40,817 DEBUG    [hooks.py:210] Event creating-client-class.simpledb: calling handler <function add_generate_presigned_url at 0x802dd60d0>
+14-03-2019:14:55:40,817 DEBUG    [args.py:169] The s3 config key is not a dictionary type, ignoring its value of: None
+14-03-2019:14:55:40,820 DEBUG    [endpoint.py:266] Setting sdb timeout as (60, 60)
+14-03-2019:14:55:40,827 DEBUG    [loaders.py:174] Loading JSON file: /usr/home/lg/private/lg/projects/software/flaskbase/venv/lib/python3.6/site-packages/botocore/data/_retry.json
+14-03-2019:14:55:40,828 DEBUG    [client.py:139] Registering retry handlers for service: sdb
+14-03-2019:14:55:40,829 DEBUG    [hooks.py:210] Event before-parameter-build.simpledb.GetAttributes: calling handler <function generate_idempotent_uuid at 0x802e5bc80>
+14-03-2019:14:55:40,829 DEBUG    [hooks.py:210] Event before-call.simpledb.GetAttributes: calling handler <function inject_api_version_header_if_needed at 0x802e5f7b8>
+14-03-2019:14:55:40,829 DEBUG    [endpoint.py:101] Making request for OperationModel(name=GetAttributes) with params: {'url_path': '/', 'query_string': '', 'method': 'POST', 'headers': {'Content-Type': 'application/x-www-form-urlencoded; charset=utf-8', 'User-Agent': 'Boto3/1.9.98 Python/3.6.7 FreeBSD/12.0-RELEASE-p3 Botocore/1.12.98'}, 'body': {'Action': 'GetAttributes', 'Version': '2009-04-15', 'DomainName': 's3mail', 'ItemName': 'langdon@idealcs.com.au'}, 'url': 'https://sdb.ap-southeast-2.amazonaws.com/', 'context': {'client_region': 'ap-southeast-2', 'client_config': <botocore.config.Config object at 0x8034162e8>, 'has_streaming_input': False, 'auth_type': None}}
+14-03-2019:14:55:40,829 DEBUG    [hooks.py:210] Event request-created.simpledb.GetAttributes: calling handler <bound method RequestSigner.handler of <botocore.signers.RequestSigner object at 0x803416278>>
+14-03-2019:14:55:40,830 DEBUG    [hooks.py:210] Event choose-signer.simpledb.GetAttributes: calling handler <function set_operation_specific_signer at 0x802e5bb70>
+14-03-2019:14:55:40,830 DEBUG    [auth.py:73] Calculating signature using v2 auth.
+14-03-2019:14:55:40,830 DEBUG    [auth.py:95] String to sign: POST
+sdb.ap-southeast-2.amazonaws.com
+/
+AWSAccessKeyId=AKIAIYWRP3SNXSCU3H6A&Action=GetAttributes&DomainName=s3mail&ItemName=langdon%40idealcs.com.au&SignatureMethod=HmacSHA256&SignatureVersion=2&Timestamp=2019-03-14T04%3A55%3A40Z&Version=2009-04-15
+14-03-2019:14:55:40,831 DEBUG    [endpoint.py:187] Sending http request: <AWSPreparedRequest stream_output=False, method=POST, url=https://sdb.ap-southeast-2.amazonaws.com/, headers={'Content-Type': b'application/x-www-form-urlencoded; charset=utf-8', 'User-Agent': b'Boto3/1.9.98 Python/3.6.7 FreeBSD/12.0-RELEASE-p3 Botocore/1.12.98', 'Content-Length': '267'}>
+14-03-2019:14:55:40,832 DEBUG    [retry.py:210] Converted retries value: False -> Retry(total=False, connect=None, read=None, redirect=0, status=None)
+14-03-2019:14:55:40,832 DEBUG    [connectionpool.py:813] Starting new HTTPS connection (1): sdb.ap-southeast-2.amazonaws.com:443
+14-03-2019:14:55:41,321 DEBUG    [connectionpool.py:393] https://sdb.ap-southeast-2.amazonaws.com:443 "POST / HTTP/1.1" 200 None
+14-03-2019:14:55:41,322 DEBUG    [parsers.py:234] Response headers: {'Date': 'Thu, 14 Mar 2019 04:55:41 GMT', 'Content-Type': 'text/xml', 'Transfer-Encoding': 'chunked', 'Connection': 'keep-alive', 'Vary': 'Accept-Encoding', 'Server': 'Amazon SimpleDB'}
+14-03-2019:14:55:41,322 DEBUG    [parsers.py:235] Response body:
+b'<?xml version="1.0"?>\n<GetAttributesResponse xmlns="http://sdb.amazonaws.com/doc/2009-04-15/"><GetAttributesResult><Attribute><Name>password</Name><Value>$argon2id$v=19$m=102400,t=2,p=8$QS6cYn2jJm4JbIzeoaUbyw$SLWcox7ULv/RFcdWk1Kcbg</Value></Attribute><Attribute><Name>confirmed</Name><Value>1</Value></Attribute></GetAttributesResult><ResponseMetadata><RequestId>cdd2105c-2173-4847-3ab8-578c3471e801</RequestId><BoxUsage>0.0000093282</BoxUsage></ResponseMetadata></GetAttributesResponse>'
+14-03-2019:14:55:41,332 DEBUG    [hooks.py:210] Event needs-retry.simpledb.GetAttributes: calling handler <botocore.retryhandler.RetryHandler object at 0x8034166d8>
+14-03-2019:14:55:41,332 DEBUG    [retryhandler.py:187] No retry needed.
+14-03-2019:14:55:41,338 DEBUG    [login_utils.py:54] {'Name': 'confirmed', 'Value': '1'}
+14-03-2019:14:55:41,338 DEBUG    [hooks.py:210] Event choose-service-name: calling handler <function handle_service_name_alias at 0x802e27950>
+14-03-2019:14:55:41,339 DEBUG    [hooks.py:210] Event creating-client-class.simpledb: calling handler <function add_generate_presigned_url at 0x802dd60d0>
+14-03-2019:14:55:41,339 DEBUG    [args.py:169] The s3 config key is not a dictionary type, ignoring its value of: None
+14-03-2019:14:55:41,355 DEBUG    [endpoint.py:266] Setting sdb timeout as (60, 60)
+14-03-2019:14:55:41,356 DEBUG    [client.py:139] Registering retry handlers for service: sdb
+14-03-2019:14:55:41,357 DEBUG    [hooks.py:210] Event before-parameter-build.simpledb.GetAttributes: calling handler <function generate_idempotent_uuid at 0x802e5bc80>
+14-03-2019:14:55:41,357 DEBUG    [hooks.py:210] Event before-call.simpledb.GetAttributes: calling handler <function inject_api_version_header_if_needed at 0x802e5f7b8>
+14-03-2019:14:55:41,357 DEBUG    [endpoint.py:101] Making request for OperationModel(name=GetAttributes) with params: {'url_path': '/', 'query_string': '', 'method': 'POST', 'headers': {'Content-Type': 'application/x-www-form-urlencoded; charset=utf-8', 'User-Agent': 'Boto3/1.9.98 Python/3.6.7 FreeBSD/12.0-RELEASE-p3 Botocore/1.12.98'}, 'body': {'Action': 'GetAttributes', 'Version': '2009-04-15', 'DomainName': 's3mail', 'ItemName': 'langdon@idealcs.com.au'}, 'url': 'https://sdb.ap-southeast-2.amazonaws.com/', 'context': {'client_region': 'ap-southeast-2', 'client_config': <botocore.config.Config object at 0x8031f3240>, 'has_streaming_input': False, 'auth_type': None}}
+14-03-2019:14:55:41,357 DEBUG    [hooks.py:210] Event request-created.simpledb.GetAttributes: calling handler <bound method RequestSigner.handler of <botocore.signers.RequestSigner object at 0x8031f30f0>>
+14-03-2019:14:55:41,357 DEBUG    [hooks.py:210] Event choose-signer.simpledb.GetAttributes: calling handler <function set_operation_specific_signer at 0x802e5bb70>
+14-03-2019:14:55:41,358 DEBUG    [auth.py:73] Calculating signature using v2 auth.
+14-03-2019:14:55:41,358 DEBUG    [auth.py:95] String to sign: POST
+sdb.ap-southeast-2.amazonaws.com
+/
+AWSAccessKeyId=AKIAIYWRP3SNXSCU3H6A&Action=GetAttributes&DomainName=s3mail&ItemName=langdon%40idealcs.com.au&SignatureMethod=HmacSHA256&SignatureVersion=2&Timestamp=2019-03-14T04%3A55%3A41Z&Version=2009-04-15
+14-03-2019:14:55:41,358 DEBUG    [endpoint.py:187] Sending http request: <AWSPreparedRequest stream_output=False, method=POST, url=https://sdb.ap-southeast-2.amazonaws.com/, headers={'Content-Type': b'application/x-www-form-urlencoded; charset=utf-8', 'User-Agent': b'Boto3/1.9.98 Python/3.6.7 FreeBSD/12.0-RELEASE-p3 Botocore/1.12.98', 'Content-Length': '267'}>
+14-03-2019:14:55:41,358 DEBUG    [retry.py:210] Converted retries value: False -> Retry(total=False, connect=None, read=None, redirect=0, status=None)
+14-03-2019:14:55:41,358 DEBUG    [connectionpool.py:813] Starting new HTTPS connection (1): sdb.ap-southeast-2.amazonaws.com:443
+14-03-2019:14:55:41,528 DEBUG    [connectionpool.py:393] https://sdb.ap-southeast-2.amazonaws.com:443 "POST / HTTP/1.1" 200 None
+14-03-2019:14:55:41,529 DEBUG    [parsers.py:234] Response headers: {'Date': 'Thu, 14 Mar 2019 04:55:41 GMT', 'Content-Type': 'text/xml', 'Transfer-Encoding': 'chunked', 'Connection': 'keep-alive', 'Vary': 'Accept-Encoding', 'Server': 'Amazon SimpleDB'}
+14-03-2019:14:55:41,529 DEBUG    [parsers.py:235] Response body:
+b'<?xml version="1.0"?>\n<GetAttributesResponse xmlns="http://sdb.amazonaws.com/doc/2009-04-15/"><GetAttributesResult><Attribute><Name>password</Name><Value>$argon2id$v=19$m=102400,t=2,p=8$QS6cYn2jJm4JbIzeoaUbyw$SLWcox7ULv/RFcdWk1Kcbg</Value></Attribute><Attribute><Name>confirmed</Name><Value>1</Value></Attribute></GetAttributesResult><ResponseMetadata><RequestId>ad583ed2-2b63-5e8b-dcbc-91ee50e0ad9e</RequestId><BoxUsage>0.0000093282</BoxUsage></ResponseMetadata></GetAttributesResponse>'
+14-03-2019:14:55:41,529 DEBUG    [hooks.py:210] Event needs-retry.simpledb.GetAttributes: calling handler <botocore.retryhandler.RetryHandler object at 0x8033ffeb8>
+14-03-2019:14:55:41,530 DEBUG    [retryhandler.py:187] No retry needed.
+14-03-2019:14:55:41,531 DEBUG    [hooks.py:210] Event choose-service-name: calling handler <function handle_service_name_alias at 0x802e27950>
+14-03-2019:14:55:41,531 DEBUG    [hooks.py:210] Event creating-client-class.simpledb: calling handler <function add_generate_presigned_url at 0x802dd60d0>
+14-03-2019:14:55:41,531 DEBUG    [args.py:169] The s3 config key is not a dictionary type, ignoring its value of: None
+14-03-2019:14:55:41,533 DEBUG    [endpoint.py:266] Setting sdb timeout as (60, 60)
+14-03-2019:14:55:41,533 DEBUG    [client.py:139] Registering retry handlers for service: sdb
+14-03-2019:14:55:41,534 DEBUG    [hooks.py:210] Event before-parameter-build.simpledb.GetAttributes: calling handler <function generate_idempotent_uuid at 0x802e5bc80>
+14-03-2019:14:55:41,534 DEBUG    [hooks.py:210] Event before-call.simpledb.GetAttributes: calling handler <function inject_api_version_header_if_needed at 0x802e5f7b8>
+14-03-2019:14:55:41,536 DEBUG    [endpoint.py:101] Making request for OperationModel(name=GetAttributes) with params: {'url_path': '/', 'query_string': '', 'method': 'POST', 'headers': {'Content-Type': 'application/x-www-form-urlencoded; charset=utf-8', 'User-Agent': 'Boto3/1.9.98 Python/3.6.7 FreeBSD/12.0-RELEASE-p3 Botocore/1.12.98'}, 'body': {'Action': 'GetAttributes', 'Version': '2009-04-15', 'DomainName': 's3mail', 'ItemName': 'langdon@idealcs.com.au'}, 'url': 'https://sdb.ap-southeast-2.amazonaws.com/', 'context': {'client_region': 'ap-southeast-2', 'client_config': <botocore.config.Config object at 0x8033ffda0>, 'has_streaming_input': False, 'auth_type': None}}
+14-03-2019:14:55:41,537 DEBUG    [hooks.py:210] Event request-created.simpledb.GetAttributes: calling handler <bound method RequestSigner.handler of <botocore.signers.RequestSigner object at 0x8033ffe10>>
+14-03-2019:14:55:41,537 DEBUG    [hooks.py:210] Event choose-signer.simpledb.GetAttributes: calling handler <function set_operation_specific_signer at 0x802e5bb70>
+14-03-2019:14:55:41,537 DEBUG    [auth.py:73] Calculating signature using v2 auth.
+14-03-2019:14:55:41,537 DEBUG    [auth.py:95] String to sign: POST
+sdb.ap-southeast-2.amazonaws.com
+/
+AWSAccessKeyId=AKIAIYWRP3SNXSCU3H6A&Action=GetAttributes&DomainName=s3mail&ItemName=langdon%40idealcs.com.au&SignatureMethod=HmacSHA256&SignatureVersion=2&Timestamp=2019-03-14T04%3A55%3A41Z&Version=2009-04-15
+14-03-2019:14:55:41,538 DEBUG    [endpoint.py:187] Sending http request: <AWSPreparedRequest stream_output=False, method=POST, url=https://sdb.ap-southeast-2.amazonaws.com/, headers={'Content-Type': b'application/x-www-form-urlencoded; charset=utf-8', 'User-Agent': b'Boto3/1.9.98 Python/3.6.7 FreeBSD/12.0-RELEASE-p3 Botocore/1.12.98', 'Content-Length': '267'}>
+14-03-2019:14:55:41,538 DEBUG    [retry.py:210] Converted retries value: False -> Retry(total=False, connect=None, read=None, redirect=0, status=None)
+14-03-2019:14:55:41,538 DEBUG    [connectionpool.py:813] Starting new HTTPS connection (1): sdb.ap-southeast-2.amazonaws.com:443
+14-03-2019:14:55:41,714 DEBUG    [connectionpool.py:393] https://sdb.ap-southeast-2.amazonaws.com:443 "POST / HTTP/1.1" 200 None
+14-03-2019:14:55:41,714 DEBUG    [parsers.py:234] Response headers: {'Date': 'Thu, 14 Mar 2019 04:55:41 GMT', 'Content-Type': 'text/xml', 'Transfer-Encoding': 'chunked', 'Connection': 'keep-alive', 'Vary': 'Accept-Encoding', 'Server': 'Amazon SimpleDB'}
+14-03-2019:14:55:41,715 DEBUG    [parsers.py:235] Response body:
+b'<?xml version="1.0"?>\n<GetAttributesResponse xmlns="http://sdb.amazonaws.com/doc/2009-04-15/"><GetAttributesResult><Attribute><Name>password</Name><Value>$argon2id$v=19$m=102400,t=2,p=8$QS6cYn2jJm4JbIzeoaUbyw$SLWcox7ULv/RFcdWk1Kcbg</Value></Attribute><Attribute><Name>confirmed</Name><Value>1</Value></Attribute></GetAttributesResult><ResponseMetadata><RequestId>149b3b48-511a-2913-323a-3a4786b7889f</RequestId><BoxUsage>0.0000093282</BoxUsage></ResponseMetadata></GetAttributesResponse>'
+14-03-2019:14:55:41,715 DEBUG    [hooks.py:210] Event needs-retry.simpledb.GetAttributes: calling handler <botocore.retryhandler.RetryHandler object at 0x8034a1c50>
+14-03-2019:14:55:41,715 DEBUG    [retryhandler.py:187] No retry needed.
+14-03-2019:14:55:41,716 DEBUG    [login_utils.py:77] {'Attributes': [{'Name': 'password', 'Value': '$argon2id$v=19$m=102400,t=2,p=8$QS6cYn2jJm4JbIzeoaUbyw$SLWcox7ULv/RFcdWk1Kcbg'}, {'Name': 'confirmed', 'Value': '1'}], 'ResponseMetadata': {'RequestId': '149b3b48-511a-2913-323a-3a4786b7889f', 'BoxUsage': '0.0000093282', 'HTTPStatusCode': 200, 'HTTPHeaders': {'date': 'Thu, 14 Mar 2019 04:55:41 GMT', 'content-type': 'text/xml', 'transfer-encoding': 'chunked', 'connection': 'keep-alive', 'vary': 'Accept-Encoding', 'server': 'Amazon SimpleDB'}, 'RetryAttempts': 0}}
+14-03-2019:14:55:41,848 ERROR    [login_utils.py:89] The password does not match the supplied hash
+14-03-2019:14:55:41,848 WARNING  [login.py:63] langdon@idealcs.com.au password didn't match IP: 127.0.0.1
+14-03-2019:14:55:41,875 DEBUG    [hooks.py:210] Event choose-service-name: calling handler <function handle_service_name_alias at 0x802e27950>
+14-03-2019:14:55:41,876 DEBUG    [hooks.py:210] Event creating-client-class.simpledb: calling handler <function add_generate_presigned_url at 0x802dd60d0>
+14-03-2019:14:55:41,876 DEBUG    [args.py:169] The s3 config key is not a dictionary type, ignoring its value of: None
+14-03-2019:14:55:41,877 DEBUG    [endpoint.py:266] Setting sdb timeout as (60, 60)
+14-03-2019:14:55:41,878 DEBUG    [client.py:139] Registering retry handlers for service: sdb
+14-03-2019:14:55:41,878 DEBUG    [hooks.py:210] Event before-parameter-build.simpledb.GetAttributes: calling handler <function generate_idempotent_uuid at 0x802e5bc80>
+14-03-2019:14:55:41,879 DEBUG    [hooks.py:210] Event before-call.simpledb.GetAttributes: calling handler <function inject_api_version_header_if_needed at 0x802e5f7b8>
+14-03-2019:14:55:41,879 DEBUG    [endpoint.py:101] Making request for OperationModel(name=GetAttributes) with params: {'url_path': '/', 'query_string': '', 'method': 'POST', 'headers': {'Content-Type': 'application/x-www-form-urlencoded; charset=utf-8', 'User-Agent': 'Boto3/1.9.98 Python/3.6.7 FreeBSD/12.0-RELEASE-p3 Botocore/1.12.98'}, 'body': {'Action': 'GetAttributes', 'Version': '2009-04-15', 'DomainName': 's3mail', 'ItemName': 'langdon@idealcs.com.au'}, 'url': 'https://sdb.ap-southeast-2.amazonaws.com/', 'context': {'client_region': 'ap-southeast-2', 'client_config': <botocore.config.Config object at 0x803525f60>, 'has_streaming_input': False, 'auth_type': None}}
+14-03-2019:14:55:41,879 DEBUG    [hooks.py:210] Event request-created.simpledb.GetAttributes: calling handler <bound method RequestSigner.handler of <botocore.signers.RequestSigner object at 0x803525e80>>
+14-03-2019:14:55:41,879 DEBUG    [hooks.py:210] Event choose-signer.simpledb.GetAttributes: calling handler <function set_operation_specific_signer at 0x802e5bb70>
+14-03-2019:14:55:41,879 DEBUG    [auth.py:73] Calculating signature using v2 auth.
+14-03-2019:14:55:41,880 DEBUG    [auth.py:95] String to sign: POST
+sdb.ap-southeast-2.amazonaws.com
+/
+AWSAccessKeyId=AKIAIYWRP3SNXSCU3H6A&Action=GetAttributes&DomainName=s3mail&ItemName=langdon%40idealcs.com.au&SignatureMethod=HmacSHA256&SignatureVersion=2&Timestamp=2019-03-14T04%3A55%3A41Z&Version=2009-04-15
+14-03-2019:14:55:41,880 DEBUG    [endpoint.py:187] Sending http request: <AWSPreparedRequest stream_output=False, method=POST, url=https://sdb.ap-southeast-2.amazonaws.com/, headers={'Content-Type': b'application/x-www-form-urlencoded; charset=utf-8', 'User-Agent': b'Boto3/1.9.98 Python/3.6.7 FreeBSD/12.0-RELEASE-p3 Botocore/1.12.98', 'Content-Length': '267'}>
+14-03-2019:14:55:41,880 DEBUG    [retry.py:210] Converted retries value: False -> Retry(total=False, connect=None, read=None, redirect=0, status=None)
+14-03-2019:14:55:41,880 DEBUG    [connectionpool.py:813] Starting new HTTPS connection (1): sdb.ap-southeast-2.amazonaws.com:443
+14-03-2019:14:55:42,53 DEBUG    [connectionpool.py:393] https://sdb.ap-southeast-2.amazonaws.com:443 "POST / HTTP/1.1" 200 None
+14-03-2019:14:55:42,54 DEBUG    [parsers.py:234] Response headers: {'Date': 'Thu, 14 Mar 2019 04:55:41 GMT', 'Content-Type': 'text/xml', 'Transfer-Encoding': 'chunked', 'Connection': 'keep-alive', 'Vary': 'Accept-Encoding', 'Server': 'Amazon SimpleDB'}
+14-03-2019:14:55:42,54 DEBUG    [parsers.py:235] Response body:
+b'<?xml version="1.0"?>\n<GetAttributesResponse xmlns="http://sdb.amazonaws.com/doc/2009-04-15/"><GetAttributesResult><Attribute><Name>password</Name><Value>$argon2id$v=19$m=102400,t=2,p=8$QS6cYn2jJm4JbIzeoaUbyw$SLWcox7ULv/RFcdWk1Kcbg</Value></Attribute><Attribute><Name>confirmed</Name><Value>1</Value></Attribute></GetAttributesResult><ResponseMetadata><RequestId>4725bfd6-3f8f-fc5c-6381-54c5dc8911c1</RequestId><BoxUsage>0.0000093282</BoxUsage></ResponseMetadata></GetAttributesResponse>'
+14-03-2019:14:55:42,55 DEBUG    [hooks.py:210] Event needs-retry.simpledb.GetAttributes: calling handler <botocore.retryhandler.RetryHandler object at 0x803525e48>
+14-03-2019:14:55:42,55 DEBUG    [retryhandler.py:187] No retry needed.
+14-03-2019:14:55:42,56 DEBUG    [login_utils.py:54] {'Name': 'confirmed', 'Value': '1'}
+14-03-2019:14:55:42,56 DEBUG    [hooks.py:210] Event choose-service-name: calling handler <function handle_service_name_alias at 0x802e27950>
+14-03-2019:14:55:42,56 DEBUG    [hooks.py:210] Event creating-client-class.simpledb: calling handler <function add_generate_presigned_url at 0x802dd60d0>
+14-03-2019:14:55:42,56 DEBUG    [args.py:169] The s3 config key is not a dictionary type, ignoring its value of: None
+14-03-2019:14:55:42,58 DEBUG    [endpoint.py:266] Setting sdb timeout as (60, 60)
+14-03-2019:14:55:42,59 DEBUG    [client.py:139] Registering retry handlers for service: sdb
+14-03-2019:14:55:42,59 DEBUG    [hooks.py:210] Event before-parameter-build.simpledb.GetAttributes: calling handler <function generate_idempotent_uuid at 0x802e5bc80>
+14-03-2019:14:55:42,59 DEBUG    [hooks.py:210] Event before-call.simpledb.GetAttributes: calling handler <function inject_api_version_header_if_needed at 0x802e5f7b8>
+14-03-2019:14:55:42,59 DEBUG    [endpoint.py:101] Making request for OperationModel(name=GetAttributes) with params: {'url_path': '/', 'query_string': '', 'method': 'POST', 'headers': {'Content-Type': 'application/x-www-form-urlencoded; charset=utf-8', 'User-Agent': 'Boto3/1.9.98 Python/3.6.7 FreeBSD/12.0-RELEASE-p3 Botocore/1.12.98'}, 'body': {'Action': 'GetAttributes', 'Version': '2009-04-15', 'DomainName': 's3mail', 'ItemName': 'langdon@idealcs.com.au'}, 'url': 'https://sdb.ap-southeast-2.amazonaws.com/', 'context': {'client_region': 'ap-southeast-2', 'client_config': <botocore.config.Config object at 0x803525a20>, 'has_streaming_input': False, 'auth_type': None}}
+14-03-2019:14:55:42,60 DEBUG    [hooks.py:210] Event request-created.simpledb.GetAttributes: calling handler <bound method RequestSigner.handler of <botocore.signers.RequestSigner object at 0x803525cc0>>
+14-03-2019:14:55:42,60 DEBUG    [hooks.py:210] Event choose-signer.simpledb.GetAttributes: calling handler <function set_operation_specific_signer at 0x802e5bb70>
+14-03-2019:14:55:42,60 DEBUG    [auth.py:73] Calculating signature using v2 auth.
+14-03-2019:14:55:42,60 DEBUG    [auth.py:95] String to sign: POST
+sdb.ap-southeast-2.amazonaws.com
+/
+AWSAccessKeyId=AKIAIYWRP3SNXSCU3H6A&Action=GetAttributes&DomainName=s3mail&ItemName=langdon%40idealcs.com.au&SignatureMethod=HmacSHA256&SignatureVersion=2&Timestamp=2019-03-14T04%3A55%3A42Z&Version=2009-04-15
+14-03-2019:14:55:42,60 DEBUG    [endpoint.py:187] Sending http request: <AWSPreparedRequest stream_output=False, method=POST, url=https://sdb.ap-southeast-2.amazonaws.com/, headers={'Content-Type': b'application/x-www-form-urlencoded; charset=utf-8', 'User-Agent': b'Boto3/1.9.98 Python/3.6.7 FreeBSD/12.0-RELEASE-p3 Botocore/1.12.98', 'Content-Length': '265'}>
+14-03-2019:14:55:42,61 DEBUG    [retry.py:210] Converted retries value: False -> Retry(total=False, connect=None, read=None, redirect=0, status=None)
+14-03-2019:14:55:42,61 DEBUG    [connectionpool.py:813] Starting new HTTPS connection (1): sdb.ap-southeast-2.amazonaws.com:443
+14-03-2019:14:55:42,238 DEBUG    [connectionpool.py:393] https://sdb.ap-southeast-2.amazonaws.com:443 "POST / HTTP/1.1" 200 None
+14-03-2019:14:55:42,238 DEBUG    [parsers.py:234] Response headers: {'Date': 'Thu, 14 Mar 2019 04:55:42 GMT', 'Content-Type': 'text/xml', 'Transfer-Encoding': 'chunked', 'Connection': 'keep-alive', 'Vary': 'Accept-Encoding', 'Server': 'Amazon SimpleDB'}
+14-03-2019:14:55:42,238 DEBUG    [parsers.py:235] Response body:
+b'<?xml version="1.0"?>\n<GetAttributesResponse xmlns="http://sdb.amazonaws.com/doc/2009-04-15/"><GetAttributesResult><Attribute><Name>password</Name><Value>$argon2id$v=19$m=102400,t=2,p=8$QS6cYn2jJm4JbIzeoaUbyw$SLWcox7ULv/RFcdWk1Kcbg</Value></Attribute><Attribute><Name>confirmed</Name><Value>1</Value></Attribute></GetAttributesResult><ResponseMetadata><RequestId>3ca226ea-bee9-e7fb-56ce-5495f93e6743</RequestId><BoxUsage>0.0000093282</BoxUsage></ResponseMetadata></GetAttributesResponse>'
+14-03-2019:14:55:42,239 DEBUG    [hooks.py:210] Event needs-retry.simpledb.GetAttributes: calling handler <botocore.retryhandler.RetryHandler object at 0x80342bef0>
+14-03-2019:14:55:42,239 DEBUG    [retryhandler.py:187] No retry needed.
+14-03-2019:14:55:42,240 DEBUG    [hooks.py:210] Event choose-service-name: calling handler <function handle_service_name_alias at 0x802e27950>
+14-03-2019:14:55:42,240 DEBUG    [hooks.py:210] Event creating-client-class.simpledb: calling handler <function add_generate_presigned_url at 0x802dd60d0>
+14-03-2019:14:55:42,240 DEBUG    [args.py:169] The s3 config key is not a dictionary type, ignoring its value of: None
+14-03-2019:14:55:42,242 DEBUG    [endpoint.py:266] Setting sdb timeout as (60, 60)
+14-03-2019:14:55:42,242 DEBUG    [client.py:139] Registering retry handlers for service: sdb
+14-03-2019:14:55:42,243 DEBUG    [hooks.py:210] Event before-parameter-build.simpledb.GetAttributes: calling handler <function generate_idempotent_uuid at 0x802e5bc80>
+14-03-2019:14:55:42,243 DEBUG    [hooks.py:210] Event before-call.simpledb.GetAttributes: calling handler <function inject_api_version_header_if_needed at 0x802e5f7b8>
+14-03-2019:14:55:42,243 DEBUG    [endpoint.py:101] Making request for OperationModel(name=GetAttributes) with params: {'url_path': '/', 'query_string': '', 'method': 'POST', 'headers': {'Content-Type': 'application/x-www-form-urlencoded; charset=utf-8', 'User-Agent': 'Boto3/1.9.98 Python/3.6.7 FreeBSD/12.0-RELEASE-p3 Botocore/1.12.98'}, 'body': {'Action': 'GetAttributes', 'Version': '2009-04-15', 'DomainName': 's3mail', 'ItemName': 'langdon@idealcs.com.au'}, 'url': 'https://sdb.ap-southeast-2.amazonaws.com/', 'context': {'client_region': 'ap-southeast-2', 'client_config': <botocore.config.Config object at 0x80351d048>, 'has_streaming_input': False, 'auth_type': None}}
+14-03-2019:14:55:42,244 DEBUG    [hooks.py:210] Event request-created.simpledb.GetAttributes: calling handler <bound method RequestSigner.handler of <botocore.signers.RequestSigner object at 0x80342b9e8>>
+14-03-2019:14:55:42,244 DEBUG    [hooks.py:210] Event choose-signer.simpledb.GetAttributes: calling handler <function set_operation_specific_signer at 0x802e5bb70>
+14-03-2019:14:55:42,244 DEBUG    [auth.py:73] Calculating signature using v2 auth.
+14-03-2019:14:55:42,244 DEBUG    [auth.py:95] String to sign: POST
+sdb.ap-southeast-2.amazonaws.com
+/
+AWSAccessKeyId=AKIAIYWRP3SNXSCU3H6A&Action=GetAttributes&DomainName=s3mail&ItemName=langdon%40idealcs.com.au&SignatureMethod=HmacSHA256&SignatureVersion=2&Timestamp=2019-03-14T04%3A55%3A42Z&Version=2009-04-15
+14-03-2019:14:55:42,244 DEBUG    [endpoint.py:187] Sending http request: <AWSPreparedRequest stream_output=False, method=POST, url=https://sdb.ap-southeast-2.amazonaws.com/, headers={'Content-Type': b'application/x-www-form-urlencoded; charset=utf-8', 'User-Agent': b'Boto3/1.9.98 Python/3.6.7 FreeBSD/12.0-RELEASE-p3 Botocore/1.12.98', 'Content-Length': '265'}>
+14-03-2019:14:55:42,245 DEBUG    [retry.py:210] Converted retries value: False -> Retry(total=False, connect=None, read=None, redirect=0, status=None)
+14-03-2019:14:55:42,245 DEBUG    [connectionpool.py:813] Starting new HTTPS connection (1): sdb.ap-southeast-2.amazonaws.com:443
+14-03-2019:14:55:42,429 DEBUG    [connectionpool.py:393] https://sdb.ap-southeast-2.amazonaws.com:443 "POST / HTTP/1.1" 200 None
+14-03-2019:14:55:42,430 DEBUG    [parsers.py:234] Response headers: {'Date': 'Thu, 14 Mar 2019 04:55:42 GMT', 'Content-Type': 'text/xml', 'Transfer-Encoding': 'chunked', 'Connection': 'keep-alive', 'Vary': 'Accept-Encoding', 'Server': 'Amazon SimpleDB'}
+14-03-2019:14:55:42,430 DEBUG    [parsers.py:235] Response body:
+b'<?xml version="1.0"?>\n<GetAttributesResponse xmlns="http://sdb.amazonaws.com/doc/2009-04-15/"><GetAttributesResult><Attribute><Name>password</Name><Value>$argon2id$v=19$m=102400,t=2,p=8$QS6cYn2jJm4JbIzeoaUbyw$SLWcox7ULv/RFcdWk1Kcbg</Value></Attribute><Attribute><Name>confirmed</Name><Value>1</Value></Attribute></GetAttributesResult><ResponseMetadata><RequestId>27c4d2f8-86be-6efb-1444-59c275a00f93</RequestId><BoxUsage>0.0000093282</BoxUsage></ResponseMetadata></GetAttributesResponse>'
+14-03-2019:14:55:42,431 DEBUG    [hooks.py:210] Event needs-retry.simpledb.GetAttributes: calling handler <botocore.retryhandler.RetryHandler object at 0x80351def0>
+14-03-2019:14:55:42,431 DEBUG    [retryhandler.py:187] No retry needed.
+14-03-2019:14:55:42,442 DEBUG    [login_utils.py:77] {'Attributes': [{'Name': 'password', 'Value': '$argon2id$v=19$m=102400,t=2,p=8$QS6cYn2jJm4JbIzeoaUbyw$SLWcox7ULv/RFcdWk1Kcbg'}, {'Name': 'confirmed', 'Value': '1'}], 'ResponseMetadata': {'RequestId': '27c4d2f8-86be-6efb-1444-59c275a00f93', 'BoxUsage': '0.0000093282', 'HTTPStatusCode': 200, 'HTTPHeaders': {'date': 'Thu, 14 Mar 2019 04:55:42 GMT', 'content-type': 'text/xml', 'transfer-encoding': 'chunked', 'connection': 'keep-alive', 'vary': 'Accept-Encoding', 'server': 'Amazon SimpleDB'}, 'RetryAttempts': 0}}
+14-03-2019:14:55:42,573 INFO     [login.py:55] langdon@idealcs.com.au logged in IP: 127.0.0.1
+14-03-2019:14:57:34,646 DEBUG    [hooks.py:417] Changing event name from creating-client-class.iot-data to creating-client-class.iot-data-plane
+14-03-2019:14:57:34,653 DEBUG    [hooks.py:417] Changing event name from before-call.apigateway to before-call.api-gateway
+14-03-2019:14:57:34,654 DEBUG    [hooks.py:417] Changing event name from request-created.machinelearning.Predict to request-created.machine-learning.Predict
+14-03-2019:14:57:34,656 DEBUG    [hooks.py:417] Changing event name from before-parameter-build.autoscaling.CreateLaunchConfiguration to before-parameter-build.auto-scaling.CreateLaunchConfiguration
+14-03-2019:14:57:34,656 DEBUG    [hooks.py:417] Changing event name from before-parameter-build.route53 to before-parameter-build.route-53
+14-03-2019:14:57:34,656 DEBUG    [hooks.py:417] Changing event name from request-created.cloudsearchdomain.Search to request-created.cloudsearch-domain.Search
+14-03-2019:14:57:34,657 DEBUG    [hooks.py:417] Changing event name from docs.*.autoscaling.CreateLaunchConfiguration.complete-section to docs.*.auto-scaling.CreateLaunchConfiguration.complete-section
+14-03-2019:14:57:34,660 DEBUG    [hooks.py:417] Changing event name from before-parameter-build.logs.CreateExportTask to before-parameter-build.cloudwatch-logs.CreateExportTask
+14-03-2019:14:57:34,660 DEBUG    [hooks.py:417] Changing event name from docs.*.logs.CreateExportTask.complete-section to docs.*.cloudwatch-logs.CreateExportTask.complete-section
+14-03-2019:14:57:34,660 DEBUG    [hooks.py:417] Changing event name from before-parameter-build.cloudsearchdomain.Search to before-parameter-build.cloudsearch-domain.Search
+14-03-2019:14:57:34,660 DEBUG    [hooks.py:417] Changing event name from docs.*.cloudsearchdomain.Search.complete-section to docs.*.cloudsearch-domain.Search.complete-section
+14-03-2019:14:57:34,728 DEBUG    [credentials.py:1687] Looking for credentials via: env
+14-03-2019:14:57:34,728 DEBUG    [credentials.py:1687] Looking for credentials via: assume-role
+14-03-2019:14:57:34,729 DEBUG    [credentials.py:1687] Looking for credentials via: shared-credentials-file
+14-03-2019:14:57:34,729 INFO     [credentials.py:1046] Found credentials in shared credentials file: ~/.aws/credentials
+14-03-2019:14:57:34,730 DEBUG    [loaders.py:174] Loading JSON file: /usr/home/lg/private/lg/projects/software/flaskbase/venv/lib/python3.6/site-packages/botocore/data/endpoints.json
+14-03-2019:14:57:34,734 DEBUG    [hooks.py:210] Event choose-service-name: calling handler <function handle_service_name_alias at 0x802e23950>
+14-03-2019:14:57:34,771 DEBUG    [loaders.py:174] Loading JSON file: /usr/home/lg/private/lg/projects/software/flaskbase/venv/lib/python3.6/site-packages/botocore/data/sdb/2009-04-15/service-2.json
+14-03-2019:14:57:34,773 DEBUG    [hooks.py:210] Event creating-client-class.simpledb: calling handler <function add_generate_presigned_url at 0x802dda0d0>
+14-03-2019:14:57:34,773 DEBUG    [args.py:169] The s3 config key is not a dictionary type, ignoring its value of: None
+14-03-2019:14:57:34,776 DEBUG    [endpoint.py:266] Setting sdb timeout as (60, 60)
+14-03-2019:14:57:34,777 DEBUG    [loaders.py:174] Loading JSON file: /usr/home/lg/private/lg/projects/software/flaskbase/venv/lib/python3.6/site-packages/botocore/data/_retry.json
+14-03-2019:14:57:34,777 DEBUG    [client.py:139] Registering retry handlers for service: sdb
+14-03-2019:14:57:34,778 DEBUG    [hooks.py:210] Event before-parameter-build.simpledb.GetAttributes: calling handler <function generate_idempotent_uuid at 0x802e5ac80>
+14-03-2019:14:57:34,778 DEBUG    [hooks.py:210] Event before-call.simpledb.GetAttributes: calling handler <function inject_api_version_header_if_needed at 0x802e5d7b8>
+14-03-2019:14:57:34,778 DEBUG    [endpoint.py:101] Making request for OperationModel(name=GetAttributes) with params: {'url_path': '/', 'query_string': '', 'method': 'POST', 'headers': {'Content-Type': 'application/x-www-form-urlencoded; charset=utf-8', 'User-Agent': 'Boto3/1.9.98 Python/3.6.7 FreeBSD/12.0-RELEASE-p3 Botocore/1.12.98'}, 'body': {'Action': 'GetAttributes', 'Version': '2009-04-15', 'DomainName': 's3mail', 'ItemName': 'langdon@idealcs.com.au'}, 'url': 'https://sdb.ap-southeast-2.amazonaws.com/', 'context': {'client_region': 'ap-southeast-2', 'client_config': <botocore.config.Config object at 0x803404198>, 'has_streaming_input': False, 'auth_type': None}}
+14-03-2019:14:57:34,779 DEBUG    [hooks.py:210] Event request-created.simpledb.GetAttributes: calling handler <bound method RequestSigner.handler of <botocore.signers.RequestSigner object at 0x803404128>>
+14-03-2019:14:57:34,779 DEBUG    [hooks.py:210] Event choose-signer.simpledb.GetAttributes: calling handler <function set_operation_specific_signer at 0x802e5ab70>
+14-03-2019:14:57:34,779 DEBUG    [auth.py:73] Calculating signature using v2 auth.
+14-03-2019:14:57:34,779 DEBUG    [auth.py:95] String to sign: POST
+sdb.ap-southeast-2.amazonaws.com
+/
+AWSAccessKeyId=AKIAIYWRP3SNXSCU3H6A&Action=GetAttributes&DomainName=s3mail&ItemName=langdon%40idealcs.com.au&SignatureMethod=HmacSHA256&SignatureVersion=2&Timestamp=2019-03-14T04%3A57%3A34Z&Version=2009-04-15
+14-03-2019:14:57:34,780 DEBUG    [endpoint.py:187] Sending http request: <AWSPreparedRequest stream_output=False, method=POST, url=https://sdb.ap-southeast-2.amazonaws.com/, headers={'Content-Type': b'application/x-www-form-urlencoded; charset=utf-8', 'User-Agent': b'Boto3/1.9.98 Python/3.6.7 FreeBSD/12.0-RELEASE-p3 Botocore/1.12.98', 'Content-Length': '267'}>
+14-03-2019:14:57:34,780 DEBUG    [retry.py:210] Converted retries value: False -> Retry(total=False, connect=None, read=None, redirect=0, status=None)
+14-03-2019:14:57:34,781 DEBUG    [connectionpool.py:813] Starting new HTTPS connection (1): sdb.ap-southeast-2.amazonaws.com:443
+14-03-2019:14:57:35,456 DEBUG    [connectionpool.py:393] https://sdb.ap-southeast-2.amazonaws.com:443 "POST / HTTP/1.1" 200 None
+14-03-2019:14:57:35,456 DEBUG    [parsers.py:234] Response headers: {'Date': 'Thu, 14 Mar 2019 04:57:35 GMT', 'Content-Type': 'text/xml', 'Transfer-Encoding': 'chunked', 'Connection': 'keep-alive', 'Vary': 'Accept-Encoding', 'Server': 'Amazon SimpleDB'}
+14-03-2019:14:57:35,457 DEBUG    [parsers.py:235] Response body:
+b'<?xml version="1.0"?>\n<GetAttributesResponse xmlns="http://sdb.amazonaws.com/doc/2009-04-15/"><GetAttributesResult><Attribute><Name>password</Name><Value>$argon2id$v=19$m=102400,t=2,p=8$QS6cYn2jJm4JbIzeoaUbyw$SLWcox7ULv/RFcdWk1Kcbg</Value></Attribute><Attribute><Name>confirmed</Name><Value>1</Value></Attribute></GetAttributesResult><ResponseMetadata><RequestId>e46dee0a-215f-fdc7-84b9-10b03c5b9a3a</RequestId><BoxUsage>0.0000093282</BoxUsage></ResponseMetadata></GetAttributesResponse>'
+14-03-2019:14:57:35,459 DEBUG    [hooks.py:210] Event needs-retry.simpledb.GetAttributes: calling handler <botocore.retryhandler.RetryHandler object at 0x803404588>
+14-03-2019:14:57:35,459 DEBUG    [retryhandler.py:187] No retry needed.
+14-03-2019:14:57:35,461 DEBUG    [login_utils.py:54] {'Name': 'confirmed', 'Value': '1'}
+14-03-2019:14:57:35,462 DEBUG    [hooks.py:210] Event choose-service-name: calling handler <function handle_service_name_alias at 0x802e23950>
+14-03-2019:14:57:35,462 DEBUG    [hooks.py:210] Event creating-client-class.simpledb: calling handler <function add_generate_presigned_url at 0x802dda0d0>
+14-03-2019:14:57:35,462 DEBUG    [args.py:169] The s3 config key is not a dictionary type, ignoring its value of: None
+14-03-2019:14:57:35,478 DEBUG    [endpoint.py:266] Setting sdb timeout as (60, 60)
+14-03-2019:14:57:35,479 DEBUG    [client.py:139] Registering retry handlers for service: sdb
+14-03-2019:14:57:35,480 DEBUG    [hooks.py:210] Event before-parameter-build.simpledb.GetAttributes: calling handler <function generate_idempotent_uuid at 0x802e5ac80>
+14-03-2019:14:57:35,480 DEBUG    [hooks.py:210] Event before-call.simpledb.GetAttributes: calling handler <function inject_api_version_header_if_needed at 0x802e5d7b8>
+14-03-2019:14:57:35,480 DEBUG    [endpoint.py:101] Making request for OperationModel(name=GetAttributes) with params: {'url_path': '/', 'query_string': '', 'method': 'POST', 'headers': {'Content-Type': 'application/x-www-form-urlencoded; charset=utf-8', 'User-Agent': 'Boto3/1.9.98 Python/3.6.7 FreeBSD/12.0-RELEASE-p3 Botocore/1.12.98'}, 'body': {'Action': 'GetAttributes', 'Version': '2009-04-15', 'DomainName': 's3mail', 'ItemName': 'langdon@idealcs.com.au'}, 'url': 'https://sdb.ap-southeast-2.amazonaws.com/', 'context': {'client_region': 'ap-southeast-2', 'client_config': <botocore.config.Config object at 0x8032110b8>, 'has_streaming_input': False, 'auth_type': None}}
+14-03-2019:14:57:35,480 DEBUG    [hooks.py:210] Event request-created.simpledb.GetAttributes: calling handler <bound method RequestSigner.handler of <botocore.signers.RequestSigner object at 0x802086c18>>
+14-03-2019:14:57:35,480 DEBUG    [hooks.py:210] Event choose-signer.simpledb.GetAttributes: calling handler <function set_operation_specific_signer at 0x802e5ab70>
+14-03-2019:14:57:35,481 DEBUG    [auth.py:73] Calculating signature using v2 auth.
+14-03-2019:14:57:35,481 DEBUG    [auth.py:95] String to sign: POST
+sdb.ap-southeast-2.amazonaws.com
+/
+AWSAccessKeyId=AKIAIYWRP3SNXSCU3H6A&Action=GetAttributes&DomainName=s3mail&ItemName=langdon%40idealcs.com.au&SignatureMethod=HmacSHA256&SignatureVersion=2&Timestamp=2019-03-14T04%3A57%3A35Z&Version=2009-04-15
+14-03-2019:14:57:35,481 DEBUG    [endpoint.py:187] Sending http request: <AWSPreparedRequest stream_output=False, method=POST, url=https://sdb.ap-southeast-2.amazonaws.com/, headers={'Content-Type': b'application/x-www-form-urlencoded; charset=utf-8', 'User-Agent': b'Boto3/1.9.98 Python/3.6.7 FreeBSD/12.0-RELEASE-p3 Botocore/1.12.98', 'Content-Length': '271'}>
+14-03-2019:14:57:35,484 DEBUG    [retry.py:210] Converted retries value: False -> Retry(total=False, connect=None, read=None, redirect=0, status=None)
+14-03-2019:14:57:35,484 DEBUG    [connectionpool.py:813] Starting new HTTPS connection (1): sdb.ap-southeast-2.amazonaws.com:443
+14-03-2019:14:57:35,662 DEBUG    [connectionpool.py:393] https://sdb.ap-southeast-2.amazonaws.com:443 "POST / HTTP/1.1" 200 None
+14-03-2019:14:57:35,662 DEBUG    [parsers.py:234] Response headers: {'Date': 'Thu, 14 Mar 2019 04:57:35 GMT', 'Content-Type': 'text/xml', 'Transfer-Encoding': 'chunked', 'Connection': 'close', 'Vary': 'Accept-Encoding', 'Server': 'Amazon SimpleDB'}
+14-03-2019:14:57:35,663 DEBUG    [parsers.py:235] Response body:
+b'<?xml version="1.0"?>\n<GetAttributesResponse xmlns="http://sdb.amazonaws.com/doc/2009-04-15/"><GetAttributesResult><Attribute><Name>password</Name><Value>$argon2id$v=19$m=102400,t=2,p=8$QS6cYn2jJm4JbIzeoaUbyw$SLWcox7ULv/RFcdWk1Kcbg</Value></Attribute><Attribute><Name>confirmed</Name><Value>1</Value></Attribute></GetAttributesResult><ResponseMetadata><RequestId>f5dc6c88-8479-0063-97db-2fe67883fc26</RequestId><BoxUsage>0.0000093282</BoxUsage></ResponseMetadata></GetAttributesResponse>'
+14-03-2019:14:57:35,663 DEBUG    [hooks.py:210] Event needs-retry.simpledb.GetAttributes: calling handler <botocore.retryhandler.RetryHandler object at 0x8033edcf8>
+14-03-2019:14:57:35,663 DEBUG    [retryhandler.py:187] No retry needed.
+14-03-2019:14:57:35,664 DEBUG    [hooks.py:210] Event choose-service-name: calling handler <function handle_service_name_alias at 0x802e23950>
+14-03-2019:14:57:35,665 DEBUG    [hooks.py:210] Event creating-client-class.simpledb: calling handler <function add_generate_presigned_url at 0x802dda0d0>
+14-03-2019:14:57:35,665 DEBUG    [args.py:169] The s3 config key is not a dictionary type, ignoring its value of: None
+14-03-2019:14:57:35,666 DEBUG    [endpoint.py:266] Setting sdb timeout as (60, 60)
+14-03-2019:14:57:35,667 DEBUG    [client.py:139] Registering retry handlers for service: sdb
+14-03-2019:14:57:35,667 DEBUG    [hooks.py:210] Event before-parameter-build.simpledb.GetAttributes: calling handler <function generate_idempotent_uuid at 0x802e5ac80>
+14-03-2019:14:57:35,667 DEBUG    [hooks.py:210] Event before-call.simpledb.GetAttributes: calling handler <function inject_api_version_header_if_needed at 0x802e5d7b8>
+14-03-2019:14:57:35,668 DEBUG    [endpoint.py:101] Making request for OperationModel(name=GetAttributes) with params: {'url_path': '/', 'query_string': '', 'method': 'POST', 'headers': {'Content-Type': 'application/x-www-form-urlencoded; charset=utf-8', 'User-Agent': 'Boto3/1.9.98 Python/3.6.7 FreeBSD/12.0-RELEASE-p3 Botocore/1.12.98'}, 'body': {'Action': 'GetAttributes', 'Version': '2009-04-15', 'DomainName': 's3mail', 'ItemName': 'langdon@idealcs.com.au'}, 'url': 'https://sdb.ap-southeast-2.amazonaws.com/', 'context': {'client_region': 'ap-southeast-2', 'client_config': <botocore.config.Config object at 0x8033edb38>, 'has_streaming_input': False, 'auth_type': None}}
+14-03-2019:14:57:35,668 DEBUG    [hooks.py:210] Event request-created.simpledb.GetAttributes: calling handler <bound method RequestSigner.handler of <botocore.signers.RequestSigner object at 0x8033edd30>>
+14-03-2019:14:57:35,668 DEBUG    [hooks.py:210] Event choose-signer.simpledb.GetAttributes: calling handler <function set_operation_specific_signer at 0x802e5ab70>
+14-03-2019:14:57:35,668 DEBUG    [auth.py:73] Calculating signature using v2 auth.
+14-03-2019:14:57:35,668 DEBUG    [auth.py:95] String to sign: POST
+sdb.ap-southeast-2.amazonaws.com
+/
+AWSAccessKeyId=AKIAIYWRP3SNXSCU3H6A&Action=GetAttributes&DomainName=s3mail&ItemName=langdon%40idealcs.com.au&SignatureMethod=HmacSHA256&SignatureVersion=2&Timestamp=2019-03-14T04%3A57%3A35Z&Version=2009-04-15
+14-03-2019:14:57:35,669 DEBUG    [endpoint.py:187] Sending http request: <AWSPreparedRequest stream_output=False, method=POST, url=https://sdb.ap-southeast-2.amazonaws.com/, headers={'Content-Type': b'application/x-www-form-urlencoded; charset=utf-8', 'User-Agent': b'Boto3/1.9.98 Python/3.6.7 FreeBSD/12.0-RELEASE-p3 Botocore/1.12.98', 'Content-Length': '271'}>
+14-03-2019:14:57:35,669 DEBUG    [retry.py:210] Converted retries value: False -> Retry(total=False, connect=None, read=None, redirect=0, status=None)
+14-03-2019:14:57:35,669 DEBUG    [connectionpool.py:813] Starting new HTTPS connection (1): sdb.ap-southeast-2.amazonaws.com:443
+14-03-2019:14:57:35,847 DEBUG    [connectionpool.py:393] https://sdb.ap-southeast-2.amazonaws.com:443 "POST / HTTP/1.1" 200 None
+14-03-2019:14:57:35,847 DEBUG    [parsers.py:234] Response headers: {'Date': 'Thu, 14 Mar 2019 04:57:35 GMT', 'Content-Type': 'text/xml', 'Transfer-Encoding': 'chunked', 'Connection': 'keep-alive', 'Vary': 'Accept-Encoding', 'Server': 'Amazon SimpleDB'}
+14-03-2019:14:57:35,847 DEBUG    [parsers.py:235] Response body:
+b'<?xml version="1.0"?>\n<GetAttributesResponse xmlns="http://sdb.amazonaws.com/doc/2009-04-15/"><GetAttributesResult><Attribute><Name>password</Name><Value>$argon2id$v=19$m=102400,t=2,p=8$QS6cYn2jJm4JbIzeoaUbyw$SLWcox7ULv/RFcdWk1Kcbg</Value></Attribute><Attribute><Name>confirmed</Name><Value>1</Value></Attribute></GetAttributesResult><ResponseMetadata><RequestId>cb93ca0f-3a56-9c1e-a74c-2936915a604d</RequestId><BoxUsage>0.0000093282</BoxUsage></ResponseMetadata></GetAttributesResponse>'
+14-03-2019:14:57:35,848 DEBUG    [hooks.py:210] Event needs-retry.simpledb.GetAttributes: calling handler <botocore.retryhandler.RetryHandler object at 0x80348fac8>
+14-03-2019:14:57:35,848 DEBUG    [retryhandler.py:187] No retry needed.
+14-03-2019:14:57:35,850 DEBUG    [login_utils.py:77] {'Attributes': [{'Name': 'password', 'Value': '$argon2id$v=19$m=102400,t=2,p=8$QS6cYn2jJm4JbIzeoaUbyw$SLWcox7ULv/RFcdWk1Kcbg'}, {'Name': 'confirmed', 'Value': '1'}], 'ResponseMetadata': {'RequestId': 'cb93ca0f-3a56-9c1e-a74c-2936915a604d', 'BoxUsage': '0.0000093282', 'HTTPStatusCode': 200, 'HTTPHeaders': {'date': 'Thu, 14 Mar 2019 04:57:35 GMT', 'content-type': 'text/xml', 'transfer-encoding': 'chunked', 'connection': 'keep-alive', 'vary': 'Accept-Encoding', 'server': 'Amazon SimpleDB'}, 'RetryAttempts': 0}}
+14-03-2019:14:57:35,979 ERROR    [login_utils.py:89] The password does not match the supplied hash
+14-03-2019:14:57:35,980 WARNING  [login.py:63] langdon@idealcs.com.au password didn't match IP: 127.0.0.1
+14-03-2019:14:57:36,7 DEBUG    [hooks.py:210] Event choose-service-name: calling handler <function handle_service_name_alias at 0x802e23950>
+14-03-2019:14:57:36,7 DEBUG    [hooks.py:210] Event creating-client-class.simpledb: calling handler <function add_generate_presigned_url at 0x802dda0d0>
+14-03-2019:14:57:36,7 DEBUG    [args.py:169] The s3 config key is not a dictionary type, ignoring its value of: None
+14-03-2019:14:57:36,9 DEBUG    [endpoint.py:266] Setting sdb timeout as (60, 60)
+14-03-2019:14:57:36,9 DEBUG    [client.py:139] Registering retry handlers for service: sdb
+14-03-2019:14:57:36,10 DEBUG    [hooks.py:210] Event before-parameter-build.simpledb.GetAttributes: calling handler <function generate_idempotent_uuid at 0x802e5ac80>
+14-03-2019:14:57:36,10 DEBUG    [hooks.py:210] Event before-call.simpledb.GetAttributes: calling handler <function inject_api_version_header_if_needed at 0x802e5d7b8>
+14-03-2019:14:57:36,10 DEBUG    [endpoint.py:101] Making request for OperationModel(name=GetAttributes) with params: {'url_path': '/', 'query_string': '', 'method': 'POST', 'headers': {'Content-Type': 'application/x-www-form-urlencoded; charset=utf-8', 'User-Agent': 'Boto3/1.9.98 Python/3.6.7 FreeBSD/12.0-RELEASE-p3 Botocore/1.12.98'}, 'body': {'Action': 'GetAttributes', 'Version': '2009-04-15', 'DomainName': 's3mail', 'ItemName': 'langdon@idealcs.com.au'}, 'url': 'https://sdb.ap-southeast-2.amazonaws.com/', 'context': {'client_region': 'ap-southeast-2', 'client_config': <botocore.config.Config object at 0x803529940>, 'has_streaming_input': False, 'auth_type': None}}
+14-03-2019:14:57:36,10 DEBUG    [hooks.py:210] Event request-created.simpledb.GetAttributes: calling handler <bound method RequestSigner.handler of <botocore.signers.RequestSigner object at 0x803529b00>>
+14-03-2019:14:57:36,11 DEBUG    [hooks.py:210] Event choose-signer.simpledb.GetAttributes: calling handler <function set_operation_specific_signer at 0x802e5ab70>
+14-03-2019:14:57:36,11 DEBUG    [auth.py:73] Calculating signature using v2 auth.
+14-03-2019:14:57:36,11 DEBUG    [auth.py:95] String to sign: POST
+sdb.ap-southeast-2.amazonaws.com
+/
+AWSAccessKeyId=AKIAIYWRP3SNXSCU3H6A&Action=GetAttributes&DomainName=s3mail&ItemName=langdon%40idealcs.com.au&SignatureMethod=HmacSHA256&SignatureVersion=2&Timestamp=2019-03-14T04%3A57%3A36Z&Version=2009-04-15
+14-03-2019:14:57:36,11 DEBUG    [endpoint.py:187] Sending http request: <AWSPreparedRequest stream_output=False, method=POST, url=https://sdb.ap-southeast-2.amazonaws.com/, headers={'Content-Type': b'application/x-www-form-urlencoded; charset=utf-8', 'User-Agent': b'Boto3/1.9.98 Python/3.6.7 FreeBSD/12.0-RELEASE-p3 Botocore/1.12.98', 'Content-Length': '273'}>
+14-03-2019:14:57:36,12 DEBUG    [retry.py:210] Converted retries value: False -> Retry(total=False, connect=None, read=None, redirect=0, status=None)
+14-03-2019:14:57:36,12 DEBUG    [connectionpool.py:813] Starting new HTTPS connection (1): sdb.ap-southeast-2.amazonaws.com:443
+14-03-2019:14:57:36,193 DEBUG    [connectionpool.py:393] https://sdb.ap-southeast-2.amazonaws.com:443 "POST / HTTP/1.1" 200 None
+14-03-2019:14:57:36,194 DEBUG    [parsers.py:234] Response headers: {'Date': 'Thu, 14 Mar 2019 04:57:36 GMT', 'Content-Type': 'text/xml', 'Transfer-Encoding': 'chunked', 'Connection': 'keep-alive', 'Vary': 'Accept-Encoding', 'Server': 'Amazon SimpleDB'}
+14-03-2019:14:57:36,194 DEBUG    [parsers.py:235] Response body:
+b'<?xml version="1.0"?>\n<GetAttributesResponse xmlns="http://sdb.amazonaws.com/doc/2009-04-15/"><GetAttributesResult><Attribute><Name>password</Name><Value>$argon2id$v=19$m=102400,t=2,p=8$QS6cYn2jJm4JbIzeoaUbyw$SLWcox7ULv/RFcdWk1Kcbg</Value></Attribute><Attribute><Name>confirmed</Name><Value>1</Value></Attribute></GetAttributesResult><ResponseMetadata><RequestId>0c5ee34b-5e4c-b01a-21d5-d20328715b98</RequestId><BoxUsage>0.0000093282</BoxUsage></ResponseMetadata></GetAttributesResponse>'
+14-03-2019:14:57:36,194 DEBUG    [hooks.py:210] Event needs-retry.simpledb.GetAttributes: calling handler <botocore.retryhandler.RetryHandler object at 0x8035297f0>
+14-03-2019:14:57:36,194 DEBUG    [retryhandler.py:187] No retry needed.
+14-03-2019:14:57:36,195 DEBUG    [login_utils.py:54] {'Name': 'confirmed', 'Value': '1'}
+14-03-2019:14:57:36,196 DEBUG    [hooks.py:210] Event choose-service-name: calling handler <function handle_service_name_alias at 0x802e23950>
+14-03-2019:14:57:36,196 DEBUG    [hooks.py:210] Event creating-client-class.simpledb: calling handler <function add_generate_presigned_url at 0x802dda0d0>
+14-03-2019:14:57:36,196 DEBUG    [args.py:169] The s3 config key is not a dictionary type, ignoring its value of: None
+14-03-2019:14:57:36,198 DEBUG    [endpoint.py:266] Setting sdb timeout as (60, 60)
+14-03-2019:14:57:36,198 DEBUG    [client.py:139] Registering retry handlers for service: sdb
+14-03-2019:14:57:36,199 DEBUG    [hooks.py:210] Event before-parameter-build.simpledb.GetAttributes: calling handler <function generate_idempotent_uuid at 0x802e5ac80>
+14-03-2019:14:57:36,199 DEBUG    [hooks.py:210] Event before-call.simpledb.GetAttributes: calling handler <function inject_api_version_header_if_needed at 0x802e5d7b8>
+14-03-2019:14:57:36,199 DEBUG    [endpoint.py:101] Making request for OperationModel(name=GetAttributes) with params: {'url_path': '/', 'query_string': '', 'method': 'POST', 'headers': {'Content-Type': 'application/x-www-form-urlencoded; charset=utf-8', 'User-Agent': 'Boto3/1.9.98 Python/3.6.7 FreeBSD/12.0-RELEASE-p3 Botocore/1.12.98'}, 'body': {'Action': 'GetAttributes', 'Version': '2009-04-15', 'DomainName': 's3mail', 'ItemName': 'langdon@idealcs.com.au'}, 'url': 'https://sdb.ap-southeast-2.amazonaws.com/', 'context': {'client_region': 'ap-southeast-2', 'client_config': <botocore.config.Config object at 0x8035299b0>, 'has_streaming_input': False, 'auth_type': None}}
+14-03-2019:14:57:36,199 DEBUG    [hooks.py:210] Event request-created.simpledb.GetAttributes: calling handler <bound method RequestSigner.handler of <botocore.signers.RequestSigner object at 0x803529978>>
+14-03-2019:14:57:36,200 DEBUG    [hooks.py:210] Event choose-signer.simpledb.GetAttributes: calling handler <function set_operation_specific_signer at 0x802e5ab70>
+14-03-2019:14:57:36,200 DEBUG    [auth.py:73] Calculating signature using v2 auth.
+14-03-2019:14:57:36,200 DEBUG    [auth.py:95] String to sign: POST
+sdb.ap-southeast-2.amazonaws.com
+/
+AWSAccessKeyId=AKIAIYWRP3SNXSCU3H6A&Action=GetAttributes&DomainName=s3mail&ItemName=langdon%40idealcs.com.au&SignatureMethod=HmacSHA256&SignatureVersion=2&Timestamp=2019-03-14T04%3A57%3A36Z&Version=2009-04-15
+14-03-2019:14:57:36,200 DEBUG    [endpoint.py:187] Sending http request: <AWSPreparedRequest stream_output=False, method=POST, url=https://sdb.ap-southeast-2.amazonaws.com/, headers={'Content-Type': b'application/x-www-form-urlencoded; charset=utf-8', 'User-Agent': b'Boto3/1.9.98 Python/3.6.7 FreeBSD/12.0-RELEASE-p3 Botocore/1.12.98', 'Content-Length': '273'}>
+14-03-2019:14:57:36,201 DEBUG    [retry.py:210] Converted retries value: False -> Retry(total=False, connect=None, read=None, redirect=0, status=None)
+14-03-2019:14:57:36,201 DEBUG    [connectionpool.py:813] Starting new HTTPS connection (1): sdb.ap-southeast-2.amazonaws.com:443
+14-03-2019:14:57:36,382 DEBUG    [connectionpool.py:393] https://sdb.ap-southeast-2.amazonaws.com:443 "POST / HTTP/1.1" 200 None
+14-03-2019:14:57:36,383 DEBUG    [parsers.py:234] Response headers: {'Date': 'Thu, 14 Mar 2019 04:57:36 GMT', 'Content-Type': 'text/xml', 'Transfer-Encoding': 'chunked', 'Connection': 'keep-alive', 'Vary': 'Accept-Encoding', 'Server': 'Amazon SimpleDB'}
+14-03-2019:14:57:36,383 DEBUG    [parsers.py:235] Response body:
+b'<?xml version="1.0"?>\n<GetAttributesResponse xmlns="http://sdb.amazonaws.com/doc/2009-04-15/"><GetAttributesResult><Attribute><Name>password</Name><Value>$argon2id$v=19$m=102400,t=2,p=8$QS6cYn2jJm4JbIzeoaUbyw$SLWcox7ULv/RFcdWk1Kcbg</Value></Attribute><Attribute><Name>confirmed</Name><Value>1</Value></Attribute></GetAttributesResult><ResponseMetadata><RequestId>7b276c6a-023b-57a6-5cf3-c7c0b0cd97cd</RequestId><BoxUsage>0.0000093282</BoxUsage></ResponseMetadata></GetAttributesResponse>'
+14-03-2019:14:57:36,384 DEBUG    [hooks.py:210] Event needs-retry.simpledb.GetAttributes: calling handler <botocore.retryhandler.RetryHandler object at 0x80340d2e8>
+14-03-2019:14:57:36,384 DEBUG    [retryhandler.py:187] No retry needed.
+14-03-2019:14:57:36,386 DEBUG    [hooks.py:210] Event choose-service-name: calling handler <function handle_service_name_alias at 0x802e23950>
+14-03-2019:14:57:36,386 DEBUG    [hooks.py:210] Event creating-client-class.simpledb: calling handler <function add_generate_presigned_url at 0x802dda0d0>
+14-03-2019:14:57:36,387 DEBUG    [args.py:169] The s3 config key is not a dictionary type, ignoring its value of: None
+14-03-2019:14:57:36,388 DEBUG    [endpoint.py:266] Setting sdb timeout as (60, 60)
+14-03-2019:14:57:36,389 DEBUG    [client.py:139] Registering retry handlers for service: sdb
+14-03-2019:14:57:36,389 DEBUG    [hooks.py:210] Event before-parameter-build.simpledb.GetAttributes: calling handler <function generate_idempotent_uuid at 0x802e5ac80>
+14-03-2019:14:57:36,389 DEBUG    [hooks.py:210] Event before-call.simpledb.GetAttributes: calling handler <function inject_api_version_header_if_needed at 0x802e5d7b8>
+14-03-2019:14:57:36,389 DEBUG    [endpoint.py:101] Making request for OperationModel(name=GetAttributes) with params: {'url_path': '/', 'query_string': '', 'method': 'POST', 'headers': {'Content-Type': 'application/x-www-form-urlencoded; charset=utf-8', 'User-Agent': 'Boto3/1.9.98 Python/3.6.7 FreeBSD/12.0-RELEASE-p3 Botocore/1.12.98'}, 'body': {'Action': 'GetAttributes', 'Version': '2009-04-15', 'DomainName': 's3mail', 'ItemName': 'langdon@idealcs.com.au'}, 'url': 'https://sdb.ap-southeast-2.amazonaws.com/', 'context': {'client_region': 'ap-southeast-2', 'client_config': <botocore.config.Config object at 0x80340da90>, 'has_streaming_input': False, 'auth_type': None}}
+14-03-2019:14:57:36,390 DEBUG    [hooks.py:210] Event request-created.simpledb.GetAttributes: calling handler <bound method RequestSigner.handler of <botocore.signers.RequestSigner object at 0x80340deb8>>
+14-03-2019:14:57:36,390 DEBUG    [hooks.py:210] Event choose-signer.simpledb.GetAttributes: calling handler <function set_operation_specific_signer at 0x802e5ab70>
+14-03-2019:14:57:36,390 DEBUG    [auth.py:73] Calculating signature using v2 auth.
+14-03-2019:14:57:36,390 DEBUG    [auth.py:95] String to sign: POST
+sdb.ap-southeast-2.amazonaws.com
+/
+AWSAccessKeyId=AKIAIYWRP3SNXSCU3H6A&Action=GetAttributes&DomainName=s3mail&ItemName=langdon%40idealcs.com.au&SignatureMethod=HmacSHA256&SignatureVersion=2&Timestamp=2019-03-14T04%3A57%3A36Z&Version=2009-04-15
+14-03-2019:14:57:36,390 DEBUG    [endpoint.py:187] Sending http request: <AWSPreparedRequest stream_output=False, method=POST, url=https://sdb.ap-southeast-2.amazonaws.com/, headers={'Content-Type': b'application/x-www-form-urlencoded; charset=utf-8', 'User-Agent': b'Boto3/1.9.98 Python/3.6.7 FreeBSD/12.0-RELEASE-p3 Botocore/1.12.98', 'Content-Length': '273'}>
+14-03-2019:14:57:36,391 DEBUG    [retry.py:210] Converted retries value: False -> Retry(total=False, connect=None, read=None, redirect=0, status=None)
+14-03-2019:14:57:36,391 DEBUG    [connectionpool.py:813] Starting new HTTPS connection (1): sdb.ap-southeast-2.amazonaws.com:443
+14-03-2019:14:57:36,558 DEBUG    [connectionpool.py:393] https://sdb.ap-southeast-2.amazonaws.com:443 "POST / HTTP/1.1" 200 None
+14-03-2019:14:57:36,559 DEBUG    [parsers.py:234] Response headers: {'Date': 'Thu, 14 Mar 2019 04:57:36 GMT', 'Content-Type': 'text/xml', 'Transfer-Encoding': 'chunked', 'Connection': 'keep-alive', 'Vary': 'Accept-Encoding', 'Server': 'Amazon SimpleDB'}
+14-03-2019:14:57:36,559 DEBUG    [parsers.py:235] Response body:
+b'<?xml version="1.0"?>\n<GetAttributesResponse xmlns="http://sdb.amazonaws.com/doc/2009-04-15/"><GetAttributesResult><Attribute><Name>password</Name><Value>$argon2id$v=19$m=102400,t=2,p=8$QS6cYn2jJm4JbIzeoaUbyw$SLWcox7ULv/RFcdWk1Kcbg</Value></Attribute><Attribute><Name>confirmed</Name><Value>1</Value></Attribute></GetAttributesResult><ResponseMetadata><RequestId>5ae88d48-09ff-a1ec-ffef-8bc635812d5c</RequestId><BoxUsage>0.0000093282</BoxUsage></ResponseMetadata></GetAttributesResponse>'
+14-03-2019:14:57:36,559 DEBUG    [hooks.py:210] Event needs-retry.simpledb.GetAttributes: calling handler <botocore.retryhandler.RetryHandler object at 0x803523518>
+14-03-2019:14:57:36,559 DEBUG    [retryhandler.py:187] No retry needed.
+14-03-2019:14:57:36,560 DEBUG    [login_utils.py:77] {'Attributes': [{'Name': 'password', 'Value': '$argon2id$v=19$m=102400,t=2,p=8$QS6cYn2jJm4JbIzeoaUbyw$SLWcox7ULv/RFcdWk1Kcbg'}, {'Name': 'confirmed', 'Value': '1'}], 'ResponseMetadata': {'RequestId': '5ae88d48-09ff-a1ec-ffef-8bc635812d5c', 'BoxUsage': '0.0000093282', 'HTTPStatusCode': 200, 'HTTPHeaders': {'date': 'Thu, 14 Mar 2019 04:57:36 GMT', 'content-type': 'text/xml', 'transfer-encoding': 'chunked', 'connection': 'keep-alive', 'vary': 'Accept-Encoding', 'server': 'Amazon SimpleDB'}, 'RetryAttempts': 0}}
+14-03-2019:14:57:36,674 INFO     [login.py:55] langdon@idealcs.com.au logged in IP: 127.0.0.1
+14-03-2019:14:57:47,357 DEBUG    [hooks.py:417] Changing event name from creating-client-class.iot-data to creating-client-class.iot-data-plane
+14-03-2019:14:57:47,363 DEBUG    [hooks.py:417] Changing event name from before-call.apigateway to before-call.api-gateway
+14-03-2019:14:57:47,364 DEBUG    [hooks.py:417] Changing event name from request-created.machinelearning.Predict to request-created.machine-learning.Predict
+14-03-2019:14:57:47,366 DEBUG    [hooks.py:417] Changing event name from before-parameter-build.autoscaling.CreateLaunchConfiguration to before-parameter-build.auto-scaling.CreateLaunchConfiguration
+14-03-2019:14:57:47,366 DEBUG    [hooks.py:417] Changing event name from before-parameter-build.route53 to before-parameter-build.route-53
+14-03-2019:14:57:47,367 DEBUG    [hooks.py:417] Changing event name from request-created.cloudsearchdomain.Search to request-created.cloudsearch-domain.Search
+14-03-2019:14:57:47,368 DEBUG    [hooks.py:417] Changing event name from docs.*.autoscaling.CreateLaunchConfiguration.complete-section to docs.*.auto-scaling.CreateLaunchConfiguration.complete-section
+14-03-2019:14:57:47,370 DEBUG    [hooks.py:417] Changing event name from before-parameter-build.logs.CreateExportTask to before-parameter-build.cloudwatch-logs.CreateExportTask
+14-03-2019:14:57:47,371 DEBUG    [hooks.py:417] Changing event name from docs.*.logs.CreateExportTask.complete-section to docs.*.cloudwatch-logs.CreateExportTask.complete-section
+14-03-2019:14:57:47,371 DEBUG    [hooks.py:417] Changing event name from before-parameter-build.cloudsearchdomain.Search to before-parameter-build.cloudsearch-domain.Search
+14-03-2019:14:57:47,371 DEBUG    [hooks.py:417] Changing event name from docs.*.cloudsearchdomain.Search.complete-section to docs.*.cloudsearch-domain.Search.complete-section
+14-03-2019:14:57:47,437 DEBUG    [credentials.py:1687] Looking for credentials via: env
+14-03-2019:14:57:47,438 DEBUG    [credentials.py:1687] Looking for credentials via: assume-role
+14-03-2019:14:57:47,438 DEBUG    [credentials.py:1687] Looking for credentials via: shared-credentials-file
+14-03-2019:14:57:47,438 INFO     [credentials.py:1046] Found credentials in shared credentials file: ~/.aws/credentials
+14-03-2019:14:57:47,439 DEBUG    [loaders.py:174] Loading JSON file: /usr/home/lg/private/lg/projects/software/flaskbase/venv/lib/python3.6/site-packages/botocore/data/endpoints.json
+14-03-2019:14:57:47,443 DEBUG    [hooks.py:210] Event choose-service-name: calling handler <function handle_service_name_alias at 0x802e23950>
+14-03-2019:14:57:47,478 DEBUG    [loaders.py:174] Loading JSON file: /usr/home/lg/private/lg/projects/software/flaskbase/venv/lib/python3.6/site-packages/botocore/data/sdb/2009-04-15/service-2.json
+14-03-2019:14:57:47,480 DEBUG    [hooks.py:210] Event creating-client-class.simpledb: calling handler <function add_generate_presigned_url at 0x802dda0d0>
+14-03-2019:14:57:47,480 DEBUG    [args.py:169] The s3 config key is not a dictionary type, ignoring its value of: None
+14-03-2019:14:57:47,483 DEBUG    [endpoint.py:266] Setting sdb timeout as (60, 60)
+14-03-2019:14:57:47,484 DEBUG    [loaders.py:174] Loading JSON file: /usr/home/lg/private/lg/projects/software/flaskbase/venv/lib/python3.6/site-packages/botocore/data/_retry.json
+14-03-2019:14:57:47,484 DEBUG    [client.py:139] Registering retry handlers for service: sdb
+14-03-2019:14:57:47,485 DEBUG    [hooks.py:210] Event before-parameter-build.simpledb.GetAttributes: calling handler <function generate_idempotent_uuid at 0x802e5ac80>
+14-03-2019:14:57:47,485 DEBUG    [hooks.py:210] Event before-call.simpledb.GetAttributes: calling handler <function inject_api_version_header_if_needed at 0x802e5d7b8>
+14-03-2019:14:57:47,486 DEBUG    [endpoint.py:101] Making request for OperationModel(name=GetAttributes) with params: {'url_path': '/', 'query_string': '', 'method': 'POST', 'headers': {'Content-Type': 'application/x-www-form-urlencoded; charset=utf-8', 'User-Agent': 'Boto3/1.9.98 Python/3.6.7 FreeBSD/12.0-RELEASE-p3 Botocore/1.12.98'}, 'body': {'Action': 'GetAttributes', 'Version': '2009-04-15', 'DomainName': 's3mail', 'ItemName': 'langdon@idealcs.com.au'}, 'url': 'https://sdb.ap-southeast-2.amazonaws.com/', 'context': {'client_region': 'ap-southeast-2', 'client_config': <botocore.config.Config object at 0x803404208>, 'has_streaming_input': False, 'auth_type': None}}
+14-03-2019:14:57:47,486 DEBUG    [hooks.py:210] Event request-created.simpledb.GetAttributes: calling handler <bound method RequestSigner.handler of <botocore.signers.RequestSigner object at 0x803404198>>
+14-03-2019:14:57:47,486 DEBUG    [hooks.py:210] Event choose-signer.simpledb.GetAttributes: calling handler <function set_operation_specific_signer at 0x802e5ab70>
+14-03-2019:14:57:47,486 DEBUG    [auth.py:73] Calculating signature using v2 auth.
+14-03-2019:14:57:47,486 DEBUG    [auth.py:95] String to sign: POST
+sdb.ap-southeast-2.amazonaws.com
+/
+AWSAccessKeyId=AKIAIYWRP3SNXSCU3H6A&Action=GetAttributes&DomainName=s3mail&ItemName=langdon%40idealcs.com.au&SignatureMethod=HmacSHA256&SignatureVersion=2&Timestamp=2019-03-14T04%3A57%3A47Z&Version=2009-04-15
+14-03-2019:14:57:47,487 DEBUG    [endpoint.py:187] Sending http request: <AWSPreparedRequest stream_output=False, method=POST, url=https://sdb.ap-southeast-2.amazonaws.com/, headers={'Content-Type': b'application/x-www-form-urlencoded; charset=utf-8', 'User-Agent': b'Boto3/1.9.98 Python/3.6.7 FreeBSD/12.0-RELEASE-p3 Botocore/1.12.98', 'Content-Length': '269'}>
+14-03-2019:14:57:47,487 DEBUG    [retry.py:210] Converted retries value: False -> Retry(total=False, connect=None, read=None, redirect=0, status=None)
+14-03-2019:14:57:47,488 DEBUG    [connectionpool.py:813] Starting new HTTPS connection (1): sdb.ap-southeast-2.amazonaws.com:443
+14-03-2019:14:57:52,915 DEBUG    [connectionpool.py:393] https://sdb.ap-southeast-2.amazonaws.com:443 "POST / HTTP/1.1" 200 None
+14-03-2019:14:57:52,916 DEBUG    [parsers.py:234] Response headers: {'Date': 'Thu, 14 Mar 2019 04:57:52 GMT', 'Content-Type': 'text/xml', 'Transfer-Encoding': 'chunked', 'Connection': 'keep-alive', 'Vary': 'Accept-Encoding', 'Server': 'Amazon SimpleDB'}
+14-03-2019:14:57:52,916 DEBUG    [parsers.py:235] Response body:
+b'<?xml version="1.0"?>\n<GetAttributesResponse xmlns="http://sdb.amazonaws.com/doc/2009-04-15/"><GetAttributesResult><Attribute><Name>password</Name><Value>$argon2id$v=19$m=102400,t=2,p=8$QS6cYn2jJm4JbIzeoaUbyw$SLWcox7ULv/RFcdWk1Kcbg</Value></Attribute><Attribute><Name>confirmed</Name><Value>1</Value></Attribute></GetAttributesResult><ResponseMetadata><RequestId>61c8a392-3b77-0cef-f62c-dbc4821f9f0f</RequestId><BoxUsage>0.0000093282</BoxUsage></ResponseMetadata></GetAttributesResponse>'
+14-03-2019:14:57:52,918 DEBUG    [hooks.py:210] Event needs-retry.simpledb.GetAttributes: calling handler <botocore.retryhandler.RetryHandler object at 0x8034045f8>
+14-03-2019:14:57:52,918 DEBUG    [retryhandler.py:187] No retry needed.
+14-03-2019:14:57:52,921 DEBUG    [login_utils.py:54] {'Name': 'confirmed', 'Value': '1'}
+14-03-2019:14:57:52,921 DEBUG    [hooks.py:210] Event choose-service-name: calling handler <function handle_service_name_alias at 0x802e23950>
+14-03-2019:14:57:52,921 DEBUG    [hooks.py:210] Event creating-client-class.simpledb: calling handler <function add_generate_presigned_url at 0x802dda0d0>
+14-03-2019:14:57:52,921 DEBUG    [args.py:169] The s3 config key is not a dictionary type, ignoring its value of: None
+14-03-2019:14:57:52,939 DEBUG    [endpoint.py:266] Setting sdb timeout as (60, 60)
+14-03-2019:14:57:52,940 DEBUG    [client.py:139] Registering retry handlers for service: sdb
+14-03-2019:14:57:52,941 DEBUG    [hooks.py:210] Event before-parameter-build.simpledb.GetAttributes: calling handler <function generate_idempotent_uuid at 0x802e5ac80>
+14-03-2019:14:57:52,941 DEBUG    [hooks.py:210] Event before-call.simpledb.GetAttributes: calling handler <function inject_api_version_header_if_needed at 0x802e5d7b8>
+14-03-2019:14:57:52,941 DEBUG    [endpoint.py:101] Making request for OperationModel(name=GetAttributes) with params: {'url_path': '/', 'query_string': '', 'method': 'POST', 'headers': {'Content-Type': 'application/x-www-form-urlencoded; charset=utf-8', 'User-Agent': 'Boto3/1.9.98 Python/3.6.7 FreeBSD/12.0-RELEASE-p3 Botocore/1.12.98'}, 'body': {'Action': 'GetAttributes', 'Version': '2009-04-15', 'DomainName': 's3mail', 'ItemName': 'langdon@idealcs.com.au'}, 'url': 'https://sdb.ap-southeast-2.amazonaws.com/', 'context': {'client_region': 'ap-southeast-2', 'client_config': <botocore.config.Config object at 0x803211128>, 'has_streaming_input': False, 'auth_type': None}}
+14-03-2019:14:57:52,941 DEBUG    [hooks.py:210] Event request-created.simpledb.GetAttributes: calling handler <bound method RequestSigner.handler of <botocore.signers.RequestSigner object at 0x802086c88>>
+14-03-2019:14:57:52,942 DEBUG    [hooks.py:210] Event choose-signer.simpledb.GetAttributes: calling handler <function set_operation_specific_signer at 0x802e5ab70>
+14-03-2019:14:57:52,942 DEBUG    [auth.py:73] Calculating signature using v2 auth.
+14-03-2019:14:57:52,942 DEBUG    [auth.py:95] String to sign: POST
+sdb.ap-southeast-2.amazonaws.com
+/
+AWSAccessKeyId=AKIAIYWRP3SNXSCU3H6A&Action=GetAttributes&DomainName=s3mail&ItemName=langdon%40idealcs.com.au&SignatureMethod=HmacSHA256&SignatureVersion=2&Timestamp=2019-03-14T04%3A57%3A52Z&Version=2009-04-15
+14-03-2019:14:57:52,942 DEBUG    [endpoint.py:187] Sending http request: <AWSPreparedRequest stream_output=False, method=POST, url=https://sdb.ap-southeast-2.amazonaws.com/, headers={'Content-Type': b'application/x-www-form-urlencoded; charset=utf-8', 'User-Agent': b'Boto3/1.9.98 Python/3.6.7 FreeBSD/12.0-RELEASE-p3 Botocore/1.12.98', 'Content-Length': '267'}>
+14-03-2019:14:57:52,942 DEBUG    [retry.py:210] Converted retries value: False -> Retry(total=False, connect=None, read=None, redirect=0, status=None)
+14-03-2019:14:57:52,943 DEBUG    [connectionpool.py:813] Starting new HTTPS connection (1): sdb.ap-southeast-2.amazonaws.com:443
+14-03-2019:14:57:53,120 DEBUG    [connectionpool.py:393] https://sdb.ap-southeast-2.amazonaws.com:443 "POST / HTTP/1.1" 200 None
+14-03-2019:14:57:53,121 DEBUG    [parsers.py:234] Response headers: {'Date': 'Thu, 14 Mar 2019 04:57:52 GMT', 'Content-Type': 'text/xml', 'Transfer-Encoding': 'chunked', 'Connection': 'keep-alive', 'Vary': 'Accept-Encoding', 'Server': 'Amazon SimpleDB'}
+14-03-2019:14:57:53,121 DEBUG    [parsers.py:235] Response body:
+b'<?xml version="1.0"?>\n<GetAttributesResponse xmlns="http://sdb.amazonaws.com/doc/2009-04-15/"><GetAttributesResult><Attribute><Name>password</Name><Value>$argon2id$v=19$m=102400,t=2,p=8$QS6cYn2jJm4JbIzeoaUbyw$SLWcox7ULv/RFcdWk1Kcbg</Value></Attribute><Attribute><Name>confirmed</Name><Value>1</Value></Attribute></GetAttributesResult><ResponseMetadata><RequestId>fbf01a7b-bb56-50a1-e6fa-c21aa43433ce</RequestId><BoxUsage>0.0000093282</BoxUsage></ResponseMetadata></GetAttributesResponse>'
+14-03-2019:14:57:53,121 DEBUG    [hooks.py:210] Event needs-retry.simpledb.GetAttributes: calling handler <botocore.retryhandler.RetryHandler object at 0x8033ecd68>
+14-03-2019:14:57:53,122 DEBUG    [retryhandler.py:187] No retry needed.
+14-03-2019:14:57:53,123 DEBUG    [hooks.py:210] Event choose-service-name: calling handler <function handle_service_name_alias at 0x802e23950>
+14-03-2019:14:57:53,123 DEBUG    [hooks.py:210] Event creating-client-class.simpledb: calling handler <function add_generate_presigned_url at 0x802dda0d0>
+14-03-2019:14:57:53,123 DEBUG    [args.py:169] The s3 config key is not a dictionary type, ignoring its value of: None
+14-03-2019:14:57:53,125 DEBUG    [endpoint.py:266] Setting sdb timeout as (60, 60)
+14-03-2019:14:57:53,125 DEBUG    [client.py:139] Registering retry handlers for service: sdb
+14-03-2019:14:57:53,126 DEBUG    [hooks.py:210] Event before-parameter-build.simpledb.GetAttributes: calling handler <function generate_idempotent_uuid at 0x802e5ac80>
+14-03-2019:14:57:53,126 DEBUG    [hooks.py:210] Event before-call.simpledb.GetAttributes: calling handler <function inject_api_version_header_if_needed at 0x802e5d7b8>
+14-03-2019:14:57:53,126 DEBUG    [endpoint.py:101] Making request for OperationModel(name=GetAttributes) with params: {'url_path': '/', 'query_string': '', 'method': 'POST', 'headers': {'Content-Type': 'application/x-www-form-urlencoded; charset=utf-8', 'User-Agent': 'Boto3/1.9.98 Python/3.6.7 FreeBSD/12.0-RELEASE-p3 Botocore/1.12.98'}, 'body': {'Action': 'GetAttributes', 'Version': '2009-04-15', 'DomainName': 's3mail', 'ItemName': 'langdon@idealcs.com.au'}, 'url': 'https://sdb.ap-southeast-2.amazonaws.com/', 'context': {'client_region': 'ap-southeast-2', 'client_config': <botocore.config.Config object at 0x8033ecef0>, 'has_streaming_input': False, 'auth_type': None}}
+14-03-2019:14:57:53,126 DEBUG    [hooks.py:210] Event request-created.simpledb.GetAttributes: calling handler <bound method RequestSigner.handler of <botocore.signers.RequestSigner object at 0x8033ecda0>>
+14-03-2019:14:57:53,127 DEBUG    [hooks.py:210] Event choose-signer.simpledb.GetAttributes: calling handler <function set_operation_specific_signer at 0x802e5ab70>
+14-03-2019:14:57:53,127 DEBUG    [auth.py:73] Calculating signature using v2 auth.
+14-03-2019:14:57:53,127 DEBUG    [auth.py:95] String to sign: POST
+sdb.ap-southeast-2.amazonaws.com
+/
+AWSAccessKeyId=AKIAIYWRP3SNXSCU3H6A&Action=GetAttributes&DomainName=s3mail&ItemName=langdon%40idealcs.com.au&SignatureMethod=HmacSHA256&SignatureVersion=2&Timestamp=2019-03-14T04%3A57%3A53Z&Version=2009-04-15
+14-03-2019:14:57:53,127 DEBUG    [endpoint.py:187] Sending http request: <AWSPreparedRequest stream_output=False, method=POST, url=https://sdb.ap-southeast-2.amazonaws.com/, headers={'Content-Type': b'application/x-www-form-urlencoded; charset=utf-8', 'User-Agent': b'Boto3/1.9.98 Python/3.6.7 FreeBSD/12.0-RELEASE-p3 Botocore/1.12.98', 'Content-Length': '265'}>
+14-03-2019:14:57:53,128 DEBUG    [retry.py:210] Converted retries value: False -> Retry(total=False, connect=None, read=None, redirect=0, status=None)
+14-03-2019:14:57:53,128 DEBUG    [connectionpool.py:813] Starting new HTTPS connection (1): sdb.ap-southeast-2.amazonaws.com:443
+14-03-2019:14:57:53,340 DEBUG    [connectionpool.py:393] https://sdb.ap-southeast-2.amazonaws.com:443 "POST / HTTP/1.1" 200 None
+14-03-2019:14:57:53,340 DEBUG    [parsers.py:234] Response headers: {'Date': 'Thu, 14 Mar 2019 04:57:53 GMT', 'Content-Type': 'text/xml', 'Transfer-Encoding': 'chunked', 'Connection': 'keep-alive', 'Vary': 'Accept-Encoding', 'Server': 'Amazon SimpleDB'}
+14-03-2019:14:57:53,340 DEBUG    [parsers.py:235] Response body:
+b'<?xml version="1.0"?>\n<GetAttributesResponse xmlns="http://sdb.amazonaws.com/doc/2009-04-15/"><GetAttributesResult><Attribute><Name>password</Name><Value>$argon2id$v=19$m=102400,t=2,p=8$QS6cYn2jJm4JbIzeoaUbyw$SLWcox7ULv/RFcdWk1Kcbg</Value></Attribute><Attribute><Name>confirmed</Name><Value>1</Value></Attribute></GetAttributesResult><ResponseMetadata><RequestId>992dc53a-b69b-24bf-1531-57b7ec31b574</RequestId><BoxUsage>0.0000093282</BoxUsage></ResponseMetadata></GetAttributesResponse>'
+14-03-2019:14:57:53,341 DEBUG    [hooks.py:210] Event needs-retry.simpledb.GetAttributes: calling handler <botocore.retryhandler.RetryHandler object at 0x803492f98>
+14-03-2019:14:57:53,341 DEBUG    [retryhandler.py:187] No retry needed.
+14-03-2019:14:57:53,342 DEBUG    [login_utils.py:77] {'Attributes': [{'Name': 'password', 'Value': '$argon2id$v=19$m=102400,t=2,p=8$QS6cYn2jJm4JbIzeoaUbyw$SLWcox7ULv/RFcdWk1Kcbg'}, {'Name': 'confirmed', 'Value': '1'}], 'ResponseMetadata': {'RequestId': '992dc53a-b69b-24bf-1531-57b7ec31b574', 'BoxUsage': '0.0000093282', 'HTTPStatusCode': 200, 'HTTPHeaders': {'date': 'Thu, 14 Mar 2019 04:57:53 GMT', 'content-type': 'text/xml', 'transfer-encoding': 'chunked', 'connection': 'keep-alive', 'vary': 'Accept-Encoding', 'server': 'Amazon SimpleDB'}, 'RetryAttempts': 0}}
+14-03-2019:14:57:53,474 ERROR    [login_utils.py:89] The password does not match the supplied hash
+14-03-2019:14:57:53,474 WARNING  [login.py:63] langdon@idealcs.com.au password didn't match IP: 127.0.0.1
+14-03-2019:14:57:53,502 DEBUG    [hooks.py:210] Event choose-service-name: calling handler <function handle_service_name_alias at 0x802e23950>
+14-03-2019:14:57:53,502 DEBUG    [hooks.py:210] Event creating-client-class.simpledb: calling handler <function add_generate_presigned_url at 0x802dda0d0>
+14-03-2019:14:57:53,502 DEBUG    [args.py:169] The s3 config key is not a dictionary type, ignoring its value of: None
+14-03-2019:14:57:53,504 DEBUG    [endpoint.py:266] Setting sdb timeout as (60, 60)
+14-03-2019:14:57:53,505 DEBUG    [client.py:139] Registering retry handlers for service: sdb
+14-03-2019:14:57:53,505 DEBUG    [hooks.py:210] Event before-parameter-build.simpledb.GetAttributes: calling handler <function generate_idempotent_uuid at 0x802e5ac80>
+14-03-2019:14:57:53,505 DEBUG    [hooks.py:210] Event before-call.simpledb.GetAttributes: calling handler <function inject_api_version_header_if_needed at 0x802e5d7b8>
+14-03-2019:14:57:53,506 DEBUG    [endpoint.py:101] Making request for OperationModel(name=GetAttributes) with params: {'url_path': '/', 'query_string': '', 'method': 'POST', 'headers': {'Content-Type': 'application/x-www-form-urlencoded; charset=utf-8', 'User-Agent': 'Boto3/1.9.98 Python/3.6.7 FreeBSD/12.0-RELEASE-p3 Botocore/1.12.98'}, 'body': {'Action': 'GetAttributes', 'Version': '2009-04-15', 'DomainName': 's3mail', 'ItemName': 'langdon@idealcs.com.au'}, 'url': 'https://sdb.ap-southeast-2.amazonaws.com/', 'context': {'client_region': 'ap-southeast-2', 'client_config': <botocore.config.Config object at 0x803528be0>, 'has_streaming_input': False, 'auth_type': None}}
+14-03-2019:14:57:53,506 DEBUG    [hooks.py:210] Event request-created.simpledb.GetAttributes: calling handler <bound method RequestSigner.handler of <botocore.signers.RequestSigner object at 0x803528ac8>>
+14-03-2019:14:57:53,506 DEBUG    [hooks.py:210] Event choose-signer.simpledb.GetAttributes: calling handler <function set_operation_specific_signer at 0x802e5ab70>
+14-03-2019:14:57:53,506 DEBUG    [auth.py:73] Calculating signature using v2 auth.
+14-03-2019:14:57:53,506 DEBUG    [auth.py:95] String to sign: POST
+sdb.ap-southeast-2.amazonaws.com
+/
+AWSAccessKeyId=AKIAIYWRP3SNXSCU3H6A&Action=GetAttributes&DomainName=s3mail&ItemName=langdon%40idealcs.com.au&SignatureMethod=HmacSHA256&SignatureVersion=2&Timestamp=2019-03-14T04%3A57%3A53Z&Version=2009-04-15
+14-03-2019:14:57:53,506 DEBUG    [endpoint.py:187] Sending http request: <AWSPreparedRequest stream_output=False, method=POST, url=https://sdb.ap-southeast-2.amazonaws.com/, headers={'Content-Type': b'application/x-www-form-urlencoded; charset=utf-8', 'User-Agent': b'Boto3/1.9.98 Python/3.6.7 FreeBSD/12.0-RELEASE-p3 Botocore/1.12.98', 'Content-Length': '265'}>
+14-03-2019:14:57:53,507 DEBUG    [retry.py:210] Converted retries value: False -> Retry(total=False, connect=None, read=None, redirect=0, status=None)
+14-03-2019:14:57:53,507 DEBUG    [connectionpool.py:813] Starting new HTTPS connection (1): sdb.ap-southeast-2.amazonaws.com:443
+14-03-2019:14:57:53,898 DEBUG    [connectionpool.py:393] https://sdb.ap-southeast-2.amazonaws.com:443 "POST / HTTP/1.1" 200 None
+14-03-2019:14:57:53,899 DEBUG    [parsers.py:234] Response headers: {'Date': 'Thu, 14 Mar 2019 04:57:53 GMT', 'Content-Type': 'text/xml', 'Transfer-Encoding': 'chunked', 'Connection': 'keep-alive', 'Vary': 'Accept-Encoding', 'Server': 'Amazon SimpleDB'}
+14-03-2019:14:57:53,899 DEBUG    [parsers.py:235] Response body:
+b'<?xml version="1.0"?>\n<GetAttributesResponse xmlns="http://sdb.amazonaws.com/doc/2009-04-15/"><GetAttributesResult><Attribute><Name>password</Name><Value>$argon2id$v=19$m=102400,t=2,p=8$QS6cYn2jJm4JbIzeoaUbyw$SLWcox7ULv/RFcdWk1Kcbg</Value></Attribute><Attribute><Name>confirmed</Name><Value>1</Value></Attribute></GetAttributesResult><ResponseMetadata><RequestId>a92db334-a4d3-eb04-75c2-92f2f1714e4a</RequestId><BoxUsage>0.0000093282</BoxUsage></ResponseMetadata></GetAttributesResponse>'
+14-03-2019:14:57:53,899 DEBUG    [hooks.py:210] Event needs-retry.simpledb.GetAttributes: calling handler <botocore.retryhandler.RetryHandler object at 0x803528a58>
+14-03-2019:14:57:53,899 DEBUG    [retryhandler.py:187] No retry needed.
+14-03-2019:14:57:53,901 DEBUG    [login_utils.py:54] {'Name': 'confirmed', 'Value': '1'}
+14-03-2019:14:57:53,902 DEBUG    [hooks.py:210] Event choose-service-name: calling handler <function handle_service_name_alias at 0x802e23950>
+14-03-2019:14:57:53,903 DEBUG    [hooks.py:210] Event creating-client-class.simpledb: calling handler <function add_generate_presigned_url at 0x802dda0d0>
+14-03-2019:14:57:53,903 DEBUG    [args.py:169] The s3 config key is not a dictionary type, ignoring its value of: None
+14-03-2019:14:57:53,904 DEBUG    [endpoint.py:266] Setting sdb timeout as (60, 60)
+14-03-2019:14:57:53,905 DEBUG    [client.py:139] Registering retry handlers for service: sdb
+14-03-2019:14:57:53,906 DEBUG    [hooks.py:210] Event before-parameter-build.simpledb.GetAttributes: calling handler <function generate_idempotent_uuid at 0x802e5ac80>
+14-03-2019:14:57:53,906 DEBUG    [hooks.py:210] Event before-call.simpledb.GetAttributes: calling handler <function inject_api_version_header_if_needed at 0x802e5d7b8>
+14-03-2019:14:57:53,906 DEBUG    [endpoint.py:101] Making request for OperationModel(name=GetAttributes) with params: {'url_path': '/', 'query_string': '', 'method': 'POST', 'headers': {'Content-Type': 'application/x-www-form-urlencoded; charset=utf-8', 'User-Agent': 'Boto3/1.9.98 Python/3.6.7 FreeBSD/12.0-RELEASE-p3 Botocore/1.12.98'}, 'body': {'Action': 'GetAttributes', 'Version': '2009-04-15', 'DomainName': 's3mail', 'ItemName': 'langdon@idealcs.com.au'}, 'url': 'https://sdb.ap-southeast-2.amazonaws.com/', 'context': {'client_region': 'ap-southeast-2', 'client_config': <botocore.config.Config object at 0x8035289b0>, 'has_streaming_input': False, 'auth_type': None}}
+14-03-2019:14:57:53,906 DEBUG    [hooks.py:210] Event request-created.simpledb.GetAttributes: calling handler <bound method RequestSigner.handler of <botocore.signers.RequestSigner object at 0x803528c18>>
+14-03-2019:14:57:53,906 DEBUG    [hooks.py:210] Event choose-signer.simpledb.GetAttributes: calling handler <function set_operation_specific_signer at 0x802e5ab70>
+14-03-2019:14:57:53,907 DEBUG    [auth.py:73] Calculating signature using v2 auth.
+14-03-2019:14:57:53,907 DEBUG    [auth.py:95] String to sign: POST
+sdb.ap-southeast-2.amazonaws.com
+/
+AWSAccessKeyId=AKIAIYWRP3SNXSCU3H6A&Action=GetAttributes&DomainName=s3mail&ItemName=langdon%40idealcs.com.au&SignatureMethod=HmacSHA256&SignatureVersion=2&Timestamp=2019-03-14T04%3A57%3A53Z&Version=2009-04-15
+14-03-2019:14:57:53,907 DEBUG    [endpoint.py:187] Sending http request: <AWSPreparedRequest stream_output=False, method=POST, url=https://sdb.ap-southeast-2.amazonaws.com/, headers={'Content-Type': b'application/x-www-form-urlencoded; charset=utf-8', 'User-Agent': b'Boto3/1.9.98 Python/3.6.7 FreeBSD/12.0-RELEASE-p3 Botocore/1.12.98', 'Content-Length': '265'}>
+14-03-2019:14:57:53,907 DEBUG    [retry.py:210] Converted retries value: False -> Retry(total=False, connect=None, read=None, redirect=0, status=None)
+14-03-2019:14:57:53,907 DEBUG    [connectionpool.py:813] Starting new HTTPS connection (1): sdb.ap-southeast-2.amazonaws.com:443
+14-03-2019:14:57:54,96 DEBUG    [connectionpool.py:393] https://sdb.ap-southeast-2.amazonaws.com:443 "POST / HTTP/1.1" 200 None
+14-03-2019:14:57:54,97 DEBUG    [parsers.py:234] Response headers: {'Date': 'Thu, 14 Mar 2019 04:57:53 GMT', 'Content-Type': 'text/xml', 'Transfer-Encoding': 'chunked', 'Connection': 'keep-alive', 'Vary': 'Accept-Encoding', 'Server': 'Amazon SimpleDB'}
+14-03-2019:14:57:54,97 DEBUG    [parsers.py:235] Response body:
+b'<?xml version="1.0"?>\n<GetAttributesResponse xmlns="http://sdb.amazonaws.com/doc/2009-04-15/"><GetAttributesResult><Attribute><Name>password</Name><Value>$argon2id$v=19$m=102400,t=2,p=8$QS6cYn2jJm4JbIzeoaUbyw$SLWcox7ULv/RFcdWk1Kcbg</Value></Attribute><Attribute><Name>confirmed</Name><Value>1</Value></Attribute></GetAttributesResult><ResponseMetadata><RequestId>904c72b0-479f-3d2d-f4dc-3eae1489150e</RequestId><BoxUsage>0.0000093282</BoxUsage></ResponseMetadata></GetAttributesResponse>'
+14-03-2019:14:57:54,97 DEBUG    [hooks.py:210] Event needs-retry.simpledb.GetAttributes: calling handler <botocore.retryhandler.RetryHandler object at 0x803415cf8>
+14-03-2019:14:57:54,98 DEBUG    [retryhandler.py:187] No retry needed.
+14-03-2019:14:57:54,99 DEBUG    [hooks.py:210] Event choose-service-name: calling handler <function handle_service_name_alias at 0x802e23950>
+14-03-2019:14:57:54,99 DEBUG    [hooks.py:210] Event creating-client-class.simpledb: calling handler <function add_generate_presigned_url at 0x802dda0d0>
+14-03-2019:14:57:54,99 DEBUG    [args.py:169] The s3 config key is not a dictionary type, ignoring its value of: None
+14-03-2019:14:57:54,101 DEBUG    [endpoint.py:266] Setting sdb timeout as (60, 60)
+14-03-2019:14:57:54,103 DEBUG    [client.py:139] Registering retry handlers for service: sdb
+14-03-2019:14:57:54,104 DEBUG    [hooks.py:210] Event before-parameter-build.simpledb.GetAttributes: calling handler <function generate_idempotent_uuid at 0x802e5ac80>
+14-03-2019:14:57:54,104 DEBUG    [hooks.py:210] Event before-call.simpledb.GetAttributes: calling handler <function inject_api_version_header_if_needed at 0x802e5d7b8>
+14-03-2019:14:57:54,104 DEBUG    [endpoint.py:101] Making request for OperationModel(name=GetAttributes) with params: {'url_path': '/', 'query_string': '', 'method': 'POST', 'headers': {'Content-Type': 'application/x-www-form-urlencoded; charset=utf-8', 'User-Agent': 'Boto3/1.9.98 Python/3.6.7 FreeBSD/12.0-RELEASE-p3 Botocore/1.12.98'}, 'body': {'Action': 'GetAttributes', 'Version': '2009-04-15', 'DomainName': 's3mail', 'ItemName': 'langdon@idealcs.com.au'}, 'url': 'https://sdb.ap-southeast-2.amazonaws.com/', 'context': {'client_region': 'ap-southeast-2', 'client_config': <botocore.config.Config object at 0x8034154a8>, 'has_streaming_input': False, 'auth_type': None}}
+14-03-2019:14:57:54,104 DEBUG    [hooks.py:210] Event request-created.simpledb.GetAttributes: calling handler <bound method RequestSigner.handler of <botocore.signers.RequestSigner object at 0x803415198>>
+14-03-2019:14:57:54,104 DEBUG    [hooks.py:210] Event choose-signer.simpledb.GetAttributes: calling handler <function set_operation_specific_signer at 0x802e5ab70>
+14-03-2019:14:57:54,105 DEBUG    [auth.py:73] Calculating signature using v2 auth.
+14-03-2019:14:57:54,105 DEBUG    [auth.py:95] String to sign: POST
+sdb.ap-southeast-2.amazonaws.com
+/
+AWSAccessKeyId=AKIAIYWRP3SNXSCU3H6A&Action=GetAttributes&DomainName=s3mail&ItemName=langdon%40idealcs.com.au&SignatureMethod=HmacSHA256&SignatureVersion=2&Timestamp=2019-03-14T04%3A57%3A54Z&Version=2009-04-15
+14-03-2019:14:57:54,105 DEBUG    [endpoint.py:187] Sending http request: <AWSPreparedRequest stream_output=False, method=POST, url=https://sdb.ap-southeast-2.amazonaws.com/, headers={'Content-Type': b'application/x-www-form-urlencoded; charset=utf-8', 'User-Agent': b'Boto3/1.9.98 Python/3.6.7 FreeBSD/12.0-RELEASE-p3 Botocore/1.12.98', 'Content-Length': '267'}>
+14-03-2019:14:57:54,105 DEBUG    [retry.py:210] Converted retries value: False -> Retry(total=False, connect=None, read=None, redirect=0, status=None)
+14-03-2019:14:57:54,106 DEBUG    [connectionpool.py:813] Starting new HTTPS connection (1): sdb.ap-southeast-2.amazonaws.com:443
+14-03-2019:14:57:54,292 DEBUG    [connectionpool.py:393] https://sdb.ap-southeast-2.amazonaws.com:443 "POST / HTTP/1.1" 200 None
+14-03-2019:14:57:54,292 DEBUG    [parsers.py:234] Response headers: {'Date': 'Thu, 14 Mar 2019 04:57:54 GMT', 'Content-Type': 'text/xml', 'Transfer-Encoding': 'chunked', 'Connection': 'keep-alive', 'Vary': 'Accept-Encoding', 'Server': 'Amazon SimpleDB'}
+14-03-2019:14:57:54,292 DEBUG    [parsers.py:235] Response body:
+b'<?xml version="1.0"?>\n<GetAttributesResponse xmlns="http://sdb.amazonaws.com/doc/2009-04-15/"><GetAttributesResult><Attribute><Name>password</Name><Value>$argon2id$v=19$m=102400,t=2,p=8$QS6cYn2jJm4JbIzeoaUbyw$SLWcox7ULv/RFcdWk1Kcbg</Value></Attribute><Attribute><Name>confirmed</Name><Value>1</Value></Attribute></GetAttributesResult><ResponseMetadata><RequestId>26d29f93-9129-f075-9150-6be6bcb96e48</RequestId><BoxUsage>0.0000093282</BoxUsage></ResponseMetadata></GetAttributesResponse>'
+14-03-2019:14:57:54,293 DEBUG    [hooks.py:210] Event needs-retry.simpledb.GetAttributes: calling handler <botocore.retryhandler.RetryHandler object at 0x803521400>
+14-03-2019:14:57:54,293 DEBUG    [retryhandler.py:187] No retry needed.
+14-03-2019:14:57:54,294 DEBUG    [login_utils.py:77] {'Attributes': [{'Name': 'password', 'Value': '$argon2id$v=19$m=102400,t=2,p=8$QS6cYn2jJm4JbIzeoaUbyw$SLWcox7ULv/RFcdWk1Kcbg'}, {'Name': 'confirmed', 'Value': '1'}], 'ResponseMetadata': {'RequestId': '26d29f93-9129-f075-9150-6be6bcb96e48', 'BoxUsage': '0.0000093282', 'HTTPStatusCode': 200, 'HTTPHeaders': {'date': 'Thu, 14 Mar 2019 04:57:54 GMT', 'content-type': 'text/xml', 'transfer-encoding': 'chunked', 'connection': 'keep-alive', 'vary': 'Accept-Encoding', 'server': 'Amazon SimpleDB'}, 'RetryAttempts': 0}}
+14-03-2019:14:57:54,428 INFO     [login.py:55] langdon@idealcs.com.au logged in IP: 127.0.0.1
+14-03-2019:14:58:02,183 DEBUG    [hooks.py:417] Changing event name from creating-client-class.iot-data to creating-client-class.iot-data-plane
+14-03-2019:14:58:02,187 DEBUG    [hooks.py:417] Changing event name from before-call.apigateway to before-call.api-gateway
+14-03-2019:14:58:02,188 DEBUG    [hooks.py:417] Changing event name from request-created.machinelearning.Predict to request-created.machine-learning.Predict
+14-03-2019:14:58:02,190 DEBUG    [hooks.py:417] Changing event name from before-parameter-build.autoscaling.CreateLaunchConfiguration to before-parameter-build.auto-scaling.CreateLaunchConfiguration
+14-03-2019:14:58:02,190 DEBUG    [hooks.py:417] Changing event name from before-parameter-build.route53 to before-parameter-build.route-53
+14-03-2019:14:58:02,191 DEBUG    [hooks.py:417] Changing event name from request-created.cloudsearchdomain.Search to request-created.cloudsearch-domain.Search
+14-03-2019:14:58:02,191 DEBUG    [hooks.py:417] Changing event name from docs.*.autoscaling.CreateLaunchConfiguration.complete-section to docs.*.auto-scaling.CreateLaunchConfiguration.complete-section
+14-03-2019:14:58:02,194 DEBUG    [hooks.py:417] Changing event name from before-parameter-build.logs.CreateExportTask to before-parameter-build.cloudwatch-logs.CreateExportTask
+14-03-2019:14:58:02,194 DEBUG    [hooks.py:417] Changing event name from docs.*.logs.CreateExportTask.complete-section to docs.*.cloudwatch-logs.CreateExportTask.complete-section
+14-03-2019:14:58:02,195 DEBUG    [hooks.py:417] Changing event name from before-parameter-build.cloudsearchdomain.Search to before-parameter-build.cloudsearch-domain.Search
+14-03-2019:14:58:02,195 DEBUG    [hooks.py:417] Changing event name from docs.*.cloudsearchdomain.Search.complete-section to docs.*.cloudsearch-domain.Search.complete-section
+14-03-2019:14:58:02,260 DEBUG    [credentials.py:1687] Looking for credentials via: env
+14-03-2019:14:58:02,260 DEBUG    [credentials.py:1687] Looking for credentials via: assume-role
+14-03-2019:14:58:02,261 DEBUG    [credentials.py:1687] Looking for credentials via: shared-credentials-file
+14-03-2019:14:58:02,261 INFO     [credentials.py:1046] Found credentials in shared credentials file: ~/.aws/credentials
+14-03-2019:14:58:02,262 DEBUG    [loaders.py:174] Loading JSON file: /usr/home/lg/private/lg/projects/software/flaskbase/venv/lib/python3.6/site-packages/botocore/data/endpoints.json
+14-03-2019:14:58:02,266 DEBUG    [hooks.py:210] Event choose-service-name: calling handler <function handle_service_name_alias at 0x802e23950>
+14-03-2019:14:58:02,300 DEBUG    [loaders.py:174] Loading JSON file: /usr/home/lg/private/lg/projects/software/flaskbase/venv/lib/python3.6/site-packages/botocore/data/sdb/2009-04-15/service-2.json
+14-03-2019:14:58:02,302 DEBUG    [hooks.py:210] Event creating-client-class.simpledb: calling handler <function add_generate_presigned_url at 0x802dda0d0>
+14-03-2019:14:58:02,302 DEBUG    [args.py:169] The s3 config key is not a dictionary type, ignoring its value of: None
+14-03-2019:14:58:02,305 DEBUG    [endpoint.py:266] Setting sdb timeout as (60, 60)
+14-03-2019:14:58:02,307 DEBUG    [loaders.py:174] Loading JSON file: /usr/home/lg/private/lg/projects/software/flaskbase/venv/lib/python3.6/site-packages/botocore/data/_retry.json
+14-03-2019:14:58:02,307 DEBUG    [client.py:139] Registering retry handlers for service: sdb
+14-03-2019:14:58:02,308 DEBUG    [hooks.py:210] Event before-parameter-build.simpledb.GetAttributes: calling handler <function generate_idempotent_uuid at 0x802e5ac80>
+14-03-2019:14:58:02,311 DEBUG    [hooks.py:210] Event before-call.simpledb.GetAttributes: calling handler <function inject_api_version_header_if_needed at 0x802e5d7b8>
+14-03-2019:14:58:02,311 DEBUG    [endpoint.py:101] Making request for OperationModel(name=GetAttributes) with params: {'url_path': '/', 'query_string': '', 'method': 'POST', 'headers': {'Content-Type': 'application/x-www-form-urlencoded; charset=utf-8', 'User-Agent': 'Boto3/1.9.98 Python/3.6.7 FreeBSD/12.0-RELEASE-p3 Botocore/1.12.98'}, 'body': {'Action': 'GetAttributes', 'Version': '2009-04-15', 'DomainName': 's3mail', 'ItemName': 'langdon@idealcs.com.au'}, 'url': 'https://sdb.ap-southeast-2.amazonaws.com/', 'context': {'client_region': 'ap-southeast-2', 'client_config': <botocore.config.Config object at 0x803404208>, 'has_streaming_input': False, 'auth_type': None}}
+14-03-2019:14:58:02,311 DEBUG    [hooks.py:210] Event request-created.simpledb.GetAttributes: calling handler <bound method RequestSigner.handler of <botocore.signers.RequestSigner object at 0x803404198>>
+14-03-2019:14:58:02,311 DEBUG    [hooks.py:210] Event choose-signer.simpledb.GetAttributes: calling handler <function set_operation_specific_signer at 0x802e5ab70>
+14-03-2019:14:58:02,312 DEBUG    [auth.py:73] Calculating signature using v2 auth.
+14-03-2019:14:58:02,312 DEBUG    [auth.py:95] String to sign: POST
+sdb.ap-southeast-2.amazonaws.com
+/
+AWSAccessKeyId=AKIAIYWRP3SNXSCU3H6A&Action=GetAttributes&DomainName=s3mail&ItemName=langdon%40idealcs.com.au&SignatureMethod=HmacSHA256&SignatureVersion=2&Timestamp=2019-03-14T04%3A58%3A02Z&Version=2009-04-15
+14-03-2019:14:58:02,312 DEBUG    [endpoint.py:187] Sending http request: <AWSPreparedRequest stream_output=False, method=POST, url=https://sdb.ap-southeast-2.amazonaws.com/, headers={'Content-Type': b'application/x-www-form-urlencoded; charset=utf-8', 'User-Agent': b'Boto3/1.9.98 Python/3.6.7 FreeBSD/12.0-RELEASE-p3 Botocore/1.12.98', 'Content-Length': '269'}>
+14-03-2019:14:58:02,313 DEBUG    [retry.py:210] Converted retries value: False -> Retry(total=False, connect=None, read=None, redirect=0, status=None)
+14-03-2019:14:58:02,313 DEBUG    [connectionpool.py:813] Starting new HTTPS connection (1): sdb.ap-southeast-2.amazonaws.com:443
+14-03-2019:14:58:02,530 DEBUG    [connectionpool.py:393] https://sdb.ap-southeast-2.amazonaws.com:443 "POST / HTTP/1.1" 200 None
+14-03-2019:14:58:02,530 DEBUG    [parsers.py:234] Response headers: {'Date': 'Thu, 14 Mar 2019 04:58:02 GMT', 'Content-Type': 'text/xml', 'Transfer-Encoding': 'chunked', 'Connection': 'keep-alive', 'Vary': 'Accept-Encoding', 'Server': 'Amazon SimpleDB'}
+14-03-2019:14:58:02,530 DEBUG    [parsers.py:235] Response body:
+b'<?xml version="1.0"?>\n<GetAttributesResponse xmlns="http://sdb.amazonaws.com/doc/2009-04-15/"><GetAttributesResult><Attribute><Name>password</Name><Value>$argon2id$v=19$m=102400,t=2,p=8$QS6cYn2jJm4JbIzeoaUbyw$SLWcox7ULv/RFcdWk1Kcbg</Value></Attribute><Attribute><Name>confirmed</Name><Value>1</Value></Attribute></GetAttributesResult><ResponseMetadata><RequestId>7400ae9b-6ca2-9b8a-f2cb-10b7cb7b2da4</RequestId><BoxUsage>0.0000093282</BoxUsage></ResponseMetadata></GetAttributesResponse>'
+14-03-2019:14:58:02,532 DEBUG    [hooks.py:210] Event needs-retry.simpledb.GetAttributes: calling handler <botocore.retryhandler.RetryHandler object at 0x8034045f8>
+14-03-2019:14:58:02,532 DEBUG    [retryhandler.py:187] No retry needed.
+14-03-2019:14:58:02,535 DEBUG    [login_utils.py:54] {'Name': 'confirmed', 'Value': '1'}
+14-03-2019:14:58:02,535 DEBUG    [hooks.py:210] Event choose-service-name: calling handler <function handle_service_name_alias at 0x802e23950>
+14-03-2019:14:58:02,535 DEBUG    [hooks.py:210] Event creating-client-class.simpledb: calling handler <function add_generate_presigned_url at 0x802dda0d0>
+14-03-2019:14:58:02,535 DEBUG    [args.py:169] The s3 config key is not a dictionary type, ignoring its value of: None
+14-03-2019:14:58:02,554 DEBUG    [endpoint.py:266] Setting sdb timeout as (60, 60)
+14-03-2019:14:58:02,555 DEBUG    [client.py:139] Registering retry handlers for service: sdb
+14-03-2019:14:58:02,556 DEBUG    [hooks.py:210] Event before-parameter-build.simpledb.GetAttributes: calling handler <function generate_idempotent_uuid at 0x802e5ac80>
+14-03-2019:14:58:02,556 DEBUG    [hooks.py:210] Event before-call.simpledb.GetAttributes: calling handler <function inject_api_version_header_if_needed at 0x802e5d7b8>
+14-03-2019:14:58:02,556 DEBUG    [endpoint.py:101] Making request for OperationModel(name=GetAttributes) with params: {'url_path': '/', 'query_string': '', 'method': 'POST', 'headers': {'Content-Type': 'application/x-www-form-urlencoded; charset=utf-8', 'User-Agent': 'Boto3/1.9.98 Python/3.6.7 FreeBSD/12.0-RELEASE-p3 Botocore/1.12.98'}, 'body': {'Action': 'GetAttributes', 'Version': '2009-04-15', 'DomainName': 's3mail', 'ItemName': 'langdon@idealcs.com.au'}, 'url': 'https://sdb.ap-southeast-2.amazonaws.com/', 'context': {'client_region': 'ap-southeast-2', 'client_config': <botocore.config.Config object at 0x803211128>, 'has_streaming_input': False, 'auth_type': None}}
+14-03-2019:14:58:02,556 DEBUG    [hooks.py:210] Event request-created.simpledb.GetAttributes: calling handler <bound method RequestSigner.handler of <botocore.signers.RequestSigner object at 0x802086c88>>
+14-03-2019:14:58:02,556 DEBUG    [hooks.py:210] Event choose-signer.simpledb.GetAttributes: calling handler <function set_operation_specific_signer at 0x802e5ab70>
+14-03-2019:14:58:02,557 DEBUG    [auth.py:73] Calculating signature using v2 auth.
+14-03-2019:14:58:02,557 DEBUG    [auth.py:95] String to sign: POST
+sdb.ap-southeast-2.amazonaws.com
+/
+AWSAccessKeyId=AKIAIYWRP3SNXSCU3H6A&Action=GetAttributes&DomainName=s3mail&ItemName=langdon%40idealcs.com.au&SignatureMethod=HmacSHA256&SignatureVersion=2&Timestamp=2019-03-14T04%3A58%3A02Z&Version=2009-04-15
+14-03-2019:14:58:02,557 DEBUG    [endpoint.py:187] Sending http request: <AWSPreparedRequest stream_output=False, method=POST, url=https://sdb.ap-southeast-2.amazonaws.com/, headers={'Content-Type': b'application/x-www-form-urlencoded; charset=utf-8', 'User-Agent': b'Boto3/1.9.98 Python/3.6.7 FreeBSD/12.0-RELEASE-p3 Botocore/1.12.98', 'Content-Length': '269'}>
+14-03-2019:14:58:02,557 DEBUG    [retry.py:210] Converted retries value: False -> Retry(total=False, connect=None, read=None, redirect=0, status=None)
+14-03-2019:14:58:02,558 DEBUG    [connectionpool.py:813] Starting new HTTPS connection (1): sdb.ap-southeast-2.amazonaws.com:443
+14-03-2019:14:58:02,742 DEBUG    [connectionpool.py:393] https://sdb.ap-southeast-2.amazonaws.com:443 "POST / HTTP/1.1" 200 None
+14-03-2019:14:58:02,745 DEBUG    [parsers.py:234] Response headers: {'Date': 'Thu, 14 Mar 2019 04:58:02 GMT', 'Content-Type': 'text/xml', 'Transfer-Encoding': 'chunked', 'Connection': 'keep-alive', 'Vary': 'Accept-Encoding', 'Server': 'Amazon SimpleDB'}
+14-03-2019:14:58:02,745 DEBUG    [parsers.py:235] Response body:
+b'<?xml version="1.0"?>\n<GetAttributesResponse xmlns="http://sdb.amazonaws.com/doc/2009-04-15/"><GetAttributesResult><Attribute><Name>password</Name><Value>$argon2id$v=19$m=102400,t=2,p=8$QS6cYn2jJm4JbIzeoaUbyw$SLWcox7ULv/RFcdWk1Kcbg</Value></Attribute><Attribute><Name>confirmed</Name><Value>1</Value></Attribute></GetAttributesResult><ResponseMetadata><RequestId>24a7df53-d67f-9030-5f99-14a2da8c48d1</RequestId><BoxUsage>0.0000093282</BoxUsage></ResponseMetadata></GetAttributesResponse>'
+14-03-2019:14:58:02,745 DEBUG    [hooks.py:210] Event needs-retry.simpledb.GetAttributes: calling handler <botocore.retryhandler.RetryHandler object at 0x8033ecd68>
+14-03-2019:14:58:02,745 DEBUG    [retryhandler.py:187] No retry needed.
+14-03-2019:14:58:02,747 DEBUG    [hooks.py:210] Event choose-service-name: calling handler <function handle_service_name_alias at 0x802e23950>
+14-03-2019:14:58:02,747 DEBUG    [hooks.py:210] Event creating-client-class.simpledb: calling handler <function add_generate_presigned_url at 0x802dda0d0>
+14-03-2019:14:58:02,747 DEBUG    [args.py:169] The s3 config key is not a dictionary type, ignoring its value of: None
+14-03-2019:14:58:02,749 DEBUG    [endpoint.py:266] Setting sdb timeout as (60, 60)
+14-03-2019:14:58:02,749 DEBUG    [client.py:139] Registering retry handlers for service: sdb
+14-03-2019:14:58:02,750 DEBUG    [hooks.py:210] Event before-parameter-build.simpledb.GetAttributes: calling handler <function generate_idempotent_uuid at 0x802e5ac80>
+14-03-2019:14:58:02,750 DEBUG    [hooks.py:210] Event before-call.simpledb.GetAttributes: calling handler <function inject_api_version_header_if_needed at 0x802e5d7b8>
+14-03-2019:14:58:02,750 DEBUG    [endpoint.py:101] Making request for OperationModel(name=GetAttributes) with params: {'url_path': '/', 'query_string': '', 'method': 'POST', 'headers': {'Content-Type': 'application/x-www-form-urlencoded; charset=utf-8', 'User-Agent': 'Boto3/1.9.98 Python/3.6.7 FreeBSD/12.0-RELEASE-p3 Botocore/1.12.98'}, 'body': {'Action': 'GetAttributes', 'Version': '2009-04-15', 'DomainName': 's3mail', 'ItemName': 'langdon@idealcs.com.au'}, 'url': 'https://sdb.ap-southeast-2.amazonaws.com/', 'context': {'client_region': 'ap-southeast-2', 'client_config': <botocore.config.Config object at 0x8033ecef0>, 'has_streaming_input': False, 'auth_type': None}}
+14-03-2019:14:58:02,751 DEBUG    [hooks.py:210] Event request-created.simpledb.GetAttributes: calling handler <bound method RequestSigner.handler of <botocore.signers.RequestSigner object at 0x8033ecda0>>
+14-03-2019:14:58:02,751 DEBUG    [hooks.py:210] Event choose-signer.simpledb.GetAttributes: calling handler <function set_operation_specific_signer at 0x802e5ab70>
+14-03-2019:14:58:02,751 DEBUG    [auth.py:73] Calculating signature using v2 auth.
+14-03-2019:14:58:02,751 DEBUG    [auth.py:95] String to sign: POST
+sdb.ap-southeast-2.amazonaws.com
+/
+AWSAccessKeyId=AKIAIYWRP3SNXSCU3H6A&Action=GetAttributes&DomainName=s3mail&ItemName=langdon%40idealcs.com.au&SignatureMethod=HmacSHA256&SignatureVersion=2&Timestamp=2019-03-14T04%3A58%3A02Z&Version=2009-04-15
+14-03-2019:14:58:02,751 DEBUG    [endpoint.py:187] Sending http request: <AWSPreparedRequest stream_output=False, method=POST, url=https://sdb.ap-southeast-2.amazonaws.com/, headers={'Content-Type': b'application/x-www-form-urlencoded; charset=utf-8', 'User-Agent': b'Boto3/1.9.98 Python/3.6.7 FreeBSD/12.0-RELEASE-p3 Botocore/1.12.98', 'Content-Length': '269'}>
+14-03-2019:14:58:02,752 DEBUG    [retry.py:210] Converted retries value: False -> Retry(total=False, connect=None, read=None, redirect=0, status=None)
+14-03-2019:14:58:02,752 DEBUG    [connectionpool.py:813] Starting new HTTPS connection (1): sdb.ap-southeast-2.amazonaws.com:443
+14-03-2019:14:58:02,934 DEBUG    [connectionpool.py:393] https://sdb.ap-southeast-2.amazonaws.com:443 "POST / HTTP/1.1" 200 None
+14-03-2019:14:58:02,934 DEBUG    [parsers.py:234] Response headers: {'Date': 'Thu, 14 Mar 2019 04:58:02 GMT', 'Content-Type': 'text/xml', 'Transfer-Encoding': 'chunked', 'Connection': 'keep-alive', 'Vary': 'Accept-Encoding', 'Server': 'Amazon SimpleDB'}
+14-03-2019:14:58:02,934 DEBUG    [parsers.py:235] Response body:
+b'<?xml version="1.0"?>\n<GetAttributesResponse xmlns="http://sdb.amazonaws.com/doc/2009-04-15/"><GetAttributesResult><Attribute><Name>password</Name><Value>$argon2id$v=19$m=102400,t=2,p=8$QS6cYn2jJm4JbIzeoaUbyw$SLWcox7ULv/RFcdWk1Kcbg</Value></Attribute><Attribute><Name>confirmed</Name><Value>1</Value></Attribute></GetAttributesResult><ResponseMetadata><RequestId>b82569d7-4f2f-5c96-e040-18f003ef07b9</RequestId><BoxUsage>0.0000093282</BoxUsage></ResponseMetadata></GetAttributesResponse>'
+14-03-2019:14:58:02,935 DEBUG    [hooks.py:210] Event needs-retry.simpledb.GetAttributes: calling handler <botocore.retryhandler.RetryHandler object at 0x8034048d0>
+14-03-2019:14:58:02,935 DEBUG    [retryhandler.py:187] No retry needed.
+14-03-2019:14:58:02,936 DEBUG    [login_utils.py:77] {'Attributes': [{'Name': 'password', 'Value': '$argon2id$v=19$m=102400,t=2,p=8$QS6cYn2jJm4JbIzeoaUbyw$SLWcox7ULv/RFcdWk1Kcbg'}, {'Name': 'confirmed', 'Value': '1'}], 'ResponseMetadata': {'RequestId': 'b82569d7-4f2f-5c96-e040-18f003ef07b9', 'BoxUsage': '0.0000093282', 'HTTPStatusCode': 200, 'HTTPHeaders': {'date': 'Thu, 14 Mar 2019 04:58:02 GMT', 'content-type': 'text/xml', 'transfer-encoding': 'chunked', 'connection': 'keep-alive', 'vary': 'Accept-Encoding', 'server': 'Amazon SimpleDB'}, 'RetryAttempts': 0}}
+14-03-2019:14:58:03,68 ERROR    [login_utils.py:89] The password does not match the supplied hash
+14-03-2019:14:58:03,68 WARNING  [login.py:63] langdon@idealcs.com.au password didn't match IP: 127.0.0.1
+14-03-2019:14:58:03,95 DEBUG    [hooks.py:210] Event choose-service-name: calling handler <function handle_service_name_alias at 0x802e23950>
+14-03-2019:14:58:03,96 DEBUG    [hooks.py:210] Event creating-client-class.simpledb: calling handler <function add_generate_presigned_url at 0x802dda0d0>
+14-03-2019:14:58:03,96 DEBUG    [args.py:169] The s3 config key is not a dictionary type, ignoring its value of: None
+14-03-2019:14:58:03,97 DEBUG    [endpoint.py:266] Setting sdb timeout as (60, 60)
+14-03-2019:14:58:03,98 DEBUG    [client.py:139] Registering retry handlers for service: sdb
+14-03-2019:14:58:03,99 DEBUG    [hooks.py:210] Event before-parameter-build.simpledb.GetAttributes: calling handler <function generate_idempotent_uuid at 0x802e5ac80>
+14-03-2019:14:58:03,99 DEBUG    [hooks.py:210] Event before-call.simpledb.GetAttributes: calling handler <function inject_api_version_header_if_needed at 0x802e5d7b8>
+14-03-2019:14:58:03,99 DEBUG    [endpoint.py:101] Making request for OperationModel(name=GetAttributes) with params: {'url_path': '/', 'query_string': '', 'method': 'POST', 'headers': {'Content-Type': 'application/x-www-form-urlencoded; charset=utf-8', 'User-Agent': 'Boto3/1.9.98 Python/3.6.7 FreeBSD/12.0-RELEASE-p3 Botocore/1.12.98'}, 'body': {'Action': 'GetAttributes', 'Version': '2009-04-15', 'DomainName': 's3mail', 'ItemName': 'langdon@idealcs.com.au'}, 'url': 'https://sdb.ap-southeast-2.amazonaws.com/', 'context': {'client_region': 'ap-southeast-2', 'client_config': <botocore.config.Config object at 0x803527ef0>, 'has_streaming_input': False, 'auth_type': None}}
+14-03-2019:14:58:03,99 DEBUG    [hooks.py:210] Event request-created.simpledb.GetAttributes: calling handler <bound method RequestSigner.handler of <botocore.signers.RequestSigner object at 0x803527c50>>
+14-03-2019:14:58:03,99 DEBUG    [hooks.py:210] Event choose-signer.simpledb.GetAttributes: calling handler <function set_operation_specific_signer at 0x802e5ab70>
+14-03-2019:14:58:03,100 DEBUG    [auth.py:73] Calculating signature using v2 auth.
+14-03-2019:14:58:03,100 DEBUG    [auth.py:95] String to sign: POST
+sdb.ap-southeast-2.amazonaws.com
+/
+AWSAccessKeyId=AKIAIYWRP3SNXSCU3H6A&Action=GetAttributes&DomainName=s3mail&ItemName=langdon%40idealcs.com.au&SignatureMethod=HmacSHA256&SignatureVersion=2&Timestamp=2019-03-14T04%3A58%3A03Z&Version=2009-04-15
+14-03-2019:14:58:03,100 DEBUG    [endpoint.py:187] Sending http request: <AWSPreparedRequest stream_output=False, method=POST, url=https://sdb.ap-southeast-2.amazonaws.com/, headers={'Content-Type': b'application/x-www-form-urlencoded; charset=utf-8', 'User-Agent': b'Boto3/1.9.98 Python/3.6.7 FreeBSD/12.0-RELEASE-p3 Botocore/1.12.98', 'Content-Length': '265'}>
+14-03-2019:14:58:03,100 DEBUG    [retry.py:210] Converted retries value: False -> Retry(total=False, connect=None, read=None, redirect=0, status=None)
+14-03-2019:14:58:03,100 DEBUG    [connectionpool.py:813] Starting new HTTPS connection (1): sdb.ap-southeast-2.amazonaws.com:443
+14-03-2019:14:58:03,378 DEBUG    [connectionpool.py:393] https://sdb.ap-southeast-2.amazonaws.com:443 "POST / HTTP/1.1" 200 None
+14-03-2019:14:58:03,379 DEBUG    [parsers.py:234] Response headers: {'Date': 'Thu, 14 Mar 2019 04:58:03 GMT', 'Content-Type': 'text/xml', 'Transfer-Encoding': 'chunked', 'Connection': 'keep-alive', 'Vary': 'Accept-Encoding', 'Server': 'Amazon SimpleDB'}
+14-03-2019:14:58:03,379 DEBUG    [parsers.py:235] Response body:
+b'<?xml version="1.0"?>\n<GetAttributesResponse xmlns="http://sdb.amazonaws.com/doc/2009-04-15/"><GetAttributesResult><Attribute><Name>password</Name><Value>$argon2id$v=19$m=102400,t=2,p=8$QS6cYn2jJm4JbIzeoaUbyw$SLWcox7ULv/RFcdWk1Kcbg</Value></Attribute><Attribute><Name>confirmed</Name><Value>1</Value></Attribute></GetAttributesResult><ResponseMetadata><RequestId>03b22492-81fe-4d6c-bca8-81c08e74eb33</RequestId><BoxUsage>0.0000093282</BoxUsage></ResponseMetadata></GetAttributesResponse>'
+14-03-2019:14:58:03,380 DEBUG    [hooks.py:210] Event needs-retry.simpledb.GetAttributes: calling handler <botocore.retryhandler.RetryHandler object at 0x803527c18>
+14-03-2019:14:58:03,380 DEBUG    [retryhandler.py:187] No retry needed.
+14-03-2019:14:58:03,381 DEBUG    [login_utils.py:54] {'Name': 'confirmed', 'Value': '1'}
+14-03-2019:14:58:03,381 DEBUG    [hooks.py:210] Event choose-service-name: calling handler <function handle_service_name_alias at 0x802e23950>
+14-03-2019:14:58:03,381 DEBUG    [hooks.py:210] Event creating-client-class.simpledb: calling handler <function add_generate_presigned_url at 0x802dda0d0>
+14-03-2019:14:58:03,381 DEBUG    [args.py:169] The s3 config key is not a dictionary type, ignoring its value of: None
+14-03-2019:14:58:03,383 DEBUG    [endpoint.py:266] Setting sdb timeout as (60, 60)
+14-03-2019:14:58:03,383 DEBUG    [client.py:139] Registering retry handlers for service: sdb
+14-03-2019:14:58:03,384 DEBUG    [hooks.py:210] Event before-parameter-build.simpledb.GetAttributes: calling handler <function generate_idempotent_uuid at 0x802e5ac80>
+14-03-2019:14:58:03,384 DEBUG    [hooks.py:210] Event before-call.simpledb.GetAttributes: calling handler <function inject_api_version_header_if_needed at 0x802e5d7b8>
+14-03-2019:14:58:03,384 DEBUG    [endpoint.py:101] Making request for OperationModel(name=GetAttributes) with params: {'url_path': '/', 'query_string': '', 'method': 'POST', 'headers': {'Content-Type': 'application/x-www-form-urlencoded; charset=utf-8', 'User-Agent': 'Boto3/1.9.98 Python/3.6.7 FreeBSD/12.0-RELEASE-p3 Botocore/1.12.98'}, 'body': {'Action': 'GetAttributes', 'Version': '2009-04-15', 'DomainName': 's3mail', 'ItemName': 'langdon@idealcs.com.au'}, 'url': 'https://sdb.ap-southeast-2.amazonaws.com/', 'context': {'client_region': 'ap-southeast-2', 'client_config': <botocore.config.Config object at 0x803527860>, 'has_streaming_input': False, 'auth_type': None}}
+14-03-2019:14:58:03,385 DEBUG    [hooks.py:210] Event request-created.simpledb.GetAttributes: calling handler <bound method RequestSigner.handler of <botocore.signers.RequestSigner object at 0x803527ac8>>
+14-03-2019:14:58:03,385 DEBUG    [hooks.py:210] Event choose-signer.simpledb.GetAttributes: calling handler <function set_operation_specific_signer at 0x802e5ab70>
+14-03-2019:14:58:03,385 DEBUG    [auth.py:73] Calculating signature using v2 auth.
+14-03-2019:14:58:03,385 DEBUG    [auth.py:95] String to sign: POST
+sdb.ap-southeast-2.amazonaws.com
+/
+AWSAccessKeyId=AKIAIYWRP3SNXSCU3H6A&Action=GetAttributes&DomainName=s3mail&ItemName=langdon%40idealcs.com.au&SignatureMethod=HmacSHA256&SignatureVersion=2&Timestamp=2019-03-14T04%3A58%3A03Z&Version=2009-04-15
+14-03-2019:14:58:03,385 DEBUG    [endpoint.py:187] Sending http request: <AWSPreparedRequest stream_output=False, method=POST, url=https://sdb.ap-southeast-2.amazonaws.com/, headers={'Content-Type': b'application/x-www-form-urlencoded; charset=utf-8', 'User-Agent': b'Boto3/1.9.98 Python/3.6.7 FreeBSD/12.0-RELEASE-p3 Botocore/1.12.98', 'Content-Length': '265'}>
+14-03-2019:14:58:03,386 DEBUG    [retry.py:210] Converted retries value: False -> Retry(total=False, connect=None, read=None, redirect=0, status=None)
+14-03-2019:14:58:03,386 DEBUG    [connectionpool.py:813] Starting new HTTPS connection (1): sdb.ap-southeast-2.amazonaws.com:443
+14-03-2019:14:58:03,593 DEBUG    [connectionpool.py:393] https://sdb.ap-southeast-2.amazonaws.com:443 "POST / HTTP/1.1" 200 None
+14-03-2019:14:58:03,593 DEBUG    [parsers.py:234] Response headers: {'Date': 'Thu, 14 Mar 2019 04:58:03 GMT', 'Content-Type': 'text/xml', 'Transfer-Encoding': 'chunked', 'Connection': 'keep-alive', 'Vary': 'Accept-Encoding', 'Server': 'Amazon SimpleDB'}
+14-03-2019:14:58:03,594 DEBUG    [parsers.py:235] Response body:
+b'<?xml version="1.0"?>\n<GetAttributesResponse xmlns="http://sdb.amazonaws.com/doc/2009-04-15/"><GetAttributesResult><Attribute><Name>password</Name><Value>$argon2id$v=19$m=102400,t=2,p=8$QS6cYn2jJm4JbIzeoaUbyw$SLWcox7ULv/RFcdWk1Kcbg</Value></Attribute><Attribute><Name>confirmed</Name><Value>1</Value></Attribute></GetAttributesResult><ResponseMetadata><RequestId>f71609e0-7a5f-d491-8a33-099fbc5ccdfe</RequestId><BoxUsage>0.0000093282</BoxUsage></ResponseMetadata></GetAttributesResponse>'
+14-03-2019:14:58:03,594 DEBUG    [hooks.py:210] Event needs-retry.simpledb.GetAttributes: calling handler <botocore.retryhandler.RetryHandler object at 0x803527f60>
+14-03-2019:14:58:03,594 DEBUG    [retryhandler.py:187] No retry needed.
+14-03-2019:14:58:03,595 DEBUG    [hooks.py:210] Event choose-service-name: calling handler <function handle_service_name_alias at 0x802e23950>
+14-03-2019:14:58:03,596 DEBUG    [hooks.py:210] Event creating-client-class.simpledb: calling handler <function add_generate_presigned_url at 0x802dda0d0>
+14-03-2019:14:58:03,596 DEBUG    [args.py:169] The s3 config key is not a dictionary type, ignoring its value of: None
+14-03-2019:14:58:03,597 DEBUG    [endpoint.py:266] Setting sdb timeout as (60, 60)
+14-03-2019:14:58:03,598 DEBUG    [client.py:139] Registering retry handlers for service: sdb
+14-03-2019:14:58:03,598 DEBUG    [hooks.py:210] Event before-parameter-build.simpledb.GetAttributes: calling handler <function generate_idempotent_uuid at 0x802e5ac80>
+14-03-2019:14:58:03,599 DEBUG    [hooks.py:210] Event before-call.simpledb.GetAttributes: calling handler <function inject_api_version_header_if_needed at 0x802e5d7b8>
+14-03-2019:14:58:03,599 DEBUG    [endpoint.py:101] Making request for OperationModel(name=GetAttributes) with params: {'url_path': '/', 'query_string': '', 'method': 'POST', 'headers': {'Content-Type': 'application/x-www-form-urlencoded; charset=utf-8', 'User-Agent': 'Boto3/1.9.98 Python/3.6.7 FreeBSD/12.0-RELEASE-p3 Botocore/1.12.98'}, 'body': {'Action': 'GetAttributes', 'Version': '2009-04-15', 'DomainName': 's3mail', 'ItemName': 'langdon@idealcs.com.au'}, 'url': 'https://sdb.ap-southeast-2.amazonaws.com/', 'context': {'client_region': 'ap-southeast-2', 'client_config': <botocore.config.Config object at 0x803415a58>, 'has_streaming_input': False, 'auth_type': None}}
+14-03-2019:14:58:03,599 DEBUG    [hooks.py:210] Event request-created.simpledb.GetAttributes: calling handler <bound method RequestSigner.handler of <botocore.signers.RequestSigner object at 0x803527da0>>
+14-03-2019:14:58:03,599 DEBUG    [hooks.py:210] Event choose-signer.simpledb.GetAttributes: calling handler <function set_operation_specific_signer at 0x802e5ab70>
+14-03-2019:14:58:03,599 DEBUG    [auth.py:73] Calculating signature using v2 auth.
+14-03-2019:14:58:03,599 DEBUG    [auth.py:95] String to sign: POST
+sdb.ap-southeast-2.amazonaws.com
+/
+AWSAccessKeyId=AKIAIYWRP3SNXSCU3H6A&Action=GetAttributes&DomainName=s3mail&ItemName=langdon%40idealcs.com.au&SignatureMethod=HmacSHA256&SignatureVersion=2&Timestamp=2019-03-14T04%3A58%3A03Z&Version=2009-04-15
+14-03-2019:14:58:03,600 DEBUG    [endpoint.py:187] Sending http request: <AWSPreparedRequest stream_output=False, method=POST, url=https://sdb.ap-southeast-2.amazonaws.com/, headers={'Content-Type': b'application/x-www-form-urlencoded; charset=utf-8', 'User-Agent': b'Boto3/1.9.98 Python/3.6.7 FreeBSD/12.0-RELEASE-p3 Botocore/1.12.98', 'Content-Length': '265'}>
+14-03-2019:14:58:03,600 DEBUG    [retry.py:210] Converted retries value: False -> Retry(total=False, connect=None, read=None, redirect=0, status=None)
+14-03-2019:14:58:03,600 DEBUG    [connectionpool.py:813] Starting new HTTPS connection (1): sdb.ap-southeast-2.amazonaws.com:443
+14-03-2019:14:58:03,780 DEBUG    [connectionpool.py:393] https://sdb.ap-southeast-2.amazonaws.com:443 "POST / HTTP/1.1" 200 None
+14-03-2019:14:58:03,780 DEBUG    [parsers.py:234] Response headers: {'Date': 'Thu, 14 Mar 2019 04:58:03 GMT', 'Content-Type': 'text/xml', 'Transfer-Encoding': 'chunked', 'Connection': 'keep-alive', 'Vary': 'Accept-Encoding', 'Server': 'Amazon SimpleDB'}
+14-03-2019:14:58:03,780 DEBUG    [parsers.py:235] Response body:
+b'<?xml version="1.0"?>\n<GetAttributesResponse xmlns="http://sdb.amazonaws.com/doc/2009-04-15/"><GetAttributesResult><Attribute><Name>password</Name><Value>$argon2id$v=19$m=102400,t=2,p=8$QS6cYn2jJm4JbIzeoaUbyw$SLWcox7ULv/RFcdWk1Kcbg</Value></Attribute><Attribute><Name>confirmed</Name><Value>1</Value></Attribute></GetAttributesResult><ResponseMetadata><RequestId>fe964151-d064-3974-56a6-2369616c81d3</RequestId><BoxUsage>0.0000093282</BoxUsage></ResponseMetadata></GetAttributesResponse>'
+14-03-2019:14:58:03,781 DEBUG    [hooks.py:210] Event needs-retry.simpledb.GetAttributes: calling handler <botocore.retryhandler.RetryHandler object at 0x803520a58>
+14-03-2019:14:58:03,781 DEBUG    [retryhandler.py:187] No retry needed.
+14-03-2019:14:58:03,782 DEBUG    [login_utils.py:77] {'Attributes': [{'Name': 'password', 'Value': '$argon2id$v=19$m=102400,t=2,p=8$QS6cYn2jJm4JbIzeoaUbyw$SLWcox7ULv/RFcdWk1Kcbg'}, {'Name': 'confirmed', 'Value': '1'}], 'ResponseMetadata': {'RequestId': 'fe964151-d064-3974-56a6-2369616c81d3', 'BoxUsage': '0.0000093282', 'HTTPStatusCode': 200, 'HTTPHeaders': {'date': 'Thu, 14 Mar 2019 04:58:03 GMT', 'content-type': 'text/xml', 'transfer-encoding': 'chunked', 'connection': 'keep-alive', 'vary': 'Accept-Encoding', 'server': 'Amazon SimpleDB'}, 'RetryAttempts': 0}}
+14-03-2019:14:58:03,912 INFO     [login.py:55] langdon@idealcs.com.au logged in IP: 127.0.0.1
+14-03-2019:14:58:31,774 INFO     [_internal.py:88] 127.0.0.1 - - [14/Mar/2019 14:58:31] "GET / HTTP/1.1" 200 -
+14-03-2019:14:58:31,862 INFO     [_internal.py:88] 127.0.0.1 - - [14/Mar/2019 14:58:31] "GET /static/css/base.css HTTP/1.1" 200 -
+14-03-2019:14:58:31,923 INFO     [_internal.py:88] 127.0.0.1 - - [14/Mar/2019 14:58:31] "GET /static/js/base.js HTTP/1.1" 200 -
+14-03-2019:14:58:33,353 INFO     [_internal.py:88] 127.0.0.1 - - [14/Mar/2019 14:58:33] "GET /login HTTP/1.1" 200 -
+14-03-2019:14:58:39,203 DEBUG    [hooks.py:417] Changing event name from creating-client-class.iot-data to creating-client-class.iot-data-plane
+14-03-2019:14:58:39,207 DEBUG    [hooks.py:417] Changing event name from before-call.apigateway to before-call.api-gateway
+14-03-2019:14:58:39,208 DEBUG    [hooks.py:417] Changing event name from request-created.machinelearning.Predict to request-created.machine-learning.Predict
+14-03-2019:14:58:39,210 DEBUG    [hooks.py:417] Changing event name from before-parameter-build.autoscaling.CreateLaunchConfiguration to before-parameter-build.auto-scaling.CreateLaunchConfiguration
+14-03-2019:14:58:39,211 DEBUG    [hooks.py:417] Changing event name from before-parameter-build.route53 to before-parameter-build.route-53
+14-03-2019:14:58:39,211 DEBUG    [hooks.py:417] Changing event name from request-created.cloudsearchdomain.Search to request-created.cloudsearch-domain.Search
+14-03-2019:14:58:39,212 DEBUG    [hooks.py:417] Changing event name from docs.*.autoscaling.CreateLaunchConfiguration.complete-section to docs.*.auto-scaling.CreateLaunchConfiguration.complete-section
+14-03-2019:14:58:39,218 DEBUG    [hooks.py:417] Changing event name from before-parameter-build.logs.CreateExportTask to before-parameter-build.cloudwatch-logs.CreateExportTask
+14-03-2019:14:58:39,218 DEBUG    [hooks.py:417] Changing event name from docs.*.logs.CreateExportTask.complete-section to docs.*.cloudwatch-logs.CreateExportTask.complete-section
+14-03-2019:14:58:39,218 DEBUG    [hooks.py:417] Changing event name from before-parameter-build.cloudsearchdomain.Search to before-parameter-build.cloudsearch-domain.Search
+14-03-2019:14:58:39,218 DEBUG    [hooks.py:417] Changing event name from docs.*.cloudsearchdomain.Search.complete-section to docs.*.cloudsearch-domain.Search.complete-section
+14-03-2019:14:58:39,279 DEBUG    [credentials.py:1687] Looking for credentials via: env
+14-03-2019:14:58:39,281 DEBUG    [credentials.py:1687] Looking for credentials via: assume-role
+14-03-2019:14:58:39,281 DEBUG    [credentials.py:1687] Looking for credentials via: shared-credentials-file
+14-03-2019:14:58:39,282 INFO     [credentials.py:1046] Found credentials in shared credentials file: ~/.aws/credentials
+14-03-2019:14:58:39,282 DEBUG    [loaders.py:174] Loading JSON file: /usr/home/lg/private/lg/projects/software/flaskbase/venv/lib/python3.6/site-packages/botocore/data/endpoints.json
+14-03-2019:14:58:39,288 DEBUG    [hooks.py:210] Event choose-service-name: calling handler <function handle_service_name_alias at 0x803a3d950>
+14-03-2019:14:58:39,326 DEBUG    [loaders.py:174] Loading JSON file: /usr/home/lg/private/lg/projects/software/flaskbase/venv/lib/python3.6/site-packages/botocore/data/sdb/2009-04-15/service-2.json
+14-03-2019:14:58:39,328 DEBUG    [hooks.py:210] Event creating-client-class.simpledb: calling handler <function add_generate_presigned_url at 0x8039e7048>
+14-03-2019:14:58:39,328 DEBUG    [args.py:169] The s3 config key is not a dictionary type, ignoring its value of: None
+14-03-2019:14:58:39,331 DEBUG    [endpoint.py:266] Setting sdb timeout as (60, 60)
+14-03-2019:14:58:39,332 DEBUG    [loaders.py:174] Loading JSON file: /usr/home/lg/private/lg/projects/software/flaskbase/venv/lib/python3.6/site-packages/botocore/data/_retry.json
+14-03-2019:14:58:39,333 DEBUG    [client.py:139] Registering retry handlers for service: sdb
+14-03-2019:14:58:39,333 DEBUG    [hooks.py:210] Event before-parameter-build.simpledb.GetAttributes: calling handler <function generate_idempotent_uuid at 0x803a7ac80>
+14-03-2019:14:58:39,334 DEBUG    [hooks.py:210] Event before-call.simpledb.GetAttributes: calling handler <function inject_api_version_header_if_needed at 0x803a7d7b8>
+14-03-2019:14:58:39,334 DEBUG    [endpoint.py:101] Making request for OperationModel(name=GetAttributes) with params: {'url_path': '/', 'query_string': '', 'method': 'POST', 'headers': {'Content-Type': 'application/x-www-form-urlencoded; charset=utf-8', 'User-Agent': 'Boto3/1.9.98 Python/3.6.7 FreeBSD/12.0-RELEASE-p3 Botocore/1.12.98'}, 'body': {'Action': 'GetAttributes', 'Version': '2009-04-15', 'DomainName': 's3mail', 'ItemName': 'langdon@idealcs.com.au'}, 'url': 'https://sdb.ap-southeast-2.amazonaws.com/', 'context': {'client_region': 'ap-southeast-2', 'client_config': <botocore.config.Config object at 0x8042e8dd8>, 'has_streaming_input': False, 'auth_type': None}}
+14-03-2019:14:58:39,334 DEBUG    [hooks.py:210] Event request-created.simpledb.GetAttributes: calling handler <bound method RequestSigner.handler of <botocore.signers.RequestSigner object at 0x8042e8d68>>
+14-03-2019:14:58:39,334 DEBUG    [hooks.py:210] Event choose-signer.simpledb.GetAttributes: calling handler <function set_operation_specific_signer at 0x803a7ab70>
+14-03-2019:14:58:39,334 DEBUG    [auth.py:73] Calculating signature using v2 auth.
+14-03-2019:14:58:39,335 DEBUG    [auth.py:95] String to sign: POST
+sdb.ap-southeast-2.amazonaws.com
+/
+AWSAccessKeyId=AKIAIYWRP3SNXSCU3H6A&Action=GetAttributes&DomainName=s3mail&ItemName=langdon%40idealcs.com.au&SignatureMethod=HmacSHA256&SignatureVersion=2&Timestamp=2019-03-14T04%3A58%3A39Z&Version=2009-04-15
+14-03-2019:14:58:39,335 DEBUG    [endpoint.py:187] Sending http request: <AWSPreparedRequest stream_output=False, method=POST, url=https://sdb.ap-southeast-2.amazonaws.com/, headers={'Content-Type': b'application/x-www-form-urlencoded; charset=utf-8', 'User-Agent': b'Boto3/1.9.98 Python/3.6.7 FreeBSD/12.0-RELEASE-p3 Botocore/1.12.98', 'Content-Length': '267'}>
+14-03-2019:14:58:39,336 DEBUG    [retry.py:210] Converted retries value: False -> Retry(total=False, connect=None, read=None, redirect=0, status=None)
+14-03-2019:14:58:39,336 DEBUG    [connectionpool.py:813] Starting new HTTPS connection (1): sdb.ap-southeast-2.amazonaws.com:443
+14-03-2019:14:58:40,102 DEBUG    [connectionpool.py:393] https://sdb.ap-southeast-2.amazonaws.com:443 "POST / HTTP/1.1" 200 None
+14-03-2019:14:58:40,102 DEBUG    [parsers.py:234] Response headers: {'Date': 'Thu, 14 Mar 2019 04:58:39 GMT', 'Content-Type': 'text/xml', 'Transfer-Encoding': 'chunked', 'Connection': 'keep-alive', 'Vary': 'Accept-Encoding', 'Server': 'Amazon SimpleDB'}
+14-03-2019:14:58:40,102 DEBUG    [parsers.py:235] Response body:
+b'<?xml version="1.0"?>\n<GetAttributesResponse xmlns="http://sdb.amazonaws.com/doc/2009-04-15/"><GetAttributesResult><Attribute><Name>password</Name><Value>$argon2id$v=19$m=102400,t=2,p=8$QS6cYn2jJm4JbIzeoaUbyw$SLWcox7ULv/RFcdWk1Kcbg</Value></Attribute><Attribute><Name>confirmed</Name><Value>1</Value></Attribute></GetAttributesResult><ResponseMetadata><RequestId>8f421f5c-612c-6a44-23a9-66035d6e2410</RequestId><BoxUsage>0.0000093282</BoxUsage></ResponseMetadata></GetAttributesResponse>'
+14-03-2019:14:58:40,103 DEBUG    [hooks.py:210] Event needs-retry.simpledb.GetAttributes: calling handler <botocore.retryhandler.RetryHandler object at 0x80431b208>
+14-03-2019:14:58:40,103 DEBUG    [retryhandler.py:187] No retry needed.
+14-03-2019:14:58:40,104 DEBUG    [login_utils.py:54] {'Name': 'confirmed', 'Value': '1'}
+14-03-2019:14:58:40,104 DEBUG    [hooks.py:210] Event choose-service-name: calling handler <function handle_service_name_alias at 0x803a3d950>
+14-03-2019:14:58:40,105 DEBUG    [hooks.py:210] Event creating-client-class.simpledb: calling handler <function add_generate_presigned_url at 0x8039e7048>
+14-03-2019:14:58:40,105 DEBUG    [args.py:169] The s3 config key is not a dictionary type, ignoring its value of: None
+14-03-2019:14:58:40,106 DEBUG    [endpoint.py:266] Setting sdb timeout as (60, 60)
+14-03-2019:14:58:40,107 DEBUG    [client.py:139] Registering retry handlers for service: sdb
+14-03-2019:14:58:40,107 DEBUG    [hooks.py:210] Event before-parameter-build.simpledb.GetAttributes: calling handler <function generate_idempotent_uuid at 0x803a7ac80>
+14-03-2019:14:58:40,108 DEBUG    [hooks.py:210] Event before-call.simpledb.GetAttributes: calling handler <function inject_api_version_header_if_needed at 0x803a7d7b8>
+14-03-2019:14:58:40,108 DEBUG    [endpoint.py:101] Making request for OperationModel(name=GetAttributes) with params: {'url_path': '/', 'query_string': '', 'method': 'POST', 'headers': {'Content-Type': 'application/x-www-form-urlencoded; charset=utf-8', 'User-Agent': 'Boto3/1.9.98 Python/3.6.7 FreeBSD/12.0-RELEASE-p3 Botocore/1.12.98'}, 'body': {'Action': 'GetAttributes', 'Version': '2009-04-15', 'DomainName': 's3mail', 'ItemName': 'langdon@idealcs.com.au'}, 'url': 'https://sdb.ap-southeast-2.amazonaws.com/', 'context': {'client_region': 'ap-southeast-2', 'client_config': <botocore.config.Config object at 0x80431b4e0>, 'has_streaming_input': False, 'auth_type': None}}
+14-03-2019:14:58:40,108 DEBUG    [hooks.py:210] Event request-created.simpledb.GetAttributes: calling handler <bound method RequestSigner.handler of <botocore.signers.RequestSigner object at 0x80431bef0>>
+14-03-2019:14:58:40,108 DEBUG    [hooks.py:210] Event choose-signer.simpledb.GetAttributes: calling handler <function set_operation_specific_signer at 0x803a7ab70>
+14-03-2019:14:58:40,108 DEBUG    [auth.py:73] Calculating signature using v2 auth.
+14-03-2019:14:58:40,108 DEBUG    [auth.py:95] String to sign: POST
+sdb.ap-southeast-2.amazonaws.com
+/
+AWSAccessKeyId=AKIAIYWRP3SNXSCU3H6A&Action=GetAttributes&DomainName=s3mail&ItemName=langdon%40idealcs.com.au&SignatureMethod=HmacSHA256&SignatureVersion=2&Timestamp=2019-03-14T04%3A58%3A40Z&Version=2009-04-15
+14-03-2019:14:58:40,109 DEBUG    [endpoint.py:187] Sending http request: <AWSPreparedRequest stream_output=False, method=POST, url=https://sdb.ap-southeast-2.amazonaws.com/, headers={'Content-Type': b'application/x-www-form-urlencoded; charset=utf-8', 'User-Agent': b'Boto3/1.9.98 Python/3.6.7 FreeBSD/12.0-RELEASE-p3 Botocore/1.12.98', 'Content-Length': '267'}>
+14-03-2019:14:58:40,109 DEBUG    [retry.py:210] Converted retries value: False -> Retry(total=False, connect=None, read=None, redirect=0, status=None)
+14-03-2019:14:58:40,109 DEBUG    [connectionpool.py:813] Starting new HTTPS connection (1): sdb.ap-southeast-2.amazonaws.com:443
+14-03-2019:14:58:40,285 DEBUG    [connectionpool.py:393] https://sdb.ap-southeast-2.amazonaws.com:443 "POST / HTTP/1.1" 200 None
+14-03-2019:14:58:40,285 DEBUG    [parsers.py:234] Response headers: {'Date': 'Thu, 14 Mar 2019 04:58:40 GMT', 'Content-Type': 'text/xml', 'Transfer-Encoding': 'chunked', 'Connection': 'keep-alive', 'Vary': 'Accept-Encoding', 'Server': 'Amazon SimpleDB'}
+14-03-2019:14:58:40,285 DEBUG    [parsers.py:235] Response body:
+b'<?xml version="1.0"?>\n<GetAttributesResponse xmlns="http://sdb.amazonaws.com/doc/2009-04-15/"><GetAttributesResult><Attribute><Name>password</Name><Value>$argon2id$v=19$m=102400,t=2,p=8$QS6cYn2jJm4JbIzeoaUbyw$SLWcox7ULv/RFcdWk1Kcbg</Value></Attribute><Attribute><Name>confirmed</Name><Value>1</Value></Attribute></GetAttributesResult><ResponseMetadata><RequestId>3d4eb619-1421-7386-35df-14054968ea49</RequestId><BoxUsage>0.0000093282</BoxUsage></ResponseMetadata></GetAttributesResponse>'
+14-03-2019:14:58:40,286 DEBUG    [hooks.py:210] Event needs-retry.simpledb.GetAttributes: calling handler <botocore.retryhandler.RetryHandler object at 0x80431bc88>
+14-03-2019:14:58:40,286 DEBUG    [retryhandler.py:187] No retry needed.
+14-03-2019:14:58:40,287 DEBUG    [hooks.py:210] Event choose-service-name: calling handler <function handle_service_name_alias at 0x803a3d950>
+14-03-2019:14:58:40,287 DEBUG    [hooks.py:210] Event creating-client-class.simpledb: calling handler <function add_generate_presigned_url at 0x8039e7048>
+14-03-2019:14:58:40,287 DEBUG    [args.py:169] The s3 config key is not a dictionary type, ignoring its value of: None
+14-03-2019:14:58:40,289 DEBUG    [endpoint.py:266] Setting sdb timeout as (60, 60)
+14-03-2019:14:58:40,290 DEBUG    [client.py:139] Registering retry handlers for service: sdb
+14-03-2019:14:58:40,290 DEBUG    [hooks.py:210] Event before-parameter-build.simpledb.GetAttributes: calling handler <function generate_idempotent_uuid at 0x803a7ac80>
+14-03-2019:14:58:40,290 DEBUG    [hooks.py:210] Event before-call.simpledb.GetAttributes: calling handler <function inject_api_version_header_if_needed at 0x803a7d7b8>
+14-03-2019:14:58:40,291 DEBUG    [endpoint.py:101] Making request for OperationModel(name=GetAttributes) with params: {'url_path': '/', 'query_string': '', 'method': 'POST', 'headers': {'Content-Type': 'application/x-www-form-urlencoded; charset=utf-8', 'User-Agent': 'Boto3/1.9.98 Python/3.6.7 FreeBSD/12.0-RELEASE-p3 Botocore/1.12.98'}, 'body': {'Action': 'GetAttributes', 'Version': '2009-04-15', 'DomainName': 's3mail', 'ItemName': 'langdon@idealcs.com.au'}, 'url': 'https://sdb.ap-southeast-2.amazonaws.com/', 'context': {'client_region': 'ap-southeast-2', 'client_config': <botocore.config.Config object at 0x80431b4a8>, 'has_streaming_input': False, 'auth_type': None}}
+14-03-2019:14:58:40,291 DEBUG    [hooks.py:210] Event request-created.simpledb.GetAttributes: calling handler <bound method RequestSigner.handler of <botocore.signers.RequestSigner object at 0x80431bbe0>>
+14-03-2019:14:58:40,291 DEBUG    [hooks.py:210] Event choose-signer.simpledb.GetAttributes: calling handler <function set_operation_specific_signer at 0x803a7ab70>
+14-03-2019:14:58:40,291 DEBUG    [auth.py:73] Calculating signature using v2 auth.
+14-03-2019:14:58:40,291 DEBUG    [auth.py:95] String to sign: POST
+sdb.ap-southeast-2.amazonaws.com
+/
+AWSAccessKeyId=AKIAIYWRP3SNXSCU3H6A&Action=GetAttributes&DomainName=s3mail&ItemName=langdon%40idealcs.com.au&SignatureMethod=HmacSHA256&SignatureVersion=2&Timestamp=2019-03-14T04%3A58%3A40Z&Version=2009-04-15
+14-03-2019:14:58:40,291 DEBUG    [endpoint.py:187] Sending http request: <AWSPreparedRequest stream_output=False, method=POST, url=https://sdb.ap-southeast-2.amazonaws.com/, headers={'Content-Type': b'application/x-www-form-urlencoded; charset=utf-8', 'User-Agent': b'Boto3/1.9.98 Python/3.6.7 FreeBSD/12.0-RELEASE-p3 Botocore/1.12.98', 'Content-Length': '267'}>
+14-03-2019:14:58:40,292 DEBUG    [retry.py:210] Converted retries value: False -> Retry(total=False, connect=None, read=None, redirect=0, status=None)
+14-03-2019:14:58:40,292 DEBUG    [connectionpool.py:813] Starting new HTTPS connection (1): sdb.ap-southeast-2.amazonaws.com:443
+14-03-2019:14:58:40,508 DEBUG    [connectionpool.py:393] https://sdb.ap-southeast-2.amazonaws.com:443 "POST / HTTP/1.1" 200 None
+14-03-2019:14:58:40,508 DEBUG    [parsers.py:234] Response headers: {'Date': 'Thu, 14 Mar 2019 04:58:40 GMT', 'Content-Type': 'text/xml', 'Transfer-Encoding': 'chunked', 'Connection': 'keep-alive', 'Vary': 'Accept-Encoding', 'Server': 'Amazon SimpleDB'}
+14-03-2019:14:58:40,508 DEBUG    [parsers.py:235] Response body:
+b'<?xml version="1.0"?>\n<GetAttributesResponse xmlns="http://sdb.amazonaws.com/doc/2009-04-15/"><GetAttributesResult><Attribute><Name>password</Name><Value>$argon2id$v=19$m=102400,t=2,p=8$QS6cYn2jJm4JbIzeoaUbyw$SLWcox7ULv/RFcdWk1Kcbg</Value></Attribute><Attribute><Name>confirmed</Name><Value>1</Value></Attribute></GetAttributesResult><ResponseMetadata><RequestId>0e22e5cc-f9d2-a6db-5e4e-25ed5812a77d</RequestId><BoxUsage>0.0000093282</BoxUsage></ResponseMetadata></GetAttributesResponse>'
+14-03-2019:14:58:40,509 DEBUG    [hooks.py:210] Event needs-retry.simpledb.GetAttributes: calling handler <botocore.retryhandler.RetryHandler object at 0x80431b9b0>
+14-03-2019:14:58:40,509 DEBUG    [retryhandler.py:187] No retry needed.
+14-03-2019:14:58:40,511 DEBUG    [login_utils.py:77] {'Attributes': [{'Name': 'password', 'Value': '$argon2id$v=19$m=102400,t=2,p=8$QS6cYn2jJm4JbIzeoaUbyw$SLWcox7ULv/RFcdWk1Kcbg'}, {'Name': 'confirmed', 'Value': '1'}], 'ResponseMetadata': {'RequestId': '0e22e5cc-f9d2-a6db-5e4e-25ed5812a77d', 'BoxUsage': '0.0000093282', 'HTTPStatusCode': 200, 'HTTPHeaders': {'date': 'Thu, 14 Mar 2019 04:58:40 GMT', 'content-type': 'text/xml', 'transfer-encoding': 'chunked', 'connection': 'keep-alive', 'vary': 'Accept-Encoding', 'server': 'Amazon SimpleDB'}, 'RetryAttempts': 0}}
+14-03-2019:14:58:40,644 ERROR    [login_utils.py:89] The password does not match the supplied hash
+14-03-2019:14:58:40,644 WARNING  [login.py:63] langdon@idealcs.com.au password didn't match IP: 127.0.0.1
+14-03-2019:14:58:40,646 INFO     [_internal.py:88] 127.0.0.1 - - [14/Mar/2019 14:58:40] "POST /login HTTP/1.1" 200 -
+14-03-2019:14:58:46,104 DEBUG    [hooks.py:210] Event choose-service-name: calling handler <function handle_service_name_alias at 0x803a3d950>
+14-03-2019:14:58:46,104 DEBUG    [hooks.py:210] Event creating-client-class.simpledb: calling handler <function add_generate_presigned_url at 0x8039e7048>
+14-03-2019:14:58:46,105 DEBUG    [args.py:169] The s3 config key is not a dictionary type, ignoring its value of: None
+14-03-2019:14:58:46,106 DEBUG    [endpoint.py:266] Setting sdb timeout as (60, 60)
+14-03-2019:14:58:46,107 DEBUG    [client.py:139] Registering retry handlers for service: sdb
+14-03-2019:14:58:46,107 DEBUG    [hooks.py:210] Event before-parameter-build.simpledb.GetAttributes: calling handler <function generate_idempotent_uuid at 0x803a7ac80>
+14-03-2019:14:58:46,108 DEBUG    [hooks.py:210] Event before-call.simpledb.GetAttributes: calling handler <function inject_api_version_header_if_needed at 0x803a7d7b8>
+14-03-2019:14:58:46,108 DEBUG    [endpoint.py:101] Making request for OperationModel(name=GetAttributes) with params: {'url_path': '/', 'query_string': '', 'method': 'POST', 'headers': {'Content-Type': 'application/x-www-form-urlencoded; charset=utf-8', 'User-Agent': 'Boto3/1.9.98 Python/3.6.7 FreeBSD/12.0-RELEASE-p3 Botocore/1.12.98'}, 'body': {'Action': 'GetAttributes', 'Version': '2009-04-15', 'DomainName': 's3mail', 'ItemName': 'langdon@idealcs.com.au'}, 'url': 'https://sdb.ap-southeast-2.amazonaws.com/', 'context': {'client_region': 'ap-southeast-2', 'client_config': <botocore.config.Config object at 0x804345ef0>, 'has_streaming_input': False, 'auth_type': None}}
+14-03-2019:14:58:46,108 DEBUG    [hooks.py:210] Event request-created.simpledb.GetAttributes: calling handler <bound method RequestSigner.handler of <botocore.signers.RequestSigner object at 0x804345dd8>>
+14-03-2019:14:58:46,108 DEBUG    [hooks.py:210] Event choose-signer.simpledb.GetAttributes: calling handler <function set_operation_specific_signer at 0x803a7ab70>
+14-03-2019:14:58:46,108 DEBUG    [auth.py:73] Calculating signature using v2 auth.
+14-03-2019:14:58:46,109 DEBUG    [auth.py:95] String to sign: POST
+sdb.ap-southeast-2.amazonaws.com
+/
+AWSAccessKeyId=AKIAIYWRP3SNXSCU3H6A&Action=GetAttributes&DomainName=s3mail&ItemName=langdon%40idealcs.com.au&SignatureMethod=HmacSHA256&SignatureVersion=2&Timestamp=2019-03-14T04%3A58%3A46Z&Version=2009-04-15
+14-03-2019:14:58:46,109 DEBUG    [endpoint.py:187] Sending http request: <AWSPreparedRequest stream_output=False, method=POST, url=https://sdb.ap-southeast-2.amazonaws.com/, headers={'Content-Type': b'application/x-www-form-urlencoded; charset=utf-8', 'User-Agent': b'Boto3/1.9.98 Python/3.6.7 FreeBSD/12.0-RELEASE-p3 Botocore/1.12.98', 'Content-Length': '267'}>
+14-03-2019:14:58:46,109 DEBUG    [retry.py:210] Converted retries value: False -> Retry(total=False, connect=None, read=None, redirect=0, status=None)
+14-03-2019:14:58:46,110 DEBUG    [connectionpool.py:813] Starting new HTTPS connection (1): sdb.ap-southeast-2.amazonaws.com:443
+14-03-2019:14:58:46,291 DEBUG    [connectionpool.py:393] https://sdb.ap-southeast-2.amazonaws.com:443 "POST / HTTP/1.1" 200 None
+14-03-2019:14:58:46,292 DEBUG    [parsers.py:234] Response headers: {'Date': 'Thu, 14 Mar 2019 04:58:46 GMT', 'Content-Type': 'text/xml', 'Transfer-Encoding': 'chunked', 'Connection': 'keep-alive', 'Vary': 'Accept-Encoding', 'Server': 'Amazon SimpleDB'}
+14-03-2019:14:58:46,292 DEBUG    [parsers.py:235] Response body:
+b'<?xml version="1.0"?>\n<GetAttributesResponse xmlns="http://sdb.amazonaws.com/doc/2009-04-15/"><GetAttributesResult><Attribute><Name>password</Name><Value>$argon2id$v=19$m=102400,t=2,p=8$QS6cYn2jJm4JbIzeoaUbyw$SLWcox7ULv/RFcdWk1Kcbg</Value></Attribute><Attribute><Name>confirmed</Name><Value>1</Value></Attribute></GetAttributesResult><ResponseMetadata><RequestId>d986b96a-cee5-f113-1f5e-503e2847803c</RequestId><BoxUsage>0.0000093282</BoxUsage></ResponseMetadata></GetAttributesResponse>'
+14-03-2019:14:58:46,292 DEBUG    [hooks.py:210] Event needs-retry.simpledb.GetAttributes: calling handler <botocore.retryhandler.RetryHandler object at 0x804345470>
+14-03-2019:14:58:46,293 DEBUG    [retryhandler.py:187] No retry needed.
+14-03-2019:14:58:46,298 DEBUG    [login_utils.py:54] {'Name': 'confirmed', 'Value': '1'}
+14-03-2019:14:58:46,298 DEBUG    [hooks.py:210] Event choose-service-name: calling handler <function handle_service_name_alias at 0x803a3d950>
+14-03-2019:14:58:46,299 DEBUG    [hooks.py:210] Event creating-client-class.simpledb: calling handler <function add_generate_presigned_url at 0x8039e7048>
+14-03-2019:14:58:46,299 DEBUG    [args.py:169] The s3 config key is not a dictionary type, ignoring its value of: None
+14-03-2019:14:58:46,300 DEBUG    [endpoint.py:266] Setting sdb timeout as (60, 60)
+14-03-2019:14:58:46,301 DEBUG    [client.py:139] Registering retry handlers for service: sdb
+14-03-2019:14:58:46,301 DEBUG    [hooks.py:210] Event before-parameter-build.simpledb.GetAttributes: calling handler <function generate_idempotent_uuid at 0x803a7ac80>
+14-03-2019:14:58:46,302 DEBUG    [hooks.py:210] Event before-call.simpledb.GetAttributes: calling handler <function inject_api_version_header_if_needed at 0x803a7d7b8>
+14-03-2019:14:58:46,302 DEBUG    [endpoint.py:101] Making request for OperationModel(name=GetAttributes) with params: {'url_path': '/', 'query_string': '', 'method': 'POST', 'headers': {'Content-Type': 'application/x-www-form-urlencoded; charset=utf-8', 'User-Agent': 'Boto3/1.9.98 Python/3.6.7 FreeBSD/12.0-RELEASE-p3 Botocore/1.12.98'}, 'body': {'Action': 'GetAttributes', 'Version': '2009-04-15', 'DomainName': 's3mail', 'ItemName': 'langdon@idealcs.com.au'}, 'url': 'https://sdb.ap-southeast-2.amazonaws.com/', 'context': {'client_region': 'ap-southeast-2', 'client_config': <botocore.config.Config object at 0x804345da0>, 'has_streaming_input': False, 'auth_type': None}}
+14-03-2019:14:58:46,302 DEBUG    [hooks.py:210] Event request-created.simpledb.GetAttributes: calling handler <bound method RequestSigner.handler of <botocore.signers.RequestSigner object at 0x804345e10>>
+14-03-2019:14:58:46,302 DEBUG    [hooks.py:210] Event choose-signer.simpledb.GetAttributes: calling handler <function set_operation_specific_signer at 0x803a7ab70>
+14-03-2019:14:58:46,302 DEBUG    [auth.py:73] Calculating signature using v2 auth.
+14-03-2019:14:58:46,302 DEBUG    [auth.py:95] String to sign: POST
+sdb.ap-southeast-2.amazonaws.com
+/
+AWSAccessKeyId=AKIAIYWRP3SNXSCU3H6A&Action=GetAttributes&DomainName=s3mail&ItemName=langdon%40idealcs.com.au&SignatureMethod=HmacSHA256&SignatureVersion=2&Timestamp=2019-03-14T04%3A58%3A46Z&Version=2009-04-15
+14-03-2019:14:58:46,303 DEBUG    [endpoint.py:187] Sending http request: <AWSPreparedRequest stream_output=False, method=POST, url=https://sdb.ap-southeast-2.amazonaws.com/, headers={'Content-Type': b'application/x-www-form-urlencoded; charset=utf-8', 'User-Agent': b'Boto3/1.9.98 Python/3.6.7 FreeBSD/12.0-RELEASE-p3 Botocore/1.12.98', 'Content-Length': '267'}>
+14-03-2019:14:58:46,303 DEBUG    [retry.py:210] Converted retries value: False -> Retry(total=False, connect=None, read=None, redirect=0, status=None)
+14-03-2019:14:58:46,303 DEBUG    [connectionpool.py:813] Starting new HTTPS connection (1): sdb.ap-southeast-2.amazonaws.com:443
+14-03-2019:14:58:46,487 DEBUG    [connectionpool.py:393] https://sdb.ap-southeast-2.amazonaws.com:443 "POST / HTTP/1.1" 200 None
+14-03-2019:14:58:46,488 DEBUG    [parsers.py:234] Response headers: {'Date': 'Thu, 14 Mar 2019 04:58:46 GMT', 'Content-Type': 'text/xml', 'Transfer-Encoding': 'chunked', 'Connection': 'keep-alive', 'Vary': 'Accept-Encoding', 'Server': 'Amazon SimpleDB'}
+14-03-2019:14:58:46,488 DEBUG    [parsers.py:235] Response body:
+b'<?xml version="1.0"?>\n<GetAttributesResponse xmlns="http://sdb.amazonaws.com/doc/2009-04-15/"><GetAttributesResult><Attribute><Name>password</Name><Value>$argon2id$v=19$m=102400,t=2,p=8$QS6cYn2jJm4JbIzeoaUbyw$SLWcox7ULv/RFcdWk1Kcbg</Value></Attribute><Attribute><Name>confirmed</Name><Value>1</Value></Attribute></GetAttributesResult><ResponseMetadata><RequestId>a56a65e7-7d25-015d-ef66-78a0090f6413</RequestId><BoxUsage>0.0000093282</BoxUsage></ResponseMetadata></GetAttributesResponse>'
+14-03-2019:14:58:46,488 DEBUG    [hooks.py:210] Event needs-retry.simpledb.GetAttributes: calling handler <botocore.retryhandler.RetryHandler object at 0x804361da0>
+14-03-2019:14:58:46,488 DEBUG    [retryhandler.py:187] No retry needed.
+14-03-2019:14:58:46,490 DEBUG    [hooks.py:210] Event choose-service-name: calling handler <function handle_service_name_alias at 0x803a3d950>
+14-03-2019:14:58:46,490 DEBUG    [hooks.py:210] Event creating-client-class.simpledb: calling handler <function add_generate_presigned_url at 0x8039e7048>
+14-03-2019:14:58:46,490 DEBUG    [args.py:169] The s3 config key is not a dictionary type, ignoring its value of: None
+14-03-2019:14:58:46,491 DEBUG    [endpoint.py:266] Setting sdb timeout as (60, 60)
+14-03-2019:14:58:46,492 DEBUG    [client.py:139] Registering retry handlers for service: sdb
+14-03-2019:14:58:46,493 DEBUG    [hooks.py:210] Event before-parameter-build.simpledb.GetAttributes: calling handler <function generate_idempotent_uuid at 0x803a7ac80>
+14-03-2019:14:58:46,493 DEBUG    [hooks.py:210] Event before-call.simpledb.GetAttributes: calling handler <function inject_api_version_header_if_needed at 0x803a7d7b8>
+14-03-2019:14:58:46,493 DEBUG    [endpoint.py:101] Making request for OperationModel(name=GetAttributes) with params: {'url_path': '/', 'query_string': '', 'method': 'POST', 'headers': {'Content-Type': 'application/x-www-form-urlencoded; charset=utf-8', 'User-Agent': 'Boto3/1.9.98 Python/3.6.7 FreeBSD/12.0-RELEASE-p3 Botocore/1.12.98'}, 'body': {'Action': 'GetAttributes', 'Version': '2009-04-15', 'DomainName': 's3mail', 'ItemName': 'langdon@idealcs.com.au'}, 'url': 'https://sdb.ap-southeast-2.amazonaws.com/', 'context': {'client_region': 'ap-southeast-2', 'client_config': <botocore.config.Config object at 0x804361f28>, 'has_streaming_input': False, 'auth_type': None}}
+14-03-2019:14:58:46,493 DEBUG    [hooks.py:210] Event request-created.simpledb.GetAttributes: calling handler <bound method RequestSigner.handler of <botocore.signers.RequestSigner object at 0x8043616d8>>
+14-03-2019:14:58:46,493 DEBUG    [hooks.py:210] Event choose-signer.simpledb.GetAttributes: calling handler <function set_operation_specific_signer at 0x803a7ab70>
+14-03-2019:14:58:46,494 DEBUG    [auth.py:73] Calculating signature using v2 auth.
+14-03-2019:14:58:46,494 DEBUG    [auth.py:95] String to sign: POST
+sdb.ap-southeast-2.amazonaws.com
+/
+AWSAccessKeyId=AKIAIYWRP3SNXSCU3H6A&Action=GetAttributes&DomainName=s3mail&ItemName=langdon%40idealcs.com.au&SignatureMethod=HmacSHA256&SignatureVersion=2&Timestamp=2019-03-14T04%3A58%3A46Z&Version=2009-04-15
+14-03-2019:14:58:46,494 DEBUG    [endpoint.py:187] Sending http request: <AWSPreparedRequest stream_output=False, method=POST, url=https://sdb.ap-southeast-2.amazonaws.com/, headers={'Content-Type': b'application/x-www-form-urlencoded; charset=utf-8', 'User-Agent': b'Boto3/1.9.98 Python/3.6.7 FreeBSD/12.0-RELEASE-p3 Botocore/1.12.98', 'Content-Length': '267'}>
+14-03-2019:14:58:46,494 DEBUG    [retry.py:210] Converted retries value: False -> Retry(total=False, connect=None, read=None, redirect=0, status=None)
+14-03-2019:14:58:46,495 DEBUG    [connectionpool.py:813] Starting new HTTPS connection (1): sdb.ap-southeast-2.amazonaws.com:443
+14-03-2019:14:58:46,675 DEBUG    [connectionpool.py:393] https://sdb.ap-southeast-2.amazonaws.com:443 "POST / HTTP/1.1" 200 None
+14-03-2019:14:58:46,676 DEBUG    [parsers.py:234] Response headers: {'Date': 'Thu, 14 Mar 2019 04:58:46 GMT', 'Content-Type': 'text/xml', 'Transfer-Encoding': 'chunked', 'Connection': 'keep-alive', 'Vary': 'Accept-Encoding', 'Server': 'Amazon SimpleDB'}
+14-03-2019:14:58:46,676 DEBUG    [parsers.py:235] Response body:
+b'<?xml version="1.0"?>\n<GetAttributesResponse xmlns="http://sdb.amazonaws.com/doc/2009-04-15/"><GetAttributesResult><Attribute><Name>password</Name><Value>$argon2id$v=19$m=102400,t=2,p=8$QS6cYn2jJm4JbIzeoaUbyw$SLWcox7ULv/RFcdWk1Kcbg</Value></Attribute><Attribute><Name>confirmed</Name><Value>1</Value></Attribute></GetAttributesResult><ResponseMetadata><RequestId>a67ea841-0736-0edc-c602-40656534510e</RequestId><BoxUsage>0.0000093282</BoxUsage></ResponseMetadata></GetAttributesResponse>'
+14-03-2019:14:58:46,676 DEBUG    [hooks.py:210] Event needs-retry.simpledb.GetAttributes: calling handler <botocore.retryhandler.RetryHandler object at 0x804361d68>
+14-03-2019:14:58:46,676 DEBUG    [retryhandler.py:187] No retry needed.
+14-03-2019:14:58:46,677 DEBUG    [login_utils.py:77] {'Attributes': [{'Name': 'password', 'Value': '$argon2id$v=19$m=102400,t=2,p=8$QS6cYn2jJm4JbIzeoaUbyw$SLWcox7ULv/RFcdWk1Kcbg'}, {'Name': 'confirmed', 'Value': '1'}], 'ResponseMetadata': {'RequestId': 'a67ea841-0736-0edc-c602-40656534510e', 'BoxUsage': '0.0000093282', 'HTTPStatusCode': 200, 'HTTPHeaders': {'date': 'Thu, 14 Mar 2019 04:58:46 GMT', 'content-type': 'text/xml', 'transfer-encoding': 'chunked', 'connection': 'keep-alive', 'vary': 'Accept-Encoding', 'server': 'Amazon SimpleDB'}, 'RetryAttempts': 0}}
+14-03-2019:14:58:46,796 INFO     [login.py:55] langdon@idealcs.com.au logged in IP: 127.0.0.1
+14-03-2019:14:58:46,797 INFO     [_internal.py:88] 127.0.0.1 - - [14/Mar/2019 14:58:46] "POST /login HTTP/1.1" 302 -
+14-03-2019:14:58:46,806 INFO     [_internal.py:88] 127.0.0.1 - - [14/Mar/2019 14:58:46] "GET /user HTTP/1.1" 200 -
+14-03-2019:14:58:46,851 INFO     [_internal.py:88] 127.0.0.1 - - [14/Mar/2019 14:58:46] "GET /static/css/base.css HTTP/1.1" 304 -
+14-03-2019:14:58:46,852 INFO     [_internal.py:88] 127.0.0.1 - - [14/Mar/2019 14:58:46] "GET /static/js/base.js HTTP/1.1" 304 -
+14-03-2019:14:58:46,902 INFO     [_internal.py:88] 127.0.0.1 - - [14/Mar/2019 14:58:46] "GET /favicon.ico HTTP/1.1" 404 -
+14-03-2019:14:58:49,73 INFO     [_internal.py:88] 127.0.0.1 - - [14/Mar/2019 14:58:49] "GET / HTTP/1.1" 200 -
+14-03-2019:14:58:50,832 INFO     [_internal.py:88] 127.0.0.1 - - [14/Mar/2019 14:58:50] "GET /user HTTP/1.1" 200 -
+14-03-2019:14:58:52,267 INFO     [login.py:83] User logged out IP: 127.0.0.1
+14-03-2019:14:58:52,269 INFO     [_internal.py:88] 127.0.0.1 - - [14/Mar/2019 14:58:52] "GET /logout/ HTTP/1.1" 200 -
+14-03-2019:14:58:52,304 INFO     [_internal.py:88] 127.0.0.1 - - [14/Mar/2019 14:58:52] "GET /static/css/base.css HTTP/1.1" 304 -
+14-03-2019:14:58:52,305 INFO     [_internal.py:88] 127.0.0.1 - - [14/Mar/2019 14:58:52] "GET /static/js/base.js HTTP/1.1" 304 -
+14-03-2019:14:58:52,347 INFO     [_internal.py:88] 127.0.0.1 - - [14/Mar/2019 14:58:52] "GET /favicon.ico HTTP/1.1" 404 -
+14-03-2019:14:58:56,267 INFO     [_internal.py:88] 127.0.0.1 - - [14/Mar/2019 14:58:56] "GET /user HTTP/1.1" 302 -
+14-03-2019:14:58:56,291 INFO     [_internal.py:88] 127.0.0.1 - - [14/Mar/2019 14:58:56] "GET /login?next=http%3A%2F%2Flocalhost%3A5000%2Fuser HTTP/1.1" 200 -
+14-03-2019:14:58:56,327 INFO     [_internal.py:88] 127.0.0.1 - - [14/Mar/2019 14:58:56] "GET /static/js/base.js HTTP/1.1" 304 -
+14-03-2019:14:58:56,327 INFO     [_internal.py:88] 127.0.0.1 - - [14/Mar/2019 14:58:56] "GET /static/css/base.css HTTP/1.1" 304 -
+14-03-2019:14:58:56,372 INFO     [_internal.py:88] 127.0.0.1 - - [14/Mar/2019 14:58:56] "GET /favicon.ico HTTP/1.1" 404 -
+14-03-2019:14:59:05,862 INFO     [_internal.py:88] 127.0.0.1 - - [14/Mar/2019 14:59:05] "GET / HTTP/1.1" 200 -
+14-03-2019:14:59:06,768 INFO     [_internal.py:88] 127.0.0.1 - - [14/Mar/2019 14:59:06] "GET /login HTTP/1.1" 200 -
