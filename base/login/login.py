@@ -2,18 +2,15 @@
 
 from flask import render_template, request, flash, session,url_for, redirect, g, Blueprint
 from .login_form import LoginForm
-from .login_utils import user_exists,login_user,new_user,confirm_user,user_confirmed,change_password
-from base.tools import jsonconfig as config
+from .login_utils import user_exists,login_user,new_user,confirm_user,user_confirmed,change_password,send_confirm
 from flask import current_app as app
 from itsdangerous import URLSafeTimedSerializer
-from base.tools import mail
+
 
 import logging
 
 log = logging.getLogger(__name__)
 login_blueprint = Blueprint('login', __name__, template_folder='templates')
-
-c = config.get_config()
 
 @login_blueprint.route("/login",methods=["GET","POST"])
 def client_login():
@@ -22,12 +19,18 @@ def client_login():
     Add new user to database and send confirmation email'''
 
     loginForm = LoginForm()
+    sender = 'lg@langdongreen.com'
     message = ''
+    invalid = "Invalid form submission"
+    confirmation_sent = "confirmation email sent to "
+    confirmation_message = "An email has been sent to confirm your address"
+    login_error = "Incorrect email or password"
+    
     action = 'login.client_login'
     #Form submitted validate and handle login or create new user.
     if loginForm.email.data and loginForm.password.data:
         if not loginForm.validate():
-            flash("Invalid form submission")
+            flash(invalid)
             return render_template('login.html', action = action, loginForm = loginForm)
         else:
             email= loginForm.email.data
@@ -35,14 +38,11 @@ def client_login():
 
             #if user exists but is not confirmed
             if not user_confirmed(email):
-                ts = URLSafeTimedSerializer(app.config.get('SECRET_KEY'))
-                link = url_for('login.confirm_email', _external = True, token = ts.dumps(loginForm.email.data,salt='confirmationkey'))
-                mail.send_email("Confirm Email ",c['admin'],[loginForm.email.data],link,'')
-                log.debug(user_confirmed(email))
                 
-                message = c['messages']['confirmation_email']
-                log.info("Sent confirmation email to " +email + " IP: " + request.remote_addr)
+                send_confirm(app.config.get('SECRET_KEY'),sender,email)
 
+                message = confirmation_sent
+                
                 return render_template('page.html', message = message)
                 
             #if existing email, attempt to login
@@ -59,17 +59,15 @@ def client_login():
                         return redirect(url_for('login.client_login'))
 
                 else:
-                    message = c['messages']['login_error']
+                    message = login_error
                     log.warning(email+" password didn't match"+ " IP: " + request.remote_addr)
             #new client
             else:
                 if new_user(email,password):
 
-                    link = url_for('login.confirm_email', _external = True, token = ts.dumps(loginForm.email.data,salt='confirmationkey'))
-                    mail.send_email("Confirm Email ",c['admin'],[loginForm.email.data],link,'')
+                    send_confirm(app.config.get('SECRET_KEY'),sender,email)
 
-                    message = c['messages']['confirmation_email']
-                    log.info("Sent confirmation email to " +email + " IP: " + request.remote_addr)
+                    message = confirmation_sent
 
                     return render_template('page.html', message = message)
                 else:
@@ -87,7 +85,7 @@ def client_logout():
         session['clientid'] = ''
         g.user = ''
         g.admin = ''
-        message = c['messages']['logout_message']
+        message = "Logged Out"
     except Exception as e:
         log.error("Logout exception  IP: " + request.remote_addr + " " + str(e))
 

@@ -1,4 +1,4 @@
-from base import app,c
+from base import app
 
 import unittest
 
@@ -8,6 +8,11 @@ class baseTestCase(unittest.TestCase):
     user_path = '/user'
     login_path = '/login'
     logout_path = '/logout'
+    
+    invalid = "Invalid form submission"
+    confirmation_sent = "confirmation email sent to "
+    confirmation_message = "An email has been sent to confirm your address"
+    login_error = "Incorrect email or password"
     
     def setUp(self):
         '''Setup test variables and remove form CSRF for easy submission'''
@@ -39,7 +44,7 @@ class baseTestCase(unittest.TestCase):
     def test_incorrect_password(self):
         #login incorrect password (incorrect user makes a new user)
         rv = self.login(self.email, self.password+'x')
-        assert bytes(c['messages']['login_error'],"utf-8") in rv.data
+        assert bytes(self.login_error,"utf-8") in rv.data
         
     def test_restricted(self):
         

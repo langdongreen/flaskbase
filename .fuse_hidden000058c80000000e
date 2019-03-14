@@ -12616,3 +12616,4 @@ b'<?xml version="1.0"?>\n<GetAttributesResponse xmlns="http://sdb.amazonaws.com/
 14-03-2019:14:59:06,768 INFO     [_internal.py:88] 127.0.0.1 - - [14/Mar/2019 14:59:06] "GET /login HTTP/1.1" 200 -
 14-03-2019:15:00:04,911 INFO     [_internal.py:88]  * Detected change in '/usr/home/lg/private/lg/projects/software/flaskbase/base/__init__.py', reloading
 14-03-2019:15:00:04,996 INFO     [_internal.py:88]  * Restarting with stat
+14-03-2019:15:00:56,983 INFO     [_internal.py:88]  * Restarting with stat

@@ -1,2 +1,0 @@
-
-from hp import app

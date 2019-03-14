@@ -1,14 +1,12 @@
 from flask import Flask,g,session
 import logging
 
-from base.tools import jsonconfig as config
-
 from base.login.login import login_blueprint
 from base.user.user import user_blueprint
 from base.public.public import public_blueprint
 
 app = Flask(__name__)
-app.config.from_pyfile('../config.py')
+app.config.from_pyfile('config.py')
 
 #Blueprints
 app.register_blueprint(login_blueprint)
@@ -18,8 +16,6 @@ app.register_blueprint(public_blueprint)
 logging.basicConfig(filename='debug.log',level=logging.DEBUG, format='%(asctime)s,%(msecs)d %(levelname)-8s [%(filename)s:%(lineno)d] %(message)s',
     datefmt='%d-%m-%Y:%H:%M:%S')
 
-c = config.get_config()
-
 #default template variables
 @app.context_processor
 def inject_variables():
@@ -28,9 +24,7 @@ def inject_variables():
     if 'clientid' not in session:
         session['clientid'] = ''
         
-    return {'title': c['name'],
-            'banner': c['banner'],
-            'user': session['clientid']}
+    return { 'user': session['clientid']}
 
 @app.before_request
 def before_request():
@@ -38,8 +32,6 @@ def before_request():
     #add session to global variable
     if 'clientid' in session:
         g.user = session['clientid']
-        if g.user in c['admin']:
-            g.admin = True
     else:
         g.user = ''
 
