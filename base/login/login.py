@@ -20,6 +20,7 @@ from .login_utils import (user_exists,
                           user_confirmed,
                           change_password,
                           send_confirm)
+from ..tools import mail
 
 
 
@@ -165,7 +166,7 @@ def reset_password():
                            _external = True,
                            token = ts.dumps(loginForm.email.data,salt='updatekey'))
             mail.send_email("Reset Password ",
-                            "admin email",
+                            app.config['ADMIN_EMAIL'],
                             [loginForm.email.data],link,'')
            
             return render_template('page.html', message = c['update_password_sent'])

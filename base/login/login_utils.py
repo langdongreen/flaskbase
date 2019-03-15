@@ -1,8 +1,9 @@
 import logging
 
 from flask import url_for
+from passlib.hash import bcrypt
 from itsdangerous import URLSafeTimedSerializer
-from argon2 import PasswordHasher
+
 
 from ..tools import sdb
 from base.tools import mail
@@ -87,16 +88,9 @@ def login_user(user,input):
 
 def check_password(input,password):
     '''check entered password with the password attribute in sdb'''
-    ph = PasswordHasher()
-    try:
-        ph.verify(password,input)
-    except Exception as e:
-        log.error(e)
-        return False
+    return bcrypt.verify(input,password)
 
-    return True
 
 def hash_password(password):
     '''Hash password with argon2'''
-    ph = PasswordHasher()
-    return ph.hash(password)
+    return bcrypt.hash(password)
