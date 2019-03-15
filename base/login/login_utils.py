@@ -1,9 +1,12 @@
+import logging
+
 from flask import url_for
 from itsdangerous import URLSafeTimedSerializer
-from ..tools import sdb
 from argon2 import PasswordHasher
+
+from ..tools import sdb
 from base.tools import mail
-import logging
+
 log = logging.getLogger(__name__)
 
 domain = 's3mail'
@@ -34,7 +37,9 @@ def new_user(user,password):
     
 def send_confirm(key,sender,recipient):
     ts = URLSafeTimedSerializer(key)
-    link = url_for('login.confirm_email', _external = True, token = ts.dumps(recipient,salt='confirmationkey'))
+    link = url_for('login.confirm_email', 
+                   _external = True,
+                   token = ts.dumps(recipient,salt='confirmationkey'))
     mail.send_email("Confirm Email ",sender,recipient,link,'')
     log.debug(user_confirmed(recipient))
 

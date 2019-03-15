@@ -1,5 +1,7 @@
-from flask import render_template,Blueprint
 import logging
+
+from flask import render_template,Blueprint
+
 log = logging.getLogger(__name__)
 
 public_blueprint = Blueprint('public', __name__, template_folder='templates')

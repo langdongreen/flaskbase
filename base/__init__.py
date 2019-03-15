@@ -1,5 +1,6 @@
-from flask import Flask,g,session
 import logging
+
+from flask import Flask,g,session
 
 from base.login.login import login_blueprint
 from base.user.user import user_blueprint
@@ -13,8 +14,10 @@ app.register_blueprint(login_blueprint)
 app.register_blueprint(user_blueprint)
 app.register_blueprint(public_blueprint)
 
-logging.basicConfig(filename='debug.log',level=logging.DEBUG, format='%(asctime)s,%(msecs)d %(levelname)-8s [%(filename)s:%(lineno)d] %(message)s',
-    datefmt='%d-%m-%Y:%H:%M:%S')
+logging.basicConfig(filename='debug.log',level=logging.DEBUG,
+                    format='%(asctime)s,%(msecs)d %(levelname)-8s\
+                    [%(filename)s:%(lineno)d] %(message)s',
+                    datefmt='%d-%m-%Y:%H:%M:%S')
 
 #default template variables
 @app.context_processor
@@ -34,28 +37,5 @@ def before_request():
         g.user = session['clientid']
     else:
         g.user = ''
-
-'''
-    #restrict client pages
-    if request.path.startswith('/client/'):
-        if not g.user:
-            return redirect(url_for('client_login'))
-
-    #restrict admin pages
-    if request.path.startswith('/admin'):
-
-        if not g.user:
-            return redirect(url_for('client_login'))
-        elif not g.user in c['admin']:
-            return redirect(url_for('client_dashboard'))
-'''
-
-'''@app.after_request
-def add_header(response):
-    response.cache_control.no_cache = 1
-    response.cache_control.max_age = 0
-    return response'''
-
-'''Import application files'''
 
 

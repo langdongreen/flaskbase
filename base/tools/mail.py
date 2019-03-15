@@ -1,6 +1,8 @@
+import logging
+
 from flask_mail import Mail, Message
 from flask import current_app as app
-import logging
+
 log = logging.getLogger(__name__)
 
 def send_email(subject, sender, recipients, text_body, html_body=None):

@@ -1,6 +1,7 @@
+import unittest
+
 from base import app
 
-import unittest
 
 class baseTestCase(unittest.TestCase):
     email = 'langdon@idealcs.com.au'
@@ -64,7 +65,9 @@ class baseTestCase(unittest.TestCase):
 
     def login(self, email, password):
         '''Post login details'''
-        return self.client.post(self.login_path, data=dict(email=email,password=password), follow_redirects=True)
+        return self.client.post(self.login_path, 
+                                data=dict(email=email,password=password),
+                                follow_redirects=True)
 
 
     def logout(self):

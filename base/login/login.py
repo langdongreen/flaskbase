@@ -1,13 +1,29 @@
 '''Perform user creation and login functions for application'''
-
-from flask import render_template, request, flash, session,url_for, redirect, g, Blueprint
-from .login_form import LoginForm
-from .login_utils import user_exists,login_user,new_user,confirm_user,user_confirmed,change_password,send_confirm
-from flask import current_app as app
-from itsdangerous import URLSafeTimedSerializer
-
-
 import logging
+
+from itsdangerous import URLSafeTimedSerializer
+from flask import (render_template,
+                   request,
+                   flash,
+                   session,
+                   url_for,
+                   redirect,
+                   g,
+                   Blueprint)
+from flask import current_app as app
+
+from .login_form import LoginForm
+from .login_utils import (user_exists,
+                          login_user,
+                          new_user,
+                          confirm_user,
+                          user_confirmed,
+                          change_password,
+                          send_confirm)
+
+
+
+
 
 log = logging.getLogger(__name__)
 login_blueprint = Blueprint('login', __name__, template_folder='templates')
@@ -31,7 +47,8 @@ def client_login():
     if loginForm.email.data and loginForm.password.data:
         if not loginForm.validate():
             flash(invalid)
-            return render_template('login.html', action = action, loginForm = loginForm)
+            return render_template('login.html', 
+                                   action = action, loginForm = loginForm)
         else:
             email= loginForm.email.data
             password = loginForm.password.data
@@ -60,7 +77,8 @@ def client_login():
 
                 else:
                     message = login_error
-                    log.warning(email+" password didn't match"+ " IP: " + request.remote_addr)
+                    log.warning(email+" password didn't match"+ " IP: " +
+                                request.remote_addr)
             #new client
             else:
                 if new_user(email,password):
@@ -73,11 +91,16 @@ def client_login():
                 else:
                         render_template('page.html', message = "Not a user")
 
-    return render_template('login.html', message = message, action = action, loginForm = loginForm, referrer = request.referrer)
+    return render_template('login.html',
+                           message = message,
+                           action = action,
+                           loginForm = loginForm,
+                           referrer = request.referrer)
 
 @login_blueprint.route("/logout/")
 def client_logout():
-    '''Logout client by clearing the session data, redirect to logout message page'''
+    '''Logout client by clearing the session data, 
+    redirect to logout message page'''
     message = ''
     try:
         log.info("User logged out IP: "+request.remote_addr)
@@ -103,7 +126,8 @@ def update_password(token=None):
         try:
             
             email = ts.loads(token, salt="updatekey", max_age=86400)
-            render_template('login.html',action = 'login.update_password', loginForm = loginForm,token=token)
+            render_template('login.html',action = 'login.update_password',
+                            loginForm = loginForm,token=token)
         except Exception as e:
             return render_template('page.html', message = e)
     else:
@@ -115,7 +139,11 @@ def update_password(token=None):
         
 
                 #message = "Client Saved"
-    return render_template('login.html', token = token,action='login.update_password',loginForm = loginForm, referrer = request.referrer)
+    return render_template('login.html',
+                           token = token,
+                           action='login.update_password',
+                           loginForm = loginForm,
+                           referrer = request.referrer)
 
 
 @login_blueprint.route("/reset", methods=["GET","POST"])
@@ -128,16 +156,25 @@ def reset_password():
         #Clean and verify input
         if loginForm.validate() == False:
             flash("Invalid form submission")
-            return render_template('login.html', loginForm = loginForm,action = 'login.reset_password')
+            return render_template('login.html', 
+                                   loginForm = loginForm,
+                                   action = 'login.reset_password')
         else:
             ts = URLSafeTimedSerializer(app.config.get('SECRET_KEY'))
-            link = url_for('login.update_password', _external = True, token = ts.dumps(loginForm.email.data,salt='updatekey'))
-            mail.send_email("Reset Password ",c['admin'],[loginForm.email.data],link,'')
-            #if existing email, email with reset link, otherwise do nothing.
-
+            link = url_for('login.update_password',
+                           _external = True,
+                           token = ts.dumps(loginForm.email.data,salt='updatekey'))
+            mail.send_email("Reset Password ",
+                            "admin email",
+                            [loginForm.email.data],link,'')
+           
             return render_template('page.html', message = c['update_password_sent'])
 
-    return render_template('login.html',message = message, action = 'login.reset_password', loginForm = loginForm,referrer = request.referrer)
+    return render_template('login.html',
+                           message = message,
+                           action = 'login.reset_password',
+                           loginForm = loginForm,
+                           referrer = request.referrer)
 
 
 @login_blueprint.route("/confirm/<token>", methods=["GET","POST"])

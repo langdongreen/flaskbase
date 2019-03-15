@@ -1,12 +1,7 @@
-#not/usr/bin/env python3
-# -*- coding: utf-8 -*-
-"""
-Created on Mon Jul  3 11:18:52 2017
-
-@author: vulpi
-"""
-import boto3
 import logging
+
+import boto3
+
 
 
 def add_domain(domain,sdb = None):
