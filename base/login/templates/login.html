@@ -18,6 +18,7 @@
  
   <form action="{{ url_for(action) }}" method="post">
 
+    
      {{ loginForm.csrf_token }}
 
     {% if action == 'login.reset_password' or action == 'login.client_login' %}
@@ -28,7 +29,7 @@
     </div><!--field-->
     {%endif%}
     
-    {% if action == 'login.update_password' or action == 'login.client_login' %}
+    {% if action == 'login.update_password'or action == 'login.client_login' %}
     <div class="field">
         <div class="control">
             {{ loginForm.password(placeholder="Password",class="input") }}
@@ -53,9 +54,8 @@
     
     
     <div class="field">
-        <label class="label"></label>
-        <div class="control">
-            {{ loginForm.send(class="button") }}
+          <div class="control">
+            {{ loginForm.send(class="button",value=button) }}
         </div><!--control-->       
     </div><!--field-->
 

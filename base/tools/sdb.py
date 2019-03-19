@@ -30,19 +30,15 @@ def add_attribute(domain,item,attributes,sdb = None, replace = True):
     Paramaters: domain, item (Row), Attributes:Value list of dictionary
         eg. ('attribute','value')
     Exceptions: TypeError,IndexError,DNSServerError'''
-    try:
-        if not sdb:
-            sdb = boto3.client('sdb')
-        return sdb.put_attributes(
-            DomainName=domain,
-            ItemName=item,
-            Attributes=[{'Name': attributes[0], 'Value': attributes[1],'Replace': replace}]
+    if not sdb:
+        sdb = boto3.client('sdb')
+    return sdb.put_attributes(
+        DomainName=domain,
+        ItemName=item,
+        Attributes=[{'Name': attributes[0], 'Value': attributes[1],'Replace': replace}]
 
-        )
-        return True
-    except Exception as e:
-        logging.error(e)
-        return False
+    )
+
 
 def delete_attributes(domain,item,attributes,sdb = None):
     '''Remove attributes (columns) from a domain (database)
@@ -63,18 +59,14 @@ def get_attributes(domain,item,sdb = None):
     '''Get attributes (columns) for an item (row)
     Paramaters: domain, item
     Exceptions: TypeError,IndexError,DNSServerError'''
-    try:
-        if not sdb:
-            sdb = boto3.client('sdb')
-        return sdb.get_attributes(
-            DomainName=domain,
-            ItemName=item,
-   
-        )
 
-    except Exception as e:
-        logging.error(e)
-        return False
+    if not sdb:
+        sdb = boto3.client('sdb')
+    return sdb.get_attributes(
+        DomainName=domain,
+        ItemName=item,
+   
+    )
 
 def delete_item(domain,item,sdb = None):
     '''Remove item (row) from a domain (database)
@@ -131,12 +123,7 @@ def select_attribute_where(domain,attribute,query,order_by=None,sdb = None):
     if order_by:
         query_string += ' order by '+ order_by
 
-    try:
-        data = items_to_tuple(sdb.select(SelectExpression = query_string)['Items'])
-
-    except Exception as e:
-        logging.error(e)
-        return None
+    data = items_to_tuple(sdb.select(SelectExpression = query_string)['Items'])
 
     return data
 
@@ -145,21 +132,15 @@ def items_to_tuple(items):
         [(item,{attribute:value}),....]'''
     i = []
 
-    try:
+    for item in items:
+        a = {}
+        for attribute in item['Attributes']:
 
-        for item in items:
-            a = {}
-            for attribute in item['Attributes']:
+            if attribute['Name'] == 'shipping' or attribute['Name'] == 'total':
+                attribute['Value'] = float(attribute['Value'])
 
-                if attribute['Name'] == 'shipping' or attribute['Name'] == 'total':
-                    attribute['Value'] = float(attribute['Value'])
-
-                a[attribute['Name']] = attribute['Value']
-            i.append((item['Name'],a))
-
-    except Exception as e:
-        logging.error(e)
-
+            a[attribute['Name']] = attribute['Value']
+        i.append((item['Name'],a))
 
     return i
 
@@ -168,33 +149,20 @@ def items_to_csv(items):
         deliminated by , ['item,attribute:value,.....', '....']'''
     i = []
 
-    try:
+    for item in items:
+        line = item['Name']
 
-        for item in items:
-            line = item['Name']
+        for attribute in item['Attributes']:
 
-            for attribute in item['Attributes']:
+            if attribute['Name'] == 'shipping' or attribute['Name'] == 'total':
+                attribute['Value'] = float(attribute['Value'])
 
-                if attribute['Name'] == 'shipping' or attribute['Name'] == 'total':
-                    attribute['Value'] = float(attribute['Value'])
+            line += ','+attribute['Name']+':'+str(attribute['Value'])
 
-                line += ','+attribute['Name']+':'+str(attribute['Value'])
-
-            i.append(line)
-
-    except Exception as e:
-        logging.error(e)
-
+        i.append(line)
 
     return i
 
 
 def backup_db(domain,sdb=None):
-
-    try:
-        items = items_to_csv(select_all(domain,sdb)['Items'])
-
-    except Exception as e:
-        logging.error(e)
-
-    return items
+    return items_to_csv(select_all(domain,sdb)['Items'])

@@ -4,7 +4,7 @@ from base import app
 
 
 class baseTestCase(unittest.TestCase):
-    email = 'langdon@idealcs.com.au'
+    email = 'lg@langdongreen.com'
     password = 'sharnnee'
     user_path = '/user'
     login_path = '/login'
@@ -21,7 +21,6 @@ class baseTestCase(unittest.TestCase):
         app.config['WTF_CSRF_ENABLED'] = False
         app.config['NOMAIL'] = False
         app.config['NODB'] = True
-
         
         self.client = app.test_client()
 
@@ -37,15 +36,15 @@ class baseTestCase(unittest.TestCase):
 
     def test_login(self):
         '''test login,logout with correct and incorrect details'''
-
         #login correct user pass
         rv = self.login(self.email, self.password)
-        assert self.email.encode() in rv.data
+        print(rv.data)
+        assert bytes(self.email,'utf-8') in rv.data
         
     def test_incorrect_password(self):
         #login incorrect password (incorrect user makes a new user)
         rv = self.login(self.email, self.password+'x')
-        assert bytes(self.login_error,"utf-8") in rv.data
+        assert bytes(self.login_error,'utf-8') in rv.data
         
     def test_restricted(self):
         
