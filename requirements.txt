@@ -20,5 +20,5 @@ six==1.12.0
 sqlite3==0.0.0
 Tkinter==0.0.0
 urllib3==1.24.1
-Werkzeug==0.14.1
+Werkzeug==0.15.3
 WTForms==2.2.1
